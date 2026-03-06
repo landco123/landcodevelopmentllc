@@ -1,0 +1,3 @@
+# Force primary domain (www) and HTTPS
+http://landcodevelopmentllc.com/* https://www.landcodevelopmentllc.com/:splat 301!
+https://landcodevelopmentllc.com/* https://www.landcodevelopmentllc.com/:splat 301!
