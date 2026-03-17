@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Civil Contractor Project Request | LANDCO Development LLC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<h1>Civil Project Request</h1>
+<p>Submit your project details below. LANDCO Development LLC will review and follow up quickly.</p>
+
+<form name="project-request" method="POST" data-netlify="true">
+
+  <input type="hidden" name="form-name" value="project-request">
+
+  <label>Project Stage</label><br>
+  <select name="project_stage" required>
+    <option value="">Select project stage</option>
+    <option>Gathering Information</option>
+    <option>Requesting Bids</option>
+    <option>Ready to Hire</option>
+  </select>
+  <br><br>
+
+  <label>Project Location</label><br>
+  <input type="text" name="location" required>
+  <br><br>
+
+  <label>Email</label><br>
+  <input type="email" name="email" required>
+  <br><br>
+
+  <label>Project Description</label><br>
+  <textarea name="description" rows="5" required></textarea>
+  <br><br>
+
+  <button type="submit">Submit Project Request</button>
+
+</form>
+
+<br><br>
+<a href="/">← Back to Home</a>
+
+</body>
+</html>
