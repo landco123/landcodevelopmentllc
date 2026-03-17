@@ -63,34 +63,28 @@
       Tell us where you are in the process, where the project is located, and what work you need.
     </p>
 
-    <form name="project-request" method="POST" data-netlify="true">
+    <form name="project-request" method="POST" data-netlify="true" action="/thank-you.html">
       <input type="hidden" name="form-name" value="project-request"/>
 
-      <label>Project Stage</label><br>
+      <label>Project Stage</label>
       <select name="project_stage" required>
         <option value="">Select project stage</option>
         <option>Gathering Information</option>
         <option>Requesting Bids</option>
         <option>Ready to Hire</option>
       </select>
-      <br><br>
 
-      <label>Project Location</label><br>
+      <label>Project Location</label>
       <input type="text" name="location" required>
-      <br><br>
 
-      <label>Email</label><br>
+      <label>Email</label>
       <input type="email" name="email" required>
-      <br><br>
 
-      <label>Project Description</label><br>
+      <label>Project Description</label>
       <textarea name="description" rows="6" required></textarea>
-      <br><br>
 
       <button type="submit">Submit Project Request</button>
     </form>
-
-    <br>
 
     <p>
       Prefer to speak directly? Call <a href="tel:+19122541918">912-254-1918</a>
