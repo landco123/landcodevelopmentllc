@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -10,6 +9,7 @@
 <meta content="index, follow" name="robots"/>
 <link href="https://www.landcodevelopmentllc.com/" rel="canonical"/>
 <meta content="#111111" name="theme-color"/>
+
 <!-- Open Graph -->
 <meta content="website" property="og:type"/>
 <meta content="Landco Development LLC" property="og:site_name"/>
@@ -17,13 +17,16 @@
 <meta content="Land Clearing, Grading &amp; French Drains | Landco Development LLC | Georgia" property="og:title"/>
 <meta content="Land clearing, grading, house pads, French drains &amp; drainage correction. Call/text 912-254-1918 for a fast quote." property="og:description"/>
 <meta content="https://landcodevelopmentllc.netlify.app/images/creek-before.jpg" property="og:image"/>
+
 <!-- Twitter -->
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="Land Clearing, Grading &amp; French Drains | Landco Development LLC | Georgia" name="twitter:title"/>
 <meta content="Land clearing, grading, house pads, French drains &amp; drainage correction. Call/text 912-254-1918 for a fast quote." name="twitter:description"/>
 <meta content="https://landcodevelopmentllc.netlify.app/images/creek-before.jpg" name="twitter:image"/>
+
 <link href="favicon.svg" rel="icon" type="image/svg+xml"/>
 <link href="sitemap.xml" rel="sitemap" title="Sitemap" type="application/xml"/>
+
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
@@ -86,6 +89,7 @@
   "url": "https://www.landcodevelopmentllc.com/",
   "@id": "https://www.landcodevelopmentllc.com/#identity"
 }</script>
+
 <meta content="THA4QllYOGNA8J7nSuU5EXCosLzWZMVvrLaPT3MGGIo" name="google-site-verification"/>
 <meta content="Athens GA grading, French drains, drainage contractor, yard drainage, standing water, erosion control, land clearing, forestry mulching, site preparation, skid steer grading" name="keywords"/>
 </head>
@@ -95,6 +99,7 @@
 <div class="container">
 <h1>Landco Development LLC</h1>
 <p class="tagline">Land Clearing • Grading • French Drains • Drainage Correction (Georgia)</p>
+
 <nav class="nav">
 <a href="#top">Home</a>
 <a href="#services">Services</a>
@@ -107,6 +112,7 @@
 <a href="#reviews">Reviews</a>
 <a href="#contact">Contact</a>
 </nav>
+
 <a class="header-call" href="tel:+19122541918">Call 912-254-1918</a>
 </div>
 </header>
@@ -115,63 +121,85 @@
 <div class="container">
 <h2>French Drains, Drainage Fixes &amp; Skid Steer Grading</h2>
 <p class="hero-sub">
-      Stop standing water and erosion fast. Professional drainage and grading that protects your property and lasts.
-    </p>
+Stop standing water and erosion fast. Professional drainage and grading that protects your property and lasts.
+</p>
 <a class="cta-btn" href="tel:+19122541918">Call or Text Now</a>
 <br><br>
 <a class="cta-btn secondary" href="civil-contractor-request.html">Request a Quote</a>
-
 </div>
-
-
 </section>
 
-<!-- FORM INSERTED BELOW SERVICES -->
+<section class="services" id="services">
+<div class="container">
+<h2>Site Prep Services in Georgia</h2>
+
+<div class="service-grid">
+<div class="service">
+<h3>French Drains &amp; Drainage Solutions</h3>
+<p>Correct drainage problems that cause erosion, washouts, and standing water.</p>
+</div>
+
+<div class="service">
+<h3>Skid Steer Grading</h3>
+<p>Driveways, pads, finish grading, and water control done right.</p>
+</div>
+
+<div class="service">
+<h3>Fence Line Clearing &amp; Forestry Mulching</h3>
+<p>Clean property lines, access paths, and overgrowth removal.</p>
+</div>
+</div>
+
+<div class="mini-ctas">
+<a class="mini-cta" href="land-clearing.html">Land Clearing</a>
+<a class="mini-cta" href="grading.html">Grading / House Pads</a>
+<a class="mini-cta" href="french-drains.html">French Drains</a>
+<a class="mini-cta" href="drainage-correction.html">Drainage Correction</a>
+<a class="mini-cta" href="civil-government.html">Civil &amp; Government Work</a>
+</div>
+
+<a class="cta-btn secondary" href="#contact">Get a Fast Quote</a>
+</div>
+</section>
+
 <section class="contact">
-  <div class="container">
+<div class="container">
+<h2>Request a Quote</h2>
+<p class="section-sub">Tell us about your project. We’ll review it and contact you quickly.</p>
 
-    <h2>Request a Quote</h2>
+<form name="project-request" method="POST" data-netlify="true" action="/thank-you.html">
+<input type="hidden" name="form-name" value="project-request"/>
 
-    <p class="section-sub">
-      Tell us about your project. We’ll review it and contact you quickly.
-    </p>
+<label>Project Type</label>
+<select name="project_type" required>
+<option value="">Select service</option>
+<option>French Drain</option>
+<option>Grading / House Pad</option>
+<option>Driveway</option>
+<option>Land Clearing</option>
+<option>Drainage Correction</option>
+<option>Other</option>
+</select>
 
-    <form name="project-request" method="POST" data-netlify="true" action="/thank-you.html">
-      <input type="hidden" name="form-name" value="project-request"/>
+<label>Project Location</label>
+<input type="text" name="location" required>
 
-      <label>Project Type</label>
-      <select name="project_type" required>
-        <option value="">Select service</option>
-        <option>French Drain</option>
-        <option>Grading / House Pad</option>
-        <option>Driveway</option>
-        <option>Land Clearing</option>
-        <option>Drainage Correction</option>
-        <option>Other</option>
-      </select>
+<label>Email</label>
+<input type="email" name="email" required>
 
-      <label>Project Location</label>
-      <input type="text" name="location" required>
+<label>Project Details</label>
+<textarea name="description" required></textarea>
 
-      <label>Email</label>
-      <input type="email" name="email" required>
-
-      <label>Project Details</label>
-      <textarea name="description" required></textarea>
-
-      <button type="submit">Submit Request</button>
-    </form>
-
-  </div>
-
-
-<section class="projects" id="projects">
-
+<button type="submit">Submit Request</button>
+</form>
+</div>
+</section>
 
 <section class="projects" id="projects">
 <div class="container">
 <h2>Before &amp; After Results</h2>
 <p class="section-sub">Real work. Real results.</p>
+
 <div class="ba-grid">
 <figure class="ba-card">
 <picture>
@@ -180,6 +208,7 @@
 </picture>
 <figcaption>Creek Bed Drainage — Before</figcaption>
 </figure>
+
 <figure class="ba-card">
 <picture>
 <source srcset="images/creek-after.webp" type="image/webp"/>
@@ -187,6 +216,7 @@
 </picture>
 <figcaption>Creek Bed Drainage — After</figcaption>
 </figure>
+
 <figure class="ba-card">
 <picture>
 <source srcset="images/fence-before.webp" type="image/webp"/>
@@ -194,6 +224,7 @@
 </picture>
 <figcaption>Fence Line Clearing — Before</figcaption>
 </figure>
+
 <figure class="ba-card">
 <picture>
 <source srcset="images/fence-after.webp" type="image/webp"/>
@@ -201,6 +232,7 @@
 </picture>
 <figcaption>Fence Line Clearing — After</figcaption>
 </figure>
+
 <figure class="ba-card">
 <picture>
 <source srcset="images/mulch-before.webp" type="image/webp"/>
@@ -208,6 +240,7 @@
 </picture>
 <figcaption>Forestry Mulching — Before</figcaption>
 </figure>
+
 <figure class="ba-card">
 <picture>
 <source srcset="images/mulch-after.webp" type="image/webp"/>
@@ -216,11 +249,10 @@
 <figcaption>Forestry Mulching — After</figcaption>
 </figure>
 </div>
+
 <a class="cta-btn" href="tel:+19122541918">Call Now For A Quote</a>
 <p class="gallery-note">Want more photos?</p>
-<a class="cta-btn secondary" href="https://facebook.com/Landco123" rel="noopener" target="_blank">
-      See More Real Projects
-    </a>
+<a class="cta-btn secondary" href="https://facebook.com/Landco123" rel="noopener" target="_blank">See More Real Projects</a>
 </div>
 </section>
 
@@ -228,24 +260,29 @@
 <div class="container">
 <h2>Local Reviews &amp; Verified Profiles</h2>
 <p class="section-sub">See real customer feedback and verified contractor profiles.</p>
+
 <div class="trust-grid">
 <a class="trust-card" href="https://share.google/VPTTty0vot6EEEihj" rel="noopener" target="_blank">
 <h3>Google Business Profile</h3>
 <p>Read and leave reviews on Google.</p>
 </a>
+
 <a class="trust-card" href="https://www.thumbtack.com/pro/referral/ZLnEyCIeTjnC7H0" rel="noopener" target="_blank">
 <h3>Thumbtack</h3>
 <p>Request a quote through Thumbtack.</p>
 </a>
+
 <a class="trust-card" href="https://youtube.com/@Landco321" rel="noopener" target="_blank">
 <h3>YouTube Projects</h3>
 <p>Before/after videos and job walk-throughs.</p>
 </a>
+
 <a class="trust-card" href="https://facebook.com/Landco123" rel="noopener" target="_blank">
 <h3>Facebook</h3>
 <p>More photos, updates, and messages.</p>
 </a>
 </div>
+
 <div class="callout">
 <p><strong>Fastest way to reach us:</strong> Call or text <a href="tel:+19122541918">912-254-1918</a>.</p>
 <a class="cta-btn" href="tel:+19122541918">Call / Text for Free Consultation</a>
@@ -282,12 +319,12 @@
 <p class="footer-brand">© 2026 Landco Development LLC</p>
 <p class="footer-nap">
 <strong>Call/Text:</strong> <a href="tel:+19122541918">912-254-1918</a> •
-      <strong>Email:</strong> <a href="mailto:landcodevelopment2@gmail.com">landcodevelopment2@gmail.com</a>
+<strong>Email:</strong> <a href="mailto:landcodevelopment2@gmail.com">landcodevelopment2@gmail.com</a>
 </p>
 <p class="footer-links">
 <a href="https://share.google/VPTTty0vot6EEEihj" rel="noopener" target="_blank">Google Reviews</a> •
-      <a href="https://www.thumbtack.com/pro/referral/ZLnEyCIeTjnC7H0" rel="noopener" target="_blank">Thumbtack</a> •
-      <a href="https://youtube.com/@Landco321" rel="noopener" target="_blank">YouTube</a>
+<a href="https://www.thumbtack.com/pro/referral/ZLnEyCIeTjnC7H0" rel="noopener" target="_blank">Thumbtack</a> •
+<a href="https://youtube.com/@Landco321" rel="noopener" target="_blank">YouTube</a>
 </p>
 </div>
 </footer>
