@@ -123,7 +123,46 @@
 
 </div>
 </section>
+</section>
 
+<!-- PASTE FORM RIGHT HERE -->
+<section class="contact">
+  <div class="container">
+
+    <h2>Request a Quote</h2>
+
+    <p class="section-sub">
+      Tell us about your project. We’ll review it and contact you quickly.
+    </p>
+
+    <form name="project-request" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="project-request"/>
+
+      <label>Project Type</label>
+      <select name="project_type" required>
+        <option value="">Select service</option>
+        <option>French Drain</option>
+        <option>Grading / House Pad</option>
+        <option>Driveway</option>
+        <option>Land Clearing</option>
+        <option>Drainage Correction</option>
+        <option>Other</option>
+      </select>
+
+      <label>Project Location</label>
+      <input type="text" name="location" required>
+
+      <label>Email</label>
+      <input type="email" name="email" required>
+
+      <label>Project Details</label>
+      <textarea name="description" required></textarea>
+
+      <button type="submit">Submit Request</button>
+    </form>
+
+  </div>
+</section>
 <section class="services" id="services">
 <div class="container">
 <h2>Site Prep Services in Georgia</h2>
