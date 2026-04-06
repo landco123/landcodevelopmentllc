@@ -3,56 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>French Drain Installation | Landco Development LLC</title>
-  <meta
-    name="description"
-    content="French drain installation and drainage correction by Landco Development LLC. We help move water away from foundations, yards, and problem areas with practical drainage solutions."
-  />
-  <link rel="canonical" href="https://www.landcodevelopmentllc.com/french-drains.html" />
-  <meta name="robots" content="index, follow" />
 
-  <meta property="og:title" content="French Drain Installation | Landco Development LLC" />
-  <meta
-    property="og:description"
-    content="French drain installation and drainage correction for standing water, runoff, and foundation protection."
-  />
+  <title>French Drain Installation in Northeast Georgia | Landco Development LLC</title>
+  <meta name="description" content="French drain installation, yard drainage correction, downspout tie-ins, and grading by Landco Development LLC. Serving Northeast Georgia including Athens, Lawrenceville, Dacula, and Auburn." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <link rel="canonical" href="https://www.landcodevelopmentllc.com/french-drains.html" />
+
+  <meta property="og:site_name" content="Landco Development LLC" />
+  <meta property="og:title" content="French Drain Installation in Northeast Georgia | Landco Development LLC" />
+  <meta property="og:description" content="French drain installation, drainage correction, downspout runoff control, and grading solutions for standing water and foundation runoff." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.landcodevelopmentllc.com/french-drains.html" />
   <meta property="og:image" content="https://www.landcodevelopmentllc.com/images/og-image.jpg" />
+  <meta property="og:image:alt" content="French drain installation and drainage correction by Landco Development LLC" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="French Drain Installation in Northeast Georgia | Landco Development LLC" />
+  <meta name="twitter:description" content="French drain installation, drainage correction, downspout tie-ins, and grading by Landco Development LLC." />
+  <meta name="twitter:image" content="https://www.landcodevelopmentllc.com/images/og-image.jpg" />
+
+  <meta name="theme-color" content="#0f1720" />
 
   <style>
     :root {
-      --bg: #0f1720;
-      --panel: #16212b;
-      --text: #f5f7fa;
-      --muted: #c6d0da;
-      --accent: #caa46a;
-      --line: rgba(255,255,255,0.12);
-      --max: 1100px;
+      --navy: #0f1720;
+      --navy-2: #172534;
+      --gold: #caa46a;
+      --gold-2: #e7c58a;
+      --text: #1c1c1c;
+      --muted: #5d6874;
+      --white: #ffffff;
+      --line: #e5e7eb;
+      --soft: #f7f8fa;
+      --max: 1180px;
+      --shadow: 0 18px 50px rgba(15, 23, 32, 0.12);
+      --radius: 14px;
     }
 
     * { box-sizing: border-box; }
 
+    html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
       background: #ffffff;
-      color: #1c1c1c;
       line-height: 1.6;
     }
 
-    header {
-      background: var(--bg);
-      color: var(--text);
-      padding: 18px 20px;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+    img {
+      max-width: 100%;
+      display: block;
     }
 
-    .topbar,
-    .hero,
-    .section,
-    footer {
-      width: 100%;
+    a {
+      color: inherit;
     }
 
     .wrap {
@@ -61,168 +67,628 @@
       padding: 0 20px;
     }
 
-    .brand {
-      font-size: 1.3rem;
-      font-weight: 700;
-      letter-spacing: 0.3px;
-      margin: 0;
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(15, 23, 32, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
-    .subbrand {
-      margin: 6px 0 0;
-      color: var(--muted);
+    .header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      min-height: 76px;
+    }
+
+    .brand {
+      text-decoration: none;
+      color: var(--white);
+    }
+
+    .brand-title {
+      margin: 0;
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    .brand-sub {
+      margin: 4px 0 0;
+      color: #d0d8df;
+      font-size: 0.9rem;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .nav a {
+      color: var(--white);
+      text-decoration: none;
       font-size: 0.95rem;
+      opacity: 0.95;
+    }
+
+    .nav a:hover {
+      opacity: 1;
+      color: var(--gold-2);
+    }
+
+    .nav-cta {
+      display: inline-block;
+      background: var(--gold);
+      color: #111;
+      padding: 11px 16px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      white-space: nowrap;
     }
 
     .hero {
-      background: linear-gradient(rgba(15,23,32,0.88), rgba(15,23,32,0.88));
-      color: var(--text);
-      padding: 64px 0 56px;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top right, rgba(202, 164, 106, 0.22), transparent 34%),
+        linear-gradient(135deg, #0f1720 0%, #172534 55%, #223448 100%);
+      color: var(--white);
+      padding: 88px 0 72px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 28px 28px;
+      opacity: 0.28;
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(202, 164, 106, 0.14);
+      border: 1px solid rgba(202, 164, 106, 0.35);
+      color: var(--gold-2);
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.2px;
     }
 
     .hero h1 {
       margin: 0 0 14px;
-      font-size: 2.2rem;
-      line-height: 1.15;
+      font-size: 2.9rem;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      max-width: 740px;
     }
 
     .hero p {
       max-width: 760px;
       margin: 0 0 24px;
-      color: #dde5ec;
-      font-size: 1.05rem;
+      color: #d9e2ea;
+      font-size: 1.08rem;
     }
 
     .cta-row {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
+      margin-bottom: 18px;
     }
 
     .btn {
       display: inline-block;
-      padding: 12px 18px;
+      padding: 13px 18px;
+      border-radius: 10px;
       text-decoration: none;
-      border-radius: 8px;
       font-weight: 700;
+      transition: transform 0.18s ease, opacity 0.18s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
     }
 
     .btn-primary {
-      background: var(--accent);
+      background: var(--gold);
       color: #111;
     }
 
     .btn-secondary {
-      background: transparent;
-      color: var(--text);
       border: 1px solid rgba(255,255,255,0.22);
+      color: var(--white);
+      background: rgba(255,255,255,0.04);
     }
 
-    main {
-      padding: 46px 0 20px;
+    .hero-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 16px;
+      color: #dfe8ef;
+      font-size: 0.96rem;
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(6px);
+    }
+
+    .hero-card h2 {
+      margin: 0 0 10px;
+      font-size: 1.25rem;
+      color: var(--white);
+    }
+
+    .hero-card ul {
+      margin: 0;
+      padding-left: 18px;
+      color: #e0e7ee;
+    }
+
+    .hero-card li + li {
+      margin-top: 8px;
     }
 
     .section {
-      padding: 0 0 36px;
+      padding: 74px 0;
     }
 
-    .section h2 {
+    .section.alt {
+      background: var(--soft);
+    }
+
+    .section-title {
       margin: 0 0 12px;
-      font-size: 1.6rem;
+      font-size: 2rem;
+      line-height: 1.15;
+      color: #111827;
     }
 
-    .section p {
-      margin: 0 0 14px;
+    .section-lead {
+      max-width: 830px;
+      margin: 0 0 28px;
+      color: var(--muted);
+      font-size: 1.04rem;
     }
 
-    .grid {
+    .grid-3,
+    .grid-4,
+    .grid-2 {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 16px;
-      margin-top: 18px;
+      gap: 18px;
     }
+
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 
     .card {
-      border: 1px solid #e4e7eb;
-      border-radius: 10px;
-      padding: 18px;
       background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: 0 8px 24px rgba(15, 23, 32, 0.05);
     }
 
     .card h3 {
-      margin-top: 0;
-      margin-bottom: 10px;
-      font-size: 1.08rem;
+      margin: 0 0 10px;
+      font-size: 1.12rem;
+      color: #111827;
+    }
+
+    .card p,
+    .card li {
+      color: var(--muted);
+    }
+
+    .card ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 26px;
+      align-items: start;
     }
 
     .note {
-      background: #f7f7f7;
-      border-left: 4px solid var(--accent);
-      padding: 16px;
-      border-radius: 8px;
+      background: #fff9ef;
+      border: 1px solid #f0dfbf;
+      border-left: 5px solid var(--gold);
+      border-radius: 12px;
+      padding: 18px;
+      color: #5e4b2e;
     }
 
-    footer {
-      background: var(--bg);
-      color: var(--text);
-      margin-top: 30px;
-      padding: 28px 0;
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
     }
 
-    footer a {
+    .pill {
+      display: inline-block;
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      text-decoration: none;
+      background: #fff;
+      font-weight: 700;
+      color: #243242;
+    }
+
+    .pill:hover {
+      border-color: var(--gold);
+      color: #111;
+    }
+
+    .faq details {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+      padding: 16px 18px;
+    }
+
+    .faq details + details {
+      margin-top: 14px;
+    }
+
+    .faq summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: #111827;
+      list-style: none;
+    }
+
+    .faq summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq p {
+      margin: 12px 0 0;
+      color: var(--muted);
+    }
+
+    .cta-band {
+      background: linear-gradient(135deg, #101a24 0%, #172534 100%);
+      color: var(--white);
+      padding: 70px 0;
+    }
+
+    .cta-band .section-title,
+    .cta-band .section-lead {
+      color: var(--white);
+    }
+
+    .breadcrumbs {
+      font-size: 0.92rem;
+      color: #c8d3dd;
+      margin-bottom: 14px;
+    }
+
+    .breadcrumbs a {
+      color: #dce6ef;
+      text-decoration: none;
+    }
+
+    .breadcrumbs span {
+      color: var(--gold-2);
+    }
+
+    .footer {
+      background: #0f1720;
+      color: #dbe4eb;
+      padding: 36px 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer strong {
       color: #fff;
     }
 
-    @media (max-width: 640px) {
+    .footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .split,
+      .grid-4,
+      .grid-3,
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+
       .hero h1 {
-        font-size: 1.8rem;
+        font-size: 2.3rem;
+      }
+
+      .header-row {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 14px 0;
+      }
+
+      .nav {
+        gap: 12px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        padding: 74px 0 56px;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .section {
+        padding: 58px 0;
+      }
+
+      .section-title {
+        font-size: 1.65rem;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
       }
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"LocalBusiness",
+        "@id":"https://www.landcodevelopmentllc.com/#business",
+        "name":"Landco Development LLC",
+        "url":"https://www.landcodevelopmentllc.com/",
+        "telephone":"+1-912-254-1918",
+        "email":"landcodevelopment2@gmail.com",
+        "image":"https://www.landcodevelopmentllc.com/images/og-image.jpg",
+        "description":"Landco Development LLC provides French drain installation, drainage correction, grading, land clearing, and site work in Northeast Georgia.",
+        "areaServed":[
+          {"@type":"City","name":"Athens"},
+          {"@type":"City","name":"Lawrenceville"},
+          {"@type":"City","name":"Dacula"},
+          {"@type":"City","name":"Auburn"}
+        ]
+      },
+      {
+        "@type":"Service",
+        "@id":"https://www.landcodevelopmentllc.com/french-drains.html#service",
+        "serviceType":"French Drain Installation",
+        "name":"French Drain Installation",
+        "provider":{"@id":"https://www.landcodevelopmentllc.com/#business"},
+        "areaServed":[
+          {"@type":"City","name":"Athens"},
+          {"@type":"City","name":"Lawrenceville"},
+          {"@type":"City","name":"Dacula"},
+          {"@type":"City","name":"Auburn"}
+        ],
+        "url":"https://www.landcodevelopmentllc.com/french-drains.html",
+        "description":"French drain installation, drainage correction, yard water management, and runoff control for residential and small commercial properties."
+      },
+      {
+        "@type":"BreadcrumbList",
+        "@id":"https://www.landcodevelopmentllc.com/french-drains.html#breadcrumbs",
+        "itemListElement":[
+          {
+            "@type":"ListItem",
+            "position":1,
+            "name":"Home",
+            "item":"https://www.landcodevelopmentllc.com/"
+          },
+          {
+            "@type":"ListItem",
+            "position":2,
+            "name":"French Drains",
+            "item":"https://www.landcodevelopmentllc.com/french-drains.html"
+          }
+        ]
+      },
+      {
+        "@type":"FAQPage",
+        "@id":"https://www.landcodevelopmentllc.com/french-drains.html#faq",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"What does a French drain help with?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"A French drain helps move water away from low spots, foundations, fence lines, and other saturated areas where runoff collects and causes standing water or soft ground."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Can you tie downspouts into a drainage system?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Yes. Downspouts can often be tied into a drainage system when roof runoff is dumping too close to the home, walkway, or other problem area."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Do French drains work with grading?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Yes. In many cases the best result comes from combining drainage pipe installation with grading adjustments so surface water flows correctly and the drainage system performs better."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"What areas do you serve?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Landco Development LLC serves Northeast Georgia and target service areas including Athens, Lawrenceville, Dacula, and Auburn."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-  <header>
-    <div class="wrap">
-      <p class="brand">Landco Development LLC</p>
-      <p class="subbrand">French Drains • Drainage Correction • Grading • Land Clearing</p>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="https://www.landcodevelopmentllc.com/">
+        <p class="brand-title">Landco Development LLC</p>
+        <p class="brand-sub">French Drains • Drainage Correction • Grading • Land Clearing</p>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="https://www.landcodevelopmentllc.com/">Home</a>
+        <a href="https://www.landcodevelopmentllc.com/french-drains.html">French Drains</a>
+        <a href="https://www.landcodevelopmentllc.com/drainage-correction.html">Drainage Correction</a>
+        <a href="https://www.landcodevelopmentllc.com/grading.html">Grading</a>
+        <a href="https://www.landcodevelopmentllc.com/land-clearing.html">Land Clearing</a>
+        <a class="nav-cta" href="tel:+19122541918">Call 912-254-1918</a>
+      </nav>
     </div>
   </header>
 
   <section class="hero">
-    <div class="wrap">
-      <h1>French Drain Installation</h1>
-      <p>
-        We install French drains and practical drainage solutions to help move water away
-        from foundations, low spots, fence lines, and saturated yard areas. The goal is a
-        cleaner, drier property with water flowing where it should.
-      </p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="tel:+19122541918">Call or Text 912-254-1918</a>
-        <a class="btn btn-secondary" href="https://www.landcodevelopmentllc.com/">Back to Home</a>
+    <div class="wrap hero-grid">
+      <div>
+        <div class="breadcrumbs">
+          <a href="https://www.landcodevelopmentllc.com/">Home</a> / <span>French Drains</span>
+        </div>
+        <div class="eyebrow">French Drain Installation in Northeast Georgia</div>
+        <h1>French Drains That Move Water Away From Foundations, Yards, and Problem Areas</h1>
+        <p>
+          Landco Development LLC installs French drains, drainage tie-ins, and grading-based drainage solutions for properties dealing with standing water, runoff, oversaturated yard areas, and water collecting near the house. We focus on practical drainage work that solves the problem and leaves the site clean and workable.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn btn-primary" href="tel:+19122541918">Call or Text 912-254-1918</a>
+          <a class="btn btn-secondary" href="mailto:landcodevelopment2@gmail.com">Request a Quote by Email</a>
+        </div>
+
+        <div class="hero-points">
+          <span>French drain installation</span>
+          <span>•</span>
+          <span>Drainage correction</span>
+          <span>•</span>
+          <span>Downspout runoff control</span>
+          <span>•</span>
+          <span>Finish grading support</span>
+        </div>
       </div>
+
+      <aside class="hero-card">
+        <h2>Common Problems We Address</h2>
+        <ul>
+          <li>Standing water in the yard after rain</li>
+          <li>Roof runoff collecting near the foundation</li>
+          <li>Soft, muddy ground that stays saturated</li>
+          <li>Water flowing across walkways, fence lines, or low areas</li>
+          <li>Drainage systems that were installed but never corrected the problem</li>
+        </ul>
+      </aside>
     </div>
   </section>
 
   <main>
     <section class="section">
       <div class="wrap">
-        <h2>What We Help Fix</h2>
-        <div class="grid">
+        <h2 class="section-title">French Drain Installation Built Around Real Water Flow Problems</h2>
+        <p class="section-lead">
+          A good French drain is not just a trench with pipe. The drainage path, discharge direction, water source, and surrounding grade all matter. We look at where the water is starting, where it is traveling, and where it needs to be taken so the property performs better after rain.
+        </p>
+
+        <div class="grid-4">
           <div class="card">
-            <h3>Standing Water</h3>
-            <p>Low areas in the yard that stay wet, soft, or muddy after rain.</p>
+            <h3>Standing Water in the Yard</h3>
+            <p>Low spots that stay wet, hold water, or turn into mud after rain often need drainage correction and proper discharge routing.</p>
           </div>
           <div class="card">
-            <h3>Foundation Runoff</h3>
-            <p>Roof water and surface flow collecting near the house instead of draining away.</p>
+            <h3>Foundation Water Issues</h3>
+            <p>Water collecting near the house can create long-term problems. French drains can help move runoff away from structures and problem edges.</p>
           </div>
           <div class="card">
-            <h3>Downspout Problems</h3>
-            <p>Downspouts dumping water too close to structures, walkways, or traffic areas.</p>
+            <h3>Downspout Tie-Ins</h3>
+            <p>When downspouts are dumping into the same saturated area, tying them into a proper drainage path can reduce repeated washout and pooling.</p>
           </div>
           <div class="card">
-            <h3>Drainage Corrections</h3>
-            <p>Reworking slope, trench layout, and discharge direction so the system functions properly.</p>
+            <h3>Drainage + Grading</h3>
+            <p>Many jobs improve when pipe installation is paired with grading adjustments so surface water keeps moving in the right direction.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="wrap split">
+        <div>
+          <h2 class="section-title">What a Typical French Drain Scope Can Include</h2>
+          <p class="section-lead">
+            Every property is different, but a drainage correction project commonly includes trenching, pipe placement, aggregate where needed, tie-ins from water sources, and a discharge plan that gets runoff away from the area that is failing.
+          </p>
+
+          <div class="card">
+            <h3>Typical Work Items</h3>
+            <ul>
+              <li>Drainage trench layout based on water path</li>
+              <li>French drain pipe installation</li>
+              <li>Downspout tie-ins where needed</li>
+              <li>Discharge routing away from structures and traffic areas</li>
+              <li>Light grading to support surface drainage</li>
+              <li>Clean-up and a workable finished area</li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <div class="note">
+            <strong>Important:</strong> the goal is not just to bury pipe. The goal is to move water away from the failing area and leave the property in better working condition.
+          </div>
+
+          <div class="card" style="margin-top:18px;">
+            <h3>Related Services</h3>
+            <div class="pill-row">
+              <a class="pill" href="https://www.landcodevelopmentllc.com/drainage-correction.html">Drainage Correction</a>
+              <a class="pill" href="https://www.landcodevelopmentllc.com/grading.html">Grading</a>
+              <a class="pill" href="https://www.landcodevelopmentllc.com/land-clearing.html">Land Clearing</a>
+              <a class="pill" href="https://www.landcodevelopmentllc.com/athens-ga.html">Athens</a>
+              <a class="pill" href="https://www.landcodevelopmentllc.com/lawrenceville-ga.html">Lawrenceville</a>
+              <a class="pill" href="https://www.landcodevelopmentllc.com/dacula-ga.html">Dacula</a>
+              <a class="pill" href="https://www.landcodevelopmentllc.com/auburn-ga.html">Auburn</a>
+            </div>
           </div>
         </div>
       </div>
@@ -230,47 +696,83 @@
 
     <section class="section">
       <div class="wrap">
-        <h2>Typical Scope of Work</h2>
-        <p>
-          Each job is different, but a French drain installation commonly includes trenching,
-          pipe placement, stone where needed, tie-ins from problem water sources, and discharge
-          routing to move runoff away from the area that is failing.
+        <h2 class="section-title">French Drain and Yard Drainage Service Areas</h2>
+        <p class="section-lead">
+          Landco Development LLC serves Northeast Georgia and target service areas including Athens, Lawrenceville, Dacula, and Auburn. If your property has runoff issues, standing water, or drainage failure near the house or yard, this page is built to target those searches clearly for Google and for customers.
         </p>
-        <div class="note">
-          We focus on practical drainage work that solves the water issue first, then leaves the area
-          clean, workable, and ready for the next finish step.
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Search Intent This Page Covers</h3>
+            <ul>
+              <li>French drain installation near me</li>
+              <li>French drain contractor</li>
+              <li>Yard drainage contractor</li>
+              <li>Standing water drainage solution</li>
+              <li>Drainage correction near foundation</li>
+              <li>Downspout drainage installation</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Why That Matters</h3>
+            <p>
+              This page is structured to support both conversion and search visibility with stronger local wording, better metadata, schema markup, internal links, and a clear topic focus around French drains and yard drainage.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section alt faq">
       <div class="wrap">
-        <h2>Service Areas</h2>
-        <p>
-          Landco Development LLC serves Northeast Georgia and surrounding target areas including
-          Athens, Lawrenceville, Dacula, and Auburn.
+        <h2 class="section-title">French Drain Questions</h2>
+        <p class="section-lead">
+          These are common questions property owners ask when dealing with runoff, mud, and standing water.
         </p>
+
+        <details>
+          <summary>What does a French drain help with?</summary>
+          <p>A French drain helps move water away from low spots, structures, fence lines, and other saturated areas where runoff collects and causes standing water or soft ground.</p>
+        </details>
+
+        <details>
+          <summary>Can you tie downspouts into a drainage system?</summary>
+          <p>Yes. Downspouts can often be tied into a drainage system when roof runoff is dumping too close to the home, walkway, or another problem area.</p>
+        </details>
+
+        <details>
+          <summary>Do French drains work with grading?</summary>
+          <p>Yes. Many drainage problems improve most when the pipe installation and the grade both support the same water direction.</p>
+        </details>
+
+        <details>
+          <summary>What areas do you serve?</summary>
+          <p>Landco Development LLC serves Northeast Georgia, including Athens, Lawrenceville, Dacula, and Auburn.</p>
+        </details>
       </div>
     </section>
 
-    <section class="section">
+    <section class="cta-band">
       <div class="wrap">
-        <h2>Need a Quote?</h2>
-        <p>
-          If you have standing water, runoff against the house, or a yard that stays saturated,
-          reach out and we can look at the drainage path and best correction method.
+        <h2 class="section-title">Need a French Drain Quote?</h2>
+        <p class="section-lead">
+          If you have yard drainage issues, water near the foundation, or repeated standing water after rain, contact Landco Development LLC to discuss the drainage path, runoff source, and best correction method.
         </p>
+
         <div class="cta-row">
-          <a class="btn btn-primary" href="tel:+19122541918">Call or Text Now</a>
-          <a class="btn btn-secondary" href="mailto:landcodevelopment2@gmail.com">Email Landco Development LLC</a>
+          <a class="btn btn-primary" href="tel:+19122541918">Call or Text 912-254-1918</a>
+          <a class="btn btn-secondary" href="mailto:landcodevelopment2@gmail.com">Email for a Quote</a>
+          <a class="btn btn-secondary" href="https://www.landcodevelopmentllc.com/">Back to Homepage</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="footer">
     <div class="wrap">
       <strong>Landco Development LLC</strong><br />
+      French Drains • Drainage Correction • Grading • Land Clearing<br />
       Phone: <a href="tel:+19122541918">912-254-1918</a><br />
       Email: <a href="mailto:landcodevelopment2@gmail.com">landcodevelopment2@gmail.com</a>
     </div>
