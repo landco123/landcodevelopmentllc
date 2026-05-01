@@ -4,4 +4,4 @@ https://landcodevelopmentllc.com/* https://www.landcodevelopmentllc.com/:splat 3
 /index.php / 301
 /sitemap.xml /sitemap.xml 200
 /robots.txt /robots.txt 200
-
+/hello-world/ / 301
