@@ -1,13 +1,7 @@
 https://landcodevelopmentllc.com/* https://www.landcodevelopmentllc.com/:splat 301
-
-/sitemap.xml /sitemap.xml 200
-
-/robots.txt /robots.txt 200
-
-/hello-world/ / 301
-
 /author/* / 301
-
 /wp-* / 301
-
 /index.php / 301
+/sitemap.xml /sitemap.xml 200
+/robots.txt /robots.txt 200
+/hello-world/ / 301
