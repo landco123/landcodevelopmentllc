@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>Gwinnett County Skid Steer Grading & Driveway Grading | Landco Development LLC</title>
+  <title>Gwinnett County Grading Contractor | Driveway Grading & Skid Steer Work | Landco Development LLC</title>
 
-  <meta name="description" content="Need skid steer grading, driveway grading, yard grading, house pads, gravel driveway prep, drainage grading, or small site prep in Gwinnett County, GA? Call or text Landco Development LLC at 912-254-1918 for a fast grading quote." />
+  <meta name="description" content="Need driveway grading, skid steer grading, yard leveling, house pads, gravel driveway prep, or small site prep in Gwinnett County, GA? Call or text Landco Development LLC at 912-254-1918 for a fast grading quote."/>
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
+  <link rel="canonical" href="https://www.landcodevelopmentllc.com/grading"/>
+  <meta name="theme-color" content="#111111"/>
 
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-  <link rel="canonical" href="https://www.landcodevelopmentllc.com/grading" />
-  <meta name="theme-color" content="#111111" />
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Landco Development LLC"/>
+  <meta property="og:url" content="https://www.landcodevelopmentllc.com/grading"/>
+  <meta property="og:title" content="Gwinnett County Driveway Grading & Skid Steer Work | Landco Development LLC"/>
+  <meta property="og:description" content="Driveway grading, skid steer grading, yard leveling, house pads, drainage grading, gravel prep, and small site prep in Gwinnett County, GA."/>
+  <meta property="og:image" content="https://www.landcodevelopmentllc.com/images/gwinnett-driveway-grading-landco-hero.jpg"/>
 
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Landco Development LLC" />
-  <meta property="og:url" content="https://www.landcodevelopmentllc.com/grading" />
-  <meta property="og:title" content="Gwinnett County Skid Steer Grading & Driveway Grading | Landco Development LLC" />
-  <meta property="og:description" content="Skid steer grading, driveway grading, yard leveling, drainage grading, house pads, gravel prep, and small site prep in Gwinnett County, GA." />
-  <meta property="og:image" content="https://www.landcodevelopmentllc.com/images/gwinnett-driveway-grading-landco-hero.jpg" />
+  <link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+  <link href="style.css" rel="stylesheet"/>
 
-  <link href="favicon.svg" rel="icon" type="image/svg+xml" />
-  <link href="style.css" rel="stylesheet" />
-
-  <meta name="google-site-verification" content="THA4QllYOGNA8J7nSuU5EXCosLzWZMVvrLaPT3MGGIo" />
+  <meta name="google-site-verification" content="THA4QllYOGNA8J7nSuU5EXCosLzWZMVvrLaPT3MGGIo"/>
 
   <!-- Google tag / GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ60VDSDTD"></script>
@@ -33,25 +32,14 @@
     gtag('config', 'G-KJ60VDSDTD');
   </script>
 
-  <!-- Landco lead tracking -->
+  <!-- Landco grading lead tracking -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       var params = new URLSearchParams(window.location.search);
-
-      var trackingFields = [
-        'gclid',
-        'gbraid',
-        'wbraid',
-        'utm_source',
-        'utm_medium',
-        'utm_campaign',
-        'utm_term',
-        'utm_content'
-      ];
+      var trackingFields = ['gclid','gbraid','wbraid','utm_source','utm_medium','utm_campaign','utm_term','utm_content'];
 
       trackingFields.forEach(function (field) {
         var value = params.get(field);
-
         if (value) {
           localStorage.setItem('landco_' + field, value);
         }
@@ -74,13 +62,13 @@
         referrerInput.value = document.referrer || 'direct';
       }
 
-      function landcoTrack(eventName, eventLabel) {
+      function landcoTrack(eventName, label) {
         if (typeof gtag === 'function') {
           gtag('event', eventName, {
             event_category: 'lead',
-            event_label: eventLabel,
+            event_label: label,
             service: 'gwinnett_grading',
-            page_name: 'gwinnett_grading_landing_page',
+            page_name: 'grading_landing_page',
             value: 1,
             transport_type: 'beacon'
           });
@@ -89,41 +77,41 @@
 
       document.querySelectorAll('a[href^="tel:"]').forEach(function (link) {
         link.addEventListener('click', function () {
-          landcoTrack('phone_call_click', 'gwinnett_grading_phone_click');
+          landcoTrack('phone_call_click', 'grading_phone_click');
         });
       });
 
       document.querySelectorAll('a[href^="mailto:"]').forEach(function (link) {
         link.addEventListener('click', function () {
-          landcoTrack('email_click', 'gwinnett_grading_email_click');
+          landcoTrack('email_click', 'grading_email_click');
         });
       });
 
       document.querySelectorAll('a[href="#grading-quote"]').forEach(function (link) {
         link.addEventListener('click', function () {
-          landcoTrack('quote_button_click', 'gwinnett_grading_quote_button_click');
+          landcoTrack('quote_button_click', 'grading_quote_button_click');
         });
       });
 
-      var gradingForm = document.querySelector('form[name="grading-quote"]');
+      var form = document.querySelector('form[name="grading-quote"]');
       var formStarted = false;
 
-      if (gradingForm) {
-        gradingForm.querySelectorAll('input, select, textarea').forEach(function (field) {
+      if (form) {
+        form.querySelectorAll('input, select, textarea').forEach(function (field) {
           field.addEventListener('focus', function () {
             if (!formStarted) {
               formStarted = true;
-              landcoTrack('form_start', 'gwinnett_grading_form_started');
+              landcoTrack('form_start', 'grading_form_started');
             }
           });
         });
 
-        gradingForm.addEventListener('submit', function () {
+        form.addEventListener('submit', function () {
           if (typeof gtag === 'function') {
             gtag('event', 'generate_lead', {
               currency: 'USD',
               value: 1,
-              lead_source: 'gwinnett_grading_landing_page',
+              lead_source: 'grading_landing_page',
               service: 'gwinnett_grading',
               form_name: 'grading-quote',
               transport_type: 'beacon'
@@ -131,7 +119,7 @@
 
             gtag('event', 'grading_quote_submit', {
               event_category: 'lead',
-              event_label: 'gwinnett_grading_quote_form_submit',
+              event_label: 'grading_quote_form_submit',
               service: 'gwinnett_grading',
               value: 1,
               transport_type: 'beacon'
@@ -144,131 +132,53 @@
 
   <style>
     /*
-      Page-specific landing layer.
-      This keeps the original Landco style.css active,
-      but tightens the grading page for paid ad conversion.
+      Small landing-page layer only.
+      Main Landco look still comes from style.css.
     */
-
-    :root {
-      --landco-gold: #d4a017;
-      --landco-gold-light: #e5b82a;
-      --landco-black: #111111;
-      --landco-dark: #181818;
-      --landco-soft: #242424;
-      --landco-border: #333333;
-      --landco-white: #ffffff;
-      --landco-muted: #d0d0d0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      padding-bottom: 0;
-    }
-
-    .grading-ad-header {
-      background: #111111;
-      border-bottom: 1px solid var(--landco-border);
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-
-    .grading-header-wrap {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 18px;
-      padding-top: 14px;
-      padding-bottom: 14px;
-    }
-
-    .grading-brand {
-      color: var(--landco-white);
-      font-size: 22px;
-      font-weight: 900;
-      line-height: 1.1;
-    }
-
-    .grading-tagline {
-      color: var(--landco-muted);
-      font-size: 14px;
-      margin: 3px 0 0;
-    }
-
-    .grading-header-actions {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      flex-shrink: 0;
-    }
-
-    .grading-header-actions a {
-      text-decoration: none;
-      font-weight: 900;
-      border-radius: 8px;
-      padding: 11px 14px;
-      white-space: nowrap;
-    }
-
-    .grading-header-call {
-      background: var(--landco-gold);
-      color: #111111;
-    }
-
-    .grading-header-quote {
-      color: var(--landco-gold);
-      border: 2px solid var(--landco-gold);
-      background: transparent;
-    }
 
     .grading-hero {
       background:
-        linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.83)),
+        linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.82)),
         url("/images/gwinnett-driveway-grading-landco-hero.jpg");
       background-size: cover;
       background-position: center;
-      padding: 42px 0 44px;
+      padding: 44px 0;
     }
 
     .grading-hero-grid {
       display: grid;
-      grid-template-columns: 1.05fr .95fr;
+      grid-template-columns: minmax(0, 1.08fr) minmax(320px, .92fr);
       gap: 28px;
       align-items: start;
     }
 
-    .grading-hero-copy {
+    .grading-hero-card {
       background: rgba(0,0,0,.52);
-      border: 1px solid rgba(255,255,255,.16);
-      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 14px;
       padding: 28px;
-      box-shadow: 0 18px 42px rgba(0,0,0,.35);
     }
 
     .grading-eyebrow {
-      color: var(--landco-gold);
-      font-size: 13px;
-      font-weight: 900;
+      color: #d4a017;
+      font-weight: 800;
       text-transform: uppercase;
       letter-spacing: .08em;
+      font-size: 13px;
       margin: 0 0 10px;
     }
 
-    .grading-hero h1 {
-      color: #ffffff;
+    .grading-hero h2 {
+      color: #fff;
       font-size: clamp(34px, 6vw, 58px);
-      line-height: 1.02;
+      line-height: 1.03;
       margin: 0 0 14px;
     }
 
-    .grading-hero-sub {
-      color: #f2f2f2;
+    .grading-hero .hero-sub {
       font-size: 20px;
-      line-height: 1.5;
-      margin: 0 0 18px;
+      color: #f2f2f2;
+      max-width: 780px;
     }
 
     .grading-proof-row {
@@ -283,13 +193,13 @@
       border: 1px solid rgba(255,255,255,.16);
       border-radius: 10px;
       padding: 11px 10px;
-      color: #ffffff;
+      color: #fff;
+      font-weight: 800;
       text-align: center;
       font-size: 14px;
-      font-weight: 800;
     }
 
-    .grading-service-chips {
+    .grading-chip-row {
       display: flex;
       flex-wrap: wrap;
       gap: 9px;
@@ -298,132 +208,68 @@
 
     .grading-chip {
       background: rgba(212,160,23,.16);
-      color: #ffffff;
-      border: 1px solid rgba(212,160,23,.52);
+      color: #fff;
+      border: 1px solid rgba(212,160,23,.50);
       border-radius: 999px;
       padding: 8px 11px;
       font-size: 14px;
       font-weight: 800;
     }
 
-    .grading-cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 18px;
-      align-items: center;
-    }
-
-    .grading-btn {
-      display: inline-block;
-      background: var(--landco-gold);
-      color: #111111;
-      text-decoration: none;
-      font-weight: 900;
-      padding: 14px 18px;
-      border-radius: 8px;
-      border: 0;
-      cursor: pointer;
-      text-align: center;
-      font-size: 16px;
-      line-height: 1.2;
-    }
-
-    .grading-btn:hover,
-    .grading-header-call:hover,
-    .grading-floating-call:hover {
-      background: var(--landco-gold-light);
-    }
-
-    .grading-btn-outline {
-      background: transparent;
-      color: #ffffff;
-      border: 2px solid var(--landco-gold);
-    }
-
-    .grading-btn-outline:hover,
-    .grading-header-quote:hover,
-    .grading-floating-quote:hover {
-      background: rgba(212,160,23,.16);
-    }
-
-    .grading-trust-line {
-      color: #e8e8e8;
-      font-size: 15px;
-      margin: 15px 0 0;
-    }
-
-    .grading-trust-line a {
-      color: #ffffff;
-      font-weight: 900;
-    }
-
-    .grading-quote-card {
-      background: #ffffff;
-      color: #111111;
-      border-radius: 16px;
+    .grading-quote-box {
+      background: #fff;
+      color: #111;
+      border-radius: 14px;
       padding: 24px;
-      box-shadow: 0 20px 45px rgba(0,0,0,.42);
+      box-shadow: 0 20px 45px rgba(0,0,0,.38);
     }
 
-    .grading-quote-card h2 {
-      color: #111111;
+    .grading-quote-box h2 {
+      color: #111;
       margin: 0 0 8px;
       font-size: 28px;
       line-height: 1.15;
     }
 
-    .grading-quote-card p {
-      color: #333333;
+    .grading-quote-box p {
+      color: #333;
       margin: 0 0 14px;
     }
 
-    .grading-form label {
+    .quote-form label {
       display: block;
-      color: #111111;
-      font-weight: 900;
+      color: #111;
+      font-weight: 800;
       margin: 12px 0 5px;
     }
 
-    .grading-form input,
-    .grading-form select,
-    .grading-form textarea {
+    .quote-form input,
+    .quote-form select,
+    .quote-form textarea {
       width: 100%;
       padding: 12px;
       border: 1px solid #cfcfcf;
       border-radius: 8px;
       font-size: 16px;
       font-family: Arial, Helvetica, sans-serif;
-      background: #ffffff;
-      color: #111111;
+      background: #fff;
+      color: #111;
     }
 
-    .grading-form textarea {
+    .quote-form textarea {
       min-height: 95px;
       resize: vertical;
     }
 
-    .grading-form button {
+    .quote-form button {
       width: 100%;
       margin-top: 14px;
-      font-size: 17px;
-    }
-
-    .grading-form-note {
-      color: #555555 !important;
-      font-size: 13px;
-      margin-top: 10px !important;
-    }
-
-    .grading-form-note a {
-      color: #111111;
-      font-weight: 900;
     }
 
     .grading-strip {
-      background: #111111;
-      border-top: 1px solid var(--landco-border);
-      border-bottom: 1px solid var(--landco-border);
+      background: #111;
+      border-top: 1px solid #333;
+      border-bottom: 1px solid #333;
       padding: 16px 0;
     }
 
@@ -436,32 +282,11 @@
 
     .grading-strip-item {
       background: #1a1a1a;
-      color: #ffffff;
-      border: 1px solid var(--landco-border);
+      color: #fff;
+      border: 1px solid #333;
       border-radius: 10px;
       padding: 13px 10px;
       font-weight: 900;
-    }
-
-    .grading-section {
-      padding: 48px 0;
-    }
-
-    .grading-section-dark {
-      background: #090909;
-      border-top: 1px solid var(--landco-border);
-      border-bottom: 1px solid var(--landco-border);
-    }
-
-    .grading-section h2 {
-      font-size: clamp(28px, 4vw, 42px);
-      line-height: 1.15;
-      margin: 0 0 18px;
-      color: #ffffff;
-    }
-
-    .grading-section p {
-      color: var(--landco-muted);
     }
 
     .grading-card-grid {
@@ -472,44 +297,16 @@
     }
 
     .grading-card {
-      background: var(--landco-dark);
-      border: 1px solid var(--landco-border);
+      background: #181818;
+      border: 1px solid #333;
       border-radius: 14px;
       padding: 22px;
     }
 
     .grading-card h3 {
-      color: #ffffff;
+      color: #fff;
       margin: 0 0 8px;
       font-size: 21px;
-    }
-
-    .grading-card p {
-      margin-bottom: 0;
-    }
-
-    .grading-callout {
-      background: var(--landco-soft);
-      border-left: 5px solid var(--landco-gold);
-      border-radius: 10px;
-      padding: 18px;
-      margin-top: 24px;
-    }
-
-    .grading-callout p {
-      color: #ffffff;
-      margin: 0;
-    }
-
-    .grading-bullets {
-      color: var(--landco-muted);
-      margin: 16px 0 0;
-      padding-left: 22px;
-      font-size: 17px;
-    }
-
-    .grading-bullets li {
-      margin-bottom: 10px;
     }
 
     .grading-floating-actions {
@@ -530,52 +327,31 @@
     }
 
     .grading-floating-call {
-      background: var(--landco-gold);
-      color: #111111;
+      background: #d4a017;
+      color: #111;
     }
 
     .grading-floating-quote {
-      background: #111111;
-      color: #ffffff;
-      border: 2px solid var(--landco-gold);
+      background: #111;
+      color: #fff;
+      border: 2px solid #d4a017;
     }
 
     @media (max-width: 900px) {
-      .grading-header-wrap {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .grading-header-actions {
-        width: 100%;
-      }
-
-      .grading-header-actions a {
-        flex: 1;
-        text-align: center;
-      }
-
-      .grading-hero {
-        padding-top: 28px;
-      }
-
       .grading-hero-grid,
-      .grading-card-grid {
-        grid-template-columns: 1fr;
-      }
-
+      .grading-card-grid,
       .grading-proof-row,
       .grading-strip-grid {
         grid-template-columns: 1fr;
       }
 
-      .grading-hero-copy,
-      .grading-quote-card {
-        padding: 20px;
+      .grading-hero {
+        padding: 28px 0 36px;
       }
 
-      .grading-cta-row .grading-btn {
-        width: 100%;
+      .grading-hero-card,
+      .grading-quote-box {
+        padding: 20px;
       }
 
       .grading-floating-actions {
@@ -633,10 +409,10 @@
       {
         "@type": "Service",
         "@id": "https://www.landcodevelopmentllc.com/grading#service",
-        "name": "Gwinnett County Skid Steer Grading and Driveway Grading",
+        "name": "Gwinnett County Driveway Grading and Skid Steer Grading",
         "serviceType": [
-          "Skid steer grading",
           "Driveway grading",
+          "Skid steer grading",
           "Yard grading",
           "Land grading",
           "Drainage grading",
@@ -658,42 +434,9 @@
           "Grayson, GA",
           "Lilburn, GA",
           "Buford, GA",
-          "Suwanee, GA",
-          "Norcross, GA",
-          "Duluth, GA",
-          "Sugar Hill, GA"
+          "Suwanee, GA"
         ],
-        "description": "Landco Development LLC provides skid steer grading, driveway grading, yard grading, land grading, drainage grading, house pads, gravel driveway prep, land clearing, and small site preparation in Gwinnett County, Georgia."
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://www.landcodevelopmentllc.com/grading#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What grading services does Landco Development LLC provide in Gwinnett County?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Landco Development LLC provides skid steer grading, driveway grading, yard leveling, rough grading, finish grading, drainage grading, house pads, gravel driveway prep, and small site preparation in Gwinnett County, Georgia."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can grading help with drainage problems?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Proper grading can help move water away from low spots, driveways, foundations, and areas where runoff is causing problems. Some projects may also need French drains, swales, catch basins, or additional drainage correction."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What Gwinnett County areas do you serve for grading work?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Landco Development LLC serves Gwinnett County and nearby areas including Lawrenceville, Snellville, Dacula, Loganville, Grayson, Lilburn, Buford, Suwanee, Norcross, Duluth, and Sugar Hill."
-            }
-          }
-        ]
+        "description": "Landco Development LLC provides driveway grading, skid steer grading, yard grading, drainage grading, house pads, gravel driveway prep, land clearing, and small site preparation in Gwinnett County, Georgia."
       }
     ]
   }
@@ -701,66 +444,71 @@
 </head>
 
 <body>
-  <header class="grading-ad-header" id="top">
-    <div class="container grading-header-wrap">
-      <div>
-        <div class="grading-brand">Landco Development LLC</div>
-        <p class="grading-tagline">Gwinnett County Grading • Driveways • Yard Leveling • House Pads</p>
-      </div>
+  <header class="header" id="top">
+    <div class="container">
+      <h1>Landco Development LLC</h1>
+      <p class="tagline">Land Clearing • Grading • French Drains • Drainage Correction (Georgia)</p>
 
-      <div class="grading-header-actions">
-        <a class="grading-header-call" href="tel:+19122541918">Call/Text 912-254-1918</a>
-        <a class="grading-header-quote" href="#grading-quote">Get Quote</a>
-      </div>
+      <nav class="nav">
+        <a href="index.html#top">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="land-clearing.html">Land Clearing</a>
+        <a href="grading.html">Grading</a>
+        <a href="french-drains.html">French Drains</a>
+        <a href="drainage-correction.html">Drainage</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="header-call" href="tel:+19122541918">Call 912-254-1918</a>
     </div>
   </header>
 
   <main>
-    <section class="grading-hero">
+    <section class="hero grading-hero">
       <div class="container grading-hero-grid">
-        <div class="grading-hero-copy">
-          <p class="grading-eyebrow">Gwinnett County Skid Steer Grading Contractor</p>
+        <div class="grading-hero-card">
+          <p class="grading-eyebrow">Gwinnett County Grading Contractor</p>
 
-          <h1>Need Driveway, Yard, or Pad Grading in Gwinnett County?</h1>
+          <h2>Driveway, Yard & Pad Grading That Makes Rough Ground Usable</h2>
 
-          <p class="grading-hero-sub">
-            Landco Development LLC handles skid steer grading, driveway grading, yard leveling,
-            drainage grading, house pads, gravel driveway prep, and small site prep in Lawrenceville,
-            Snellville, Dacula, Loganville, Grayson, Lilburn, Buford, Suwanee, and nearby Gwinnett County areas.
+          <p class="hero-sub">
+            Landco Development LLC provides driveway grading, skid steer grading, yard leveling,
+            drainage grading, house pads, gravel driveway prep, and small site prep across Gwinnett County.
           </p>
 
           <div class="grading-proof-row">
             <div class="grading-proof">Call/Text Direct</div>
             <div class="grading-proof">Fast Quote Path</div>
-            <div class="grading-proof">Drainage-Minded Grading</div>
+            <div class="grading-proof">Operator-Led Work</div>
           </div>
 
-          <div class="grading-service-chips" aria-label="Gwinnett County grading services">
+          <div class="grading-chip-row">
             <span class="grading-chip">Driveway Grading</span>
             <span class="grading-chip">Skid Steer Grading</span>
             <span class="grading-chip">Yard Leveling</span>
             <span class="grading-chip">House Pads</span>
-            <span class="grading-chip">Drainage Grading</span>
             <span class="grading-chip">Gravel Prep</span>
+            <span class="grading-chip">Drainage Slope</span>
           </div>
 
-          <div class="grading-cta-row">
-            <a class="grading-btn" href="tel:+19122541918">Call or Text 912-254-1918</a>
-            <a class="grading-btn grading-btn-outline" href="#grading-quote">Get a Fast Quote</a>
+          <div class="cta-row">
+            <a class="cta-btn" href="tel:+19122541918">Call or Text 912-254-1918</a>
+            <a class="cta-btn secondary" href="#grading-quote">Request a Grading Quote</a>
           </div>
 
-          <p class="grading-trust-line">
-            Best fit: washed-out driveways, uneven yards, rough lots, building pads, drainage slope problems, and gravel driveway prep.
-            <br />Email: <a href="mailto:landcodevelopment2@gmail.com">landcodevelopment2@gmail.com</a>
+          <p class="hero-sub" style="font-size:15px; margin-top:16px;">
+            Serving Lawrenceville, Snellville, Dacula, Loganville, Grayson, Lilburn, Buford, Suwanee, and nearby Gwinnett County areas.
           </p>
         </div>
 
-        <div class="grading-quote-card" id="contact">
-          <h2>Get a Gwinnett Grading Quote</h2>
+        <div class="grading-quote-box" id="contact">
+          <h2>Get a Fast Grading Quote</h2>
           <p>Send your city, project type, and what needs to be corrected. You can text photos after submitting.</p>
 
           <form
-            class="grading-form"
+            class="quote-form"
             id="grading-quote"
             name="grading-quote"
             method="POST"
@@ -768,34 +516,34 @@
             netlify-honeypot="bot-field"
             action="/Thank-you.Html"
           >
-            <input type="hidden" name="form-name" value="grading-quote" />
-            <input type="hidden" name="source-page" value="grading" />
-            <input type="hidden" name="service" value="gwinnett-skid-steer-grading" />
-            <input type="hidden" name="landing-page" value="" />
-            <input type="hidden" name="referrer" value="" />
-            <input type="hidden" name="gclid" value="" />
-            <input type="hidden" name="gbraid" value="" />
-            <input type="hidden" name="wbraid" value="" />
-            <input type="hidden" name="utm_source" value="" />
-            <input type="hidden" name="utm_medium" value="" />
-            <input type="hidden" name="utm_campaign" value="" />
-            <input type="hidden" name="utm_term" value="" />
-            <input type="hidden" name="utm_content" value="" />
+            <input type="hidden" name="form-name" value="grading-quote"/>
+            <input type="hidden" name="source-page" value="grading"/>
+            <input type="hidden" name="service" value="gwinnett-grading"/>
+            <input type="hidden" name="landing-page" value=""/>
+            <input type="hidden" name="referrer" value=""/>
+            <input type="hidden" name="gclid" value=""/>
+            <input type="hidden" name="gbraid" value=""/>
+            <input type="hidden" name="wbraid" value=""/>
+            <input type="hidden" name="utm_source" value=""/>
+            <input type="hidden" name="utm_medium" value=""/>
+            <input type="hidden" name="utm_campaign" value=""/>
+            <input type="hidden" name="utm_term" value=""/>
+            <input type="hidden" name="utm_content" value=""/>
 
             <p style="display:none;">
-              <label>Do not fill this out: <input name="bot-field" /></label>
+              <label>Do not fill this out: <input name="bot-field"/></label>
             </p>
 
             <label for="name">Name</label>
-            <input id="name" name="name" type="text" autocomplete="name" required />
+            <input id="name" name="name" type="text" autocomplete="name" required/>
 
             <label for="phone">Phone</label>
-            <input id="phone" name="phone" type="tel" autocomplete="tel" required />
+            <input id="phone" name="phone" type="tel" autocomplete="tel" required/>
 
             <label for="city">Project City</label>
-            <input id="city" name="city" type="text" autocomplete="address-level2" placeholder="Example: Lawrenceville, Snellville, Dacula" required />
+            <input id="city" name="city" type="text" autocomplete="address-level2" placeholder="Example: Lawrenceville, Snellville, Dacula" required/>
 
-            <label for="project-type">Type of Work</label>
+            <label for="project-type">Type of Grading Work</label>
             <select id="project-type" name="project-type" required>
               <option value="">Select one</option>
               <option value="driveway-grading">Driveway grading</option>
@@ -803,20 +551,20 @@
               <option value="yard-grading">Yard grading / leveling</option>
               <option value="drainage-grading">Drainage grading</option>
               <option value="house-pad">House pad / building pad</option>
-              <option value="site-prep">Small site prep</option>
               <option value="gravel-driveway-prep">Gravel driveway prep</option>
+              <option value="site-prep">Small site prep</option>
               <option value="land-clearing-and-grading">Land clearing and grading</option>
               <option value="other">Other grading work</option>
             </select>
 
             <label for="message">What needs to be fixed?</label>
-            <textarea id="message" name="message" rows="4" placeholder="Example: washed driveway, uneven yard, house pad, water not draining, gravel prep, rough area needs grading." required></textarea>
+            <textarea id="message" name="message" rows="4" placeholder="Example: washed driveway, uneven yard, house pad, rough access road, gravel prep, or water not draining." required></textarea>
 
-            <button class="grading-btn" type="submit">Send Quote Request</button>
+            <button class="cta-btn" type="submit">Send Quote Request</button>
           </form>
 
-          <p class="grading-form-note">
-            Prefer to talk now? <a href="tel:+19122541918">Call or text 912-254-1918</a>.
+          <p style="font-size:13px; color:#555; margin-top:10px;">
+            Prefer to talk now? <a href="tel:+19122541918" style="font-weight:800; color:#111;">Call or text 912-254-1918</a>.
           </p>
         </div>
       </div>
@@ -824,16 +572,16 @@
 
     <section class="grading-strip">
       <div class="container grading-strip-grid">
-        <div class="grading-strip-item">Gwinnett Driveway Grading</div>
+        <div class="grading-strip-item">Driveway Grading</div>
         <div class="grading-strip-item">Yard Leveling</div>
         <div class="grading-strip-item">House Pads</div>
-        <div class="grading-strip-item">Drainage Slope Correction</div>
+        <div class="grading-strip-item">Gravel Prep</div>
       </div>
     </section>
 
-    <section class="grading-section">
+    <section class="services">
       <div class="container">
-        <h2>Gwinnett County Grading for Driveways, Yards, Pads & Drainage Problems</h2>
+        <h2>Gwinnett Grading Work Built Around Real Property Problems</h2>
 
         <p>
           Rough ground, washed-out driveways, uneven yards, soft areas, poor runoff, and overgrown property
@@ -844,84 +592,49 @@
         <div class="grading-card-grid">
           <div class="grading-card">
             <h3>Driveway Grading</h3>
-            <p>
-              Driveway shaping, gravel driveway prep, low spot correction, washout repair, crown building,
-              and access road grading for properties across Gwinnett County.
-            </p>
+            <p>Driveway shaping, gravel driveway prep, low spot correction, washout repair, crown building, and access road grading.</p>
           </div>
 
           <div class="grading-card">
             <h3>Skid Steer Grading</h3>
-            <p>
-              Rough grading, finish grading, slope correction, surface prep, and small-machine grading work
-              for residential and small commercial properties.
-            </p>
+            <p>Rough grading, finish grading, slope correction, surface prep, and small-machine grading work.</p>
           </div>
 
           <div class="grading-card">
             <h3>Yard Grading</h3>
-            <p>
-              Yard leveling, uneven ground correction, final grading, and surface prep before seed, sod,
-              straw, or landscaping.
-            </p>
+            <p>Yard leveling, uneven ground correction, final grading, and prep before seed, sod, straw, or landscaping.</p>
           </div>
 
           <div class="grading-card">
             <h3>Drainage Grading</h3>
-            <p>
-              Slope and runoff correction to help move water away from problem areas, driveways, low spots,
-              foundations, and usable yard space.
-            </p>
+            <p>Slope and runoff correction to help move water away from low spots, driveways, foundations, and usable yard space.</p>
           </div>
 
           <div class="grading-card">
             <h3>House Pads & Site Prep</h3>
-            <p>
-              House pad preparation, small site prep, building pad shaping, parking areas, gravel prep,
-              and construction access support.
-            </p>
+            <p>House pad preparation, building pad shaping, parking areas, gravel prep, and small site preparation.</p>
           </div>
 
           <div class="grading-card">
             <h3>Land Clearing & Grading</h3>
-            <p>
-              Brush clearing, fence line clearing, small clearing projects, and grading work to turn rough
-              property into usable space.
-            </p>
+            <p>Brush clearing, fence line clearing, small clearing projects, and grading work to turn rough property usable.</p>
           </div>
         </div>
 
-        <div class="grading-callout">
+        <div class="callout">
           <p>
-            <strong>Best-fit projects:</strong> driveway grading, yard grading, land grading, drainage grading,
-            house pads, small site prep, gravel driveway prep, access road grading, and land clearing with grading.
+            <strong>Best-fit projects:</strong> driveway grading, yard grading, drainage grading, house pads, gravel driveway prep, access road grading, and small site prep.
           </p>
         </div>
 
-        <div class="grading-cta-row">
-          <a class="grading-btn" href="tel:+19122541918">Call or Text for Grading</a>
-          <a class="grading-btn grading-btn-outline" href="#grading-quote">Request Quote</a>
+        <div class="cta-row">
+          <a class="cta-btn" href="tel:+19122541918">Call or Text for Grading</a>
+          <a class="cta-btn secondary" href="#grading-quote">Request Quote</a>
         </div>
       </div>
     </section>
 
-    <section class="grading-section grading-section-dark">
-      <div class="container">
-        <h2>What’s Included</h2>
-
-        <ul class="grading-bullets">
-          <li>Skid steer grading for rough or uneven ground</li>
-          <li>Driveway grading, gravel driveway prep, and washout correction</li>
-          <li>Yard grading and leveling for usable outdoor space</li>
-          <li>Drainage grading to improve runoff and reduce standing water</li>
-          <li>House pads, parking areas, and small site preparation</li>
-          <li>Land clearing, brush clearing, and grading in one project</li>
-          <li>Final grading before seed, straw, sod, gravel, or the next trade</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="grading-section">
+    <section class="services">
       <div class="container">
         <h2>Serving Gwinnett County, Georgia</h2>
 
@@ -931,19 +644,22 @@
           Norcross, Duluth, Sugar Hill, and nearby areas.
         </p>
 
-        <p>
-          If your property needs better access, better drainage, a cleaner driveway, a flatter yard,
-          a prepared house pad, or rough land turned into usable ground, Landco Development LLC can help.
-        </p>
+        <ul class="bullet-list">
+          <li>Driveway grading and gravel prep</li>
+          <li>Skid steer grading for rough or uneven ground</li>
+          <li>Yard grading and leveling</li>
+          <li>Drainage grading and runoff correction</li>
+          <li>House pads, small site prep, and access grading</li>
+        </ul>
 
-        <div class="grading-cta-row">
-          <a class="grading-btn" href="tel:+19122541918">Call 912-254-1918</a>
-          <a class="grading-btn grading-btn-outline" href="#grading-quote">Get Quote</a>
+        <div class="cta-row">
+          <a class="cta-btn" href="tel:+19122541918">Call 912-254-1918</a>
+          <a class="cta-btn secondary" href="#grading-quote">Get Quote</a>
         </div>
       </div>
     </section>
 
-    <section class="grading-section grading-section-dark">
+    <section class="services">
       <div class="container">
         <h2>Why Landco Development LLC</h2>
 
@@ -958,14 +674,14 @@
           work better after the machine leaves.
         </p>
 
-        <div class="grading-cta-row">
-          <a class="grading-btn" href="tel:+19122541918">Call or Text Now</a>
-          <a class="grading-btn grading-btn-outline" href="https://share.google/VPTTty0vot6EEEihj" rel="noopener" target="_blank">See Google Reviews</a>
+        <div class="cta-row">
+          <a class="cta-btn" href="tel:+19122541918">Call or Text Now</a>
+          <a class="cta-btn secondary" href="https://share.google/VPTTty0vot6EEEihj" rel="noopener" target="_blank">See Google Reviews</a>
         </div>
       </div>
     </section>
 
-    <section class="grading-section">
+    <section class="services">
       <div class="container">
         <h2>Gwinnett Grading Questions</h2>
 
