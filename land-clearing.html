@@ -4,49 +4,49 @@
 
 <head>
 
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Civil Site Preparation Contractor in Georgia | Grading, Drainage &amp; Contractor Support | Landco Development LLC</title>
+  <title>Land Clearing Contractor in North Georgia | Brush Clearing & Forestry Mulching | Landco Development LLC</title>
 
-  <meta name="description" content="Civil site preparation, grading support, drainage work, land clearing, access prep and contractor support in Georgia. Landco Development LLC helps contractors, developers, engineers and property owners move site work forward. Call or text 912-254-1918." />
+  <meta name="description" content="Land clearing, brush clearing, fence line clearing, forestry mulching, lot clearing and site prep in North Georgia. Landco Development LLC serves Gwinnett County, Lawrenceville, Dacula, Auburn, Athens and nearby areas. Call or text 912-254-1918." />
 
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
+  <link rel="canonical" href="https://www.landcodevelopmentllc.com/land-clearing" />
+
   <meta name="theme-color" content="#111111" />
 
-  <meta name="google-site-verification" content="THA4QllYOGNA8J7nSuU5EXCosLzWZMVvrLaPT3MGGIo" />
-
-  <link rel="canonical" href="https://www.landcodevelopmentllc.com/civil-government.html" />
-
-  <link rel="stylesheet" href="/style.css" />
-
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+  <meta name="keywords" content="land clearing contractor North Georgia, land clearing Gwinnett County, land clearing Lawrenceville GA, brush clearing, lot clearing, fence line clearing, forestry mulching, site prep, site preparation, land clearing and grading, Dacula GA land clearing, Auburn GA land clearing, Athens GA land clearing" />
 
   <meta property="og:type" content="website" />
 
   <meta property="og:site_name" content="Landco Development LLC" />
 
-  <meta property="og:url" content="https://www.landcodevelopmentllc.com/civil-government.html" />
+  <meta property="og:url" content="https://www.landcodevelopmentllc.com/land-clearing" />
 
-  <meta property="og:title" content="Civil Site Preparation Contractor in Georgia | Landco Development LLC" />
+  <meta property="og:title" content="Land Clearing Contractor in North Georgia | Landco Development LLC" />
 
-  <meta property="og:description" content="Civil site prep, grading support, drainage work, land clearing, access prep and contractor support by Landco Development LLC." />
+  <meta property="og:description" content="Brush clearing, lot clearing, fence line clearing, forestry mulching and site prep in North Georgia. Call or text Landco Development LLC at 912-254-1918." />
 
-  <meta property="og:image" content="https://www.landcodevelopmentllc.com/images/IMG_5910.JPG" />
-
-  <meta property="og:image:alt" content="Civil site preparation and access grading work by Landco Development LLC in Georgia" />
+  <meta property="og:image" content="https://www.landcodevelopmentllc.com/images/mulch-after.jpg" />
 
   <meta name="twitter:card" content="summary_large_image" />
 
-  <meta name="twitter:title" content="Civil Site Preparation Contractor in Georgia | Landco Development LLC" />
+  <meta name="twitter:title" content="Land Clearing Contractor in North Georgia | Landco Development LLC" />
 
-  <meta name="twitter:description" content="Civil site preparation, grading support, drainage, land clearing, access prep and contractor support in Georgia." />
+  <meta name="twitter:description" content="Land clearing, brush clearing, fence line clearing, forestry mulching and site prep in North Georgia." />
 
-  <meta name="twitter:image" content="https://www.landcodevelopmentllc.com/images/IMG_5910.JPG" />
+  <meta name="twitter:image" content="https://www.landcodevelopmentllc.com/images/mulch-after.jpg" />
+
+  <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
+
+  <link href="/style.css" rel="stylesheet" />
+
+  <meta name="google-site-verification" content="THA4QllYOGNA8J7nSuU5EXCosLzWZMVvrLaPT3MGGIo" />
+
+  <!-- GA4 Tracking -->
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ60VDSDTD"></script>
 
@@ -54,629 +54,287 @@
 
     window.dataLayer = window.dataLayer || [];
 
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){ dataLayer.push(arguments); }
 
-    gtag('js', new Date());
+    gtag("js", new Date());
 
-    gtag('config', 'G-KJ60VDSDTD');
+    gtag("config", "G-KJ60VDSDTD");
 
-    gtag('config', 'AW-11478133009');
+    function landcoTrack(action, label) {
+
+      if (typeof gtag === "function") {
+
+        gtag("event", action, {
+
+          event_category: "lead",
+
+          event_label: label || "land_clearing_page",
+
+          page_title: document.title,
+
+          page_location: window.location.href
+
+        });
+
+      }
+
+      return true;
+
+    }
+
+    function landcoSubmitForm(event, label) {
+
+      event.preventDefault();
+
+      var form = event.target;
+
+      var submitted = false;
+
+      function submitOnce() {
+
+        if (submitted) return;
+
+        submitted = true;
+
+        form.submit();
+
+      }
+
+      if (typeof gtag === "function") {
+
+        gtag("event", "generate_lead", {
+
+          event_category: "lead",
+
+          event_label: label || "land_clearing_quote_form",
+
+          page_title: document.title,
+
+          page_location: window.location.href,
+
+          event_callback: submitOnce,
+
+          event_timeout: 800
+
+        });
+
+        setTimeout(submitOnce, 900);
+
+      } else {
+
+        submitOnce();
+
+      }
+
+      return false;
+
+    }
+
+    function landcoSetHiddenValue(name, value) {
+
+      var field = document.querySelector('[name="' + name + '"]');
+
+      if (field && value) field.value = value;
+
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+
+      var params = new URLSearchParams(window.location.search);
+
+      landcoSetHiddenValue("page_url", window.location.href);
+
+      landcoSetHiddenValue("referrer", document.referrer);
+
+      landcoSetHiddenValue("utm_source", params.get("utm_source"));
+
+      landcoSetHiddenValue("utm_medium", params.get("utm_medium"));
+
+      landcoSetHiddenValue("utm_campaign", params.get("utm_campaign"));
+
+      landcoSetHiddenValue("utm_term", params.get("utm_term"));
+
+      landcoSetHiddenValue("utm_content", params.get("utm_content"));
+
+      landcoSetHiddenValue("gclid", params.get("gclid"));
+
+      landcoSetHiddenValue("msclkid", params.get("msclkid"));
+
+    });
 
   </script>
 
   <style>
 
-    .brand-name{
+    .landco-card-grid,
 
-      margin:0;
+    .landco-proof-grid {
 
-      font-size:clamp(28px, 4vw, 42px);
+      display: grid;
 
-      font-weight:800;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
 
-      line-height:1.05;
+      gap: 1rem;
 
-      color:var(--black);
-
-    }
-
-    .hero-inner{
-
-      max-width:960px;
-
-      margin:0 auto;
+      margin-top: 1.25rem;
 
     }
 
-    .hero h1{
+    .landco-card,
 
-      margin:0 auto;
+    .landco-proof-card {
 
-      max-width:980px;
+      background: #fff;
 
-      font-size:clamp(34px, 5vw, 58px);
+      border: 1px solid rgba(0,0,0,0.08);
 
-      line-height:1.05;
+      border-radius: 18px;
 
-      color:var(--black);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
 
-    }
-
-    .eyebrow{
-
-      display:inline-block;
-
-      margin:0 0 10px;
-
-      font-size:13px;
-
-      font-weight:bold;
-
-      letter-spacing:.04em;
-
-      text-transform:uppercase;
-
-      color:#7a6320;
+      overflow: hidden;
 
     }
 
-    .cta-row{
+    .landco-card {
 
-      display:flex;
-
-      justify-content:center;
-
-      gap:12px;
-
-      flex-wrap:wrap;
-
-      margin-top:22px;
-
-      margin-bottom:16px;
+      padding: 1.15rem;
 
     }
 
-    .hero-points{
+    .landco-card h3,
 
-      display:flex;
+    .landco-proof-card h3 {
 
-      justify-content:center;
-
-      gap:10px;
-
-      flex-wrap:wrap;
-
-      margin-top:12px;
-
-      color:var(--muted);
-
-      font-weight:bold;
-
-      font-size:14px;
+      margin-top: 0;
 
     }
 
-    .hero-points span{
+    .landco-proof-card img {
 
-      display:inline-block;
+      width: 100%;
 
-      padding:8px 12px;
+      height: 235px;
 
-      background:#fff;
+      object-fit: cover;
 
-      border:1px solid #ddd;
-
-      border-radius:999px;
+      display: block;
 
     }
 
-    .hero-photo{
+    .landco-proof-card div {
 
-      max-width:960px;
-
-      margin:26px auto 0;
-
-      border:1px solid #ddd;
-
-      border-radius:var(--radius);
-
-      overflow:hidden;
-
-      background:#fff;
-
-      box-shadow:0 8px 24px rgba(0,0,0,0.10);
+      padding: 1rem;
 
     }
 
-    .hero-photo img{
+    .landco-link-row {
 
-      display:block;
+      display: flex;
 
-      width:100%;
+      flex-wrap: wrap;
 
-      height:min(52vw, 440px);
+      gap: 0.6rem;
 
-      object-fit:cover;
-
-      object-position:center center;
+      margin-top: 1.25rem;
 
     }
 
-    .hero-photo figcaption{
+    .landco-link-row a,
 
-      padding:12px 14px;
+    .landco-link-row span {
 
-      color:var(--muted);
+      display: inline-flex;
 
-      font-size:14px;
+      border-radius: 999px;
 
-      text-align:left;
+      padding: 0.55rem 0.75rem;
 
-      background:#fff;
+      background: #f3f3f3;
 
-    }
+      color: #111;
 
-    .hero-card{
+      text-decoration: none;
 
-      max-width:760px;
+      font-weight: 700;
 
-      margin:26px auto 0;
-
-      padding:20px 20px;
-
-      border:1px solid #ddd;
-
-      border-left:4px solid var(--gold);
-
-      border-radius:var(--radius);
-
-      background:#fff;
-
-      text-align:left;
+      font-size: 0.92rem;
 
     }
 
-    .hero-card h3{
+    .form-hide {
 
-      margin:0 0 10px;
-
-      color:var(--black);
-
-      font-size:18px;
+      display: none;
 
     }
 
-    .hero-card ul{
+    .floating-cta {
 
-      margin:0;
-
-      padding-left:20px;
-
-      color:var(--muted);
+      display: none;
 
     }
 
-    .mini-ctas{
+    @media (max-width: 850px) {
 
-      display:flex;
+      .landco-card-grid,
 
-      flex-wrap:wrap;
+      .landco-proof-grid {
 
-      gap:10px;
-
-      justify-content:center;
-
-      margin:24px 0 0;
-
-    }
-
-    .mini-cta{
-
-      display:inline-block;
-
-      padding:10px 14px;
-
-      border:1px solid #ddd;
-
-      border-radius:999px;
-
-      text-decoration:none;
-
-      color:var(--text);
-
-      background:#fff;
-
-      font-weight:bold;
-
-      font-size:15px;
-
-    }
-
-    .mini-cta:hover{
-
-      border-color:var(--gold);
-
-    }
-
-    .split-grid{
-
-      display:grid;
-
-      grid-template-columns:repeat(2, minmax(0, 1fr));
-
-      gap:24px;
-
-      margin-top:30px;
-
-      align-items:start;
-
-    }
-
-    .info-card,
-
-    .quote-card{
-
-      padding:22px 18px;
-
-      border:1px solid #ddd;
-
-      border-radius:var(--radius);
-
-      background:#fff;
-
-      text-align:left;
-
-    }
-
-    .info-card h3,
-
-    .quote-card h3{
-
-      margin:0 0 10px;
-
-      font-size:18px;
-
-      color:var(--black);
-
-    }
-
-    .info-card p,
-
-    .info-card li,
-
-    .quote-card p,
-
-    .quote-card li{
-
-      color:var(--muted);
-
-    }
-
-    .info-card ul,
-
-    .quote-card ul{
-
-      margin:0;
-
-      padding-left:20px;
-
-    }
-
-    .note{
-
-      margin:0;
-
-      padding:22px 18px;
-
-      border:1px solid #ddd;
-
-      border-left:4px solid var(--gold);
-
-      border-radius:var(--radius);
-
-      background:#fff;
-
-      text-align:left;
-
-      color:var(--muted);
-
-    }
-
-    .note h3{
-
-      margin:0 0 10px;
-
-      color:var(--black);
-
-      font-size:18px;
-
-    }
-
-    .note p{
-
-      margin:0 0 12px;
-
-    }
-
-    .note p:last-child{
-
-      margin-bottom:0;
-
-    }
-
-    .section-intro{
-
-      max-width:850px;
-
-      margin:10px auto 0;
-
-      color:var(--muted);
-
-    }
-
-    .proof-grid{
-
-      display:grid;
-
-      grid-template-columns:repeat(3, minmax(0, 1fr));
-
-      gap:22px;
-
-      margin-top:30px;
-
-    }
-
-    .proof-card{
-
-      border:1px solid #ddd;
-
-      border-radius:var(--radius);
-
-      overflow:hidden;
-
-      background:#fff;
-
-      text-align:left;
-
-    }
-
-    .proof-card img{
-
-      display:block;
-
-      width:100%;
-
-      height:260px;
-
-      object-fit:cover;
-
-    }
-
-    .proof-card-content{
-
-      padding:18px;
-
-    }
-
-    .proof-card h3{
-
-      margin:0 0 8px;
-
-      color:var(--black);
-
-      font-size:18px;
-
-    }
-
-    .proof-card p{
-
-      margin:0;
-
-      color:var(--muted);
-
-    }
-
-    .area-list{
-
-      display:flex;
-
-      flex-wrap:wrap;
-
-      gap:10px;
-
-      justify-content:center;
-
-      margin-top:24px;
-
-    }
-
-    .area-list a,
-
-    .area-list span{
-
-      display:inline-block;
-
-      padding:10px 14px;
-
-      border:1px solid #ddd;
-
-      border-radius:999px;
-
-      background:#fff;
-
-      color:var(--text);
-
-      text-decoration:none;
-
-      font-weight:bold;
-
-    }
-
-    .faq details{
-
-      max-width:850px;
-
-      margin:0 auto 14px;
-
-      text-align:left;
-
-      border:1px solid #ddd;
-
-      border-radius:var(--radius);
-
-      background:#fff;
-
-      padding:16px 18px;
-
-    }
-
-    .faq summary{
-
-      cursor:pointer;
-
-      font-weight:bold;
-
-      color:var(--black);
-
-    }
-
-    .faq p{
-
-      margin:12px 0 0;
-
-      color:var(--muted);
-
-    }
-
-    .quote-grid{
-
-      display:grid;
-
-      grid-template-columns:0.95fr 1.05fr;
-
-      gap:24px;
-
-      margin-top:30px;
-
-      align-items:start;
-
-    }
-
-    .quote-form{
-
-      max-width:none;
-
-      margin:0;
-
-    }
-
-    .fine-print{
-
-      color:var(--muted);
-
-      font-size:14px;
-
-      margin-top:12px;
-
-    }
-
-    .hidden{
-
-      display:none;
-
-    }
-
-    .sticky-cta{
-
-      display:none;
-
-      position:fixed;
-
-      left:12px;
-
-      right:12px;
-
-      bottom:12px;
-
-      z-index:1000;
-
-      gap:10px;
-
-      background:rgba(255,255,255,0.96);
-
-      border:1px solid #ddd;
-
-      border-radius:14px;
-
-      padding:10px;
-
-      box-shadow:0 10px 24px rgba(0,0,0,0.12);
-
-    }
-
-    .sticky-cta a{
-
-      flex:1;
-
-      text-decoration:none;
-
-      text-align:center;
-
-      padding:14px 12px;
-
-      border-radius:8px;
-
-      font-weight:bold;
-
-    }
-
-    .sticky-call{
-
-      background:var(--gold);
-
-      color:#000;
-
-    }
-
-    .sticky-quote{
-
-      background:#000;
-
-      color:#fff;
-
-    }
-
-    @media (max-width:900px){
-
-      .split-grid,
-
-      .quote-grid,
-
-      .proof-grid{
-
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
 
       }
 
-      .proof-card img{
+      .landco-proof-card img {
 
-        height:auto;
-
-      }
-
-    }
-
-    @media (max-width:800px){
-
-      .sticky-cta{
-
-        display:flex;
+        height: 240px;
 
       }
 
-      body{
+      .floating-cta {
 
-        padding-bottom:92px;
+        display: flex;
+
+        position: fixed;
+
+        left: 0;
+
+        right: 0;
+
+        bottom: 0;
+
+        z-index: 999;
+
+        background: #111;
+
+        border-top: 1px solid rgba(255,255,255,0.16);
+
+      }
+
+      .floating-cta a {
+
+        flex: 1;
+
+        text-align: center;
+
+        padding: 0.9rem 0.5rem;
+
+        color: #fff;
+
+        font-weight: 800;
+
+        text-decoration: none;
+
+      }
+
+      .floating-cta a + a {
+
+        border-left: 1px solid rgba(255,255,255,0.16);
+
+      }
+
+      body {
+
+        padding-bottom: 58px;
 
       }
 
@@ -694,18 +352,6 @@
 
       {
 
-        "@type": "WebSite",
-
-        "@id": "https://www.landcodevelopmentllc.com/#website",
-
-        "name": "Landco Development LLC",
-
-        "url": "https://www.landcodevelopmentllc.com/"
-
-      },
-
-      {
-
         "@type": "LocalBusiness",
 
         "@id": "https://www.landcodevelopmentllc.com/#business",
@@ -718,13 +364,11 @@
 
         "email": "landcodevelopment2@gmail.com",
 
-        "image": "https://www.landcodevelopmentllc.com/images/IMG_5910.JPG",
+        "image": "https://www.landcodevelopmentllc.com/images/mulch-after.jpg",
 
-        "priceRange": "$$",
+        "description": "Landco Development LLC provides land clearing, grading, drainage correction, French drains, forestry mulching and site preparation services in North Georgia.",
 
         "areaServed": [
-
-          "Georgia",
 
           "Gwinnett County, GA",
 
@@ -736,19 +380,17 @@
 
           "Athens, GA",
 
-          "North Georgia",
-
-          "Northeast Georgia"
+          "North Georgia"
 
         ],
 
         "sameAs": [
 
-          "https://youtube.com/@Landco321",
+          "https://share.google/VPTTty0vot6EEEihj",
 
           "https://www.thumbtack.com/pro/referral/ZLnEyCIeTjnC7H0",
 
-          "https://share.google/VPTTty0vot6EEEihj",
+          "https://youtube.com/@Landco321",
 
           "https://facebook.com/Landco123"
 
@@ -758,63 +400,29 @@
 
       {
 
-        "@type": "WebPage",
-
-        "@id": "https://www.landcodevelopmentllc.com/civil-government.html#webpage",
-
-        "url": "https://www.landcodevelopmentllc.com/civil-government.html",
-
-        "name": "Civil Site Preparation, Grading and Drainage Support in Georgia",
-
-        "description": "Civil site preparation, grading support, drainage work, land clearing, access preparation, erosion-control support and contractor support in Georgia by Landco Development LLC.",
-
-        "isPartOf": {
-
-          "@id": "https://www.landcodevelopmentllc.com/#website"
-
-        },
-
-        "about": {
-
-          "@id": "https://www.landcodevelopmentllc.com/#business"
-
-        },
-
-        "primaryImageOfPage": {
-
-          "@type": "ImageObject",
-
-          "url": "https://www.landcodevelopmentllc.com/images/IMG_5910.JPG"
-
-        }
-
-      },
-
-      {
-
         "@type": "Service",
 
-        "@id": "https://www.landcodevelopmentllc.com/civil-government.html#service",
+        "@id": "https://www.landcodevelopmentllc.com/land-clearing#service",
 
-        "name": "Civil Site Preparation, Grading, Drainage and Contractor Support",
+        "name": "Land Clearing and Forestry Mulching",
 
         "serviceType": [
 
-          "Civil site preparation",
+          "Land Clearing",
 
-          "Grading support",
+          "Brush Clearing",
 
-          "Drainage work",
+          "Lot Clearing",
 
-          "Land clearing",
+          "Fence Line Clearing",
 
-          "Access preparation",
+          "Forestry Mulching",
 
-          "Erosion-control support",
+          "Site Prep",
 
-          "Contractor site work support",
+          "Site Preparation",
 
-          "Subcontract grading support"
+          "Land Clearing and Grading"
 
         ],
 
@@ -824,9 +432,9 @@
 
         },
 
-        "areaServed": [
+        "url": "https://www.landcodevelopmentllc.com/land-clearing",
 
-          "Georgia",
+        "areaServed": [
 
           "Gwinnett County, GA",
 
@@ -838,13 +446,11 @@
 
           "Athens, GA",
 
-          "North Georgia",
-
-          "Northeast Georgia"
+          "North Georgia"
 
         ],
 
-        "description": "Landco Development LLC supports contractors, developers, engineers, property owners and project managers with civil site preparation, grading, drainage, land clearing, access preparation and field support for defined site work scopes."
+        "description": "Land clearing, brush clearing, fence line clearing, forestry mulching, lot clearing and site prep for residential and light commercial properties in North Georgia."
 
       },
 
@@ -852,7 +458,7 @@
 
         "@type": "FAQPage",
 
-        "@id": "https://www.landcodevelopmentllc.com/civil-government.html#faq",
+        "@id": "https://www.landcodevelopmentllc.com/land-clearing#faq",
 
         "mainEntity": [
 
@@ -860,13 +466,13 @@
 
             "@type": "Question",
 
-            "name": "What type of civil site work does Landco support?",
+            "name": "Do you handle small land clearing jobs?",
 
             "acceptedAnswer": {
 
               "@type": "Answer",
 
-              "text": "Landco Development LLC supports civil site preparation, grading, access preparation, drainage correction, land clearing, erosion-control support, pad preparation, driveway or access road grading and defined subcontract site work scopes."
+              "text": "Yes. Landco Development LLC handles brush clearing, fence line clearing, access clearing, small lot clearing and clearing tied to grading, drainage or site prep when the scope fits the equipment and property."
 
             }
 
@@ -876,13 +482,13 @@
 
             "@type": "Question",
 
-            "name": "Can I send plans or drawings for review?",
+            "name": "Do you provide grading after land clearing?",
 
             "acceptedAnswer": {
 
               "@type": "Answer",
 
-              "text": "Yes. Send the project location, plans or drawing link, scope notes, site photos and schedule pressure. Landco will review the field scope and respond with the fastest practical next step."
+              "text": "Yes. Many land clearing projects need grading afterward so the property is not just cleared, but also shaped into usable ground for driveways, pads, drainage, fencing or the next phase of work."
 
             }
 
@@ -892,99 +498,15 @@
 
             "@type": "Question",
 
-            "name": "Do you work with contractors, developers and project managers?",
+            "name": "Is forestry mulching always the best option?",
 
             "acceptedAnswer": {
 
               "@type": "Answer",
 
-              "text": "Yes. Landco Development LLC can support contractors, developers, engineers, project managers and property owners when the scope fits the company’s equipment, schedule and field capabilities."
+              "text": "Not always. Forestry mulching can be efficient for brush, saplings and overgrowth, but some properties also need grading, debris handling, access correction, drainage work or site preparation."
 
             }
-
-          },
-
-          {
-
-            "@type": "Question",
-
-            "name": "Can Landco help when site work is holding up the next phase?",
-
-            "acceptedAnswer": {
-
-              "@type": "Answer",
-
-              "text": "Yes. Landco focuses on practical site work that helps improve access, drainage, grading, stabilization and readiness so the project can move toward the next trade or next phase."
-
-            }
-
-          },
-
-          {
-
-            "@type": "Question",
-
-            "name": "Does Landco handle government or municipal-related site work?",
-
-            "acceptedAnswer": {
-
-              "@type": "Answer",
-
-              "text": "Landco Development LLC is positioned for civil, contractor-support and government-related site work where the scope involves practical land clearing, grading, drainage, access preparation or site preparation."
-
-            }
-
-          },
-
-          {
-
-            "@type": "Question",
-
-            "name": "What should I send for a civil project request?",
-
-            "acceptedAnswer": {
-
-              "@type": "Answer",
-
-              "text": "Send the project location, company or organization name, project type, scope needed, timeline, site photos, plan link if available and the specific site problem or bottleneck that needs to be moved forward."
-
-            }
-
-          }
-
-        ]
-
-      },
-
-      {
-
-        "@type": "BreadcrumbList",
-
-        "@id": "https://www.landcodevelopmentllc.com/civil-government.html#breadcrumb",
-
-        "itemListElement": [
-
-          {
-
-            "@type": "ListItem",
-
-            "position": 1,
-
-            "name": "Home",
-
-            "item": "https://www.landcodevelopmentllc.com/"
-
-          },
-
-          {
-
-            "@type": "ListItem",
-
-            "position": 2,
-
-            "name": "Civil & Government",
-
-            "item": "https://www.landcodevelopmentllc.com/civil-government.html"
 
           }
 
@@ -1002,41 +524,39 @@
 
 <body>
 
-  <header class="header">
+  <header class="header" id="top">
 
     <div class="container">
 
-      <p class="brand-name">Landco Development LLC</p>
+      <h1>Landco Development LLC</h1>
 
-      <p class="tagline">Civil Site Preparation • Grading • Drainage • Land Clearing (Georgia)</p>
+      <p class="tagline">Land Clearing • Grading • French Drains • Drainage Correction</p>
 
       <nav class="nav" aria-label="Main navigation">
 
-        <a href="/">Home</a>
+        <a href="/#top">Home</a>
 
         <a href="/#services">Services</a>
 
-        <a href="/land-clearing">Land Clearing</a>
+        <a href="/land-clearing" aria-current="page">Land Clearing</a>
 
         <a href="/grading">Grading</a>
 
         <a href="/french-drains">French Drains</a>
 
-        <a href="/drainage-correction.html">Drainage Correction</a>
+        <a href="/civil-government">Civil &amp; Government</a>
 
-        <a href="/civil-government.html" aria-current="page">Civil &amp; Government</a>
+        <a href="/#projects">Projects</a>
 
-        <a href="/civil-contractor-request.html">Project Request</a>
+        <a href="/#service-areas">Service Areas</a>
 
-        <a href="#service-area">Service Areas</a>
+        <a href="/#reviews">Reviews</a>
 
-        <a href="#reviews">Reviews</a>
-
-        <a href="#project-request">Contact</a>
+        <a href="#quote">Contact</a>
 
       </nav>
 
-      <a class="header-call" href="tel:+19122541918" onclick="gtag('event','phone_call_click',{event_category:'lead',event_label:'civil_header'});">Call 912-254-1918</a>
+      <a class="header-call" href="tel:+19122541918" onclick="return landcoTrack('click_to_call', 'header_land_clearing');">Call 912-254-1918</a>
 
     </div>
 
@@ -1046,327 +566,29 @@
 
     <section class="hero">
 
-      <div class="container hero-inner">
+      <div class="container">
 
-        <span class="eyebrow">Civil site prep &amp; contractor support in Georgia</span>
+        <p class="eyebrow">Land clearing contractor serving North Georgia</p>
 
-        <h1>Civil Site Preparation, Grading &amp; Drainage Support That Keeps Projects Moving</h1>
+        <h2>Land Clearing, Brush Clearing &amp; Forestry Mulching in North Georgia</h2>
 
         <p class="hero-sub">
 
-          Landco Development LLC supports contractors, developers, engineers, project managers and property owners with land clearing, grading, drainage correction, access preparation, erosion-control support and practical site work that helps move projects toward the next phase.
+          Landco Development LLC clears overgrown property, brush, fence lines, small lots and rough work areas so the ground is ready for grading, drainage, driveways, pads, fencing or the next phase of site preparation.
 
         </p>
 
-        <div class="cta-row">
+        <p>
 
-          <a class="cta-btn" href="#project-request">Send Project Request</a>
+          <a class="cta-btn" href="tel:+19122541918" onclick="return landcoTrack('click_to_call', 'hero_land_clearing');">Call or Text 912-254-1918</a>
 
-          <a class="cta-btn secondary" href="tel:+19122541918" onclick="gtag('event','phone_call_click',{event_category:'lead',event_label:'civil_hero_call'});">Call or Text 912-254-1918</a>
-
-        </div>
-
-        <div class="hero-points" aria-label="Core civil site work services">
-
-          <span>Civil Site Prep</span>
-
-          <span>Grading Support</span>
-
-          <span>Drainage Work</span>
-
-          <span>Land Clearing</span>
-
-          <span>Access Prep</span>
-
-          <span>Contractor Support</span>
-
-        </div>
-
-        <figure class="hero-photo">
-
-          <img src="/images/IMG_5910.JPG" alt="Access road grading and civil site preparation support by Landco Development LLC in Georgia" loading="eager" fetchpriority="high" decoding="async" />
-
-          <figcaption>Send the plans. Landco helps turn site work bottlenecks into forward motion.</figcaption>
-
-        </figure>
-
-        <div class="hero-card">
-
-          <h3>Civil Site Problems We Help Solve</h3>
-
-          <ul>
-
-            <li>Site work holding up the next trade or next phase</li>
-
-            <li>Access areas that need clearing, shaping or stabilization</li>
-
-            <li>Drainage or runoff issues slowing down usable site conditions</li>
-
-            <li>Clearing needed before grading, pads, utilities, fencing or driveway access</li>
-
-            <li>Small civil scopes that need practical field execution</li>
-
-            <li>Contractors needing reliable support for defined site work scopes</li>
-
-          </ul>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <section class="services" id="services">
-
-      <div class="container">
-
-        <h2>Civil Site Work Built Around Sequence, Access &amp; the Next Phase</h2>
-
-        <p class="section-intro">
-
-          Civil work is more than moving dirt. The site has to support access, drainage, grades, stabilization, inspections, trades, schedules and the next phase of construction. Landco Development LLC approaches site work from a land-development mindset.
+          <a class="cta-btn secondary" href="#quote" onclick="return landcoTrack('quote_button_click', 'hero_land_clearing');">Request a Land Clearing Quote</a>
 
         </p>
 
-        <div class="service-grid">
+        <p class="hero-sub">
 
-          <article class="service">
-
-            <h3>Civil Site Preparation</h3>
-
-            <p>Site readiness support including clearing, access prep, rough grading, pad areas, work zones and practical field preparation before the next phase.</p>
-
-          </article>
-
-          <article class="service">
-
-            <h3>Grading Support</h3>
-
-            <p>Driveway and access road grading, slopes, pads, rough grading, finish grading, surface correction and usable-ground preparation.</p>
-
-          </article>
-
-          <article class="service">
-
-            <h3>Drainage &amp; Water Control</h3>
-
-            <p>Surface runoff correction, drainage grading, swales, French drains, catch basins and water-management support when the site needs to move water correctly.</p>
-
-          </article>
-
-          <article class="service">
-
-            <h3>Land Clearing &amp; Mulching</h3>
-
-            <p>Brush clearing, lot clearing, fence line clearing, forestry mulching and clearing before grading, drainage, access or site preparation work.</p>
-
-          </article>
-
-          <article class="service">
-
-            <h3>Erosion-Control Support</h3>
-
-            <p>Practical field support around runoff awareness, site stabilization, silt-control support, construction access and BMP coordination when needed.</p>
-
-          </article>
-
-          <article class="service">
-
-            <h3>Contractor Support</h3>
-
-            <p>Support for contractors, developers, engineers and project managers who need dependable field execution for defined site work scopes.</p>
-
-          </article>
-
-        </div>
-
-        <div class="mini-ctas" aria-label="Related civil and site preparation services">
-
-          <a class="mini-cta" href="/civil-contractor-request.html">Project Request</a>
-
-          <a class="mini-cta" href="/grading">Grading</a>
-
-          <a class="mini-cta" href="/land-clearing">Land Clearing</a>
-
-          <a class="mini-cta" href="/drainage-correction.html">Drainage Correction</a>
-
-          <a class="mini-cta" href="/french-drains">French Drains</a>
-
-          <a class="mini-cta" href="/lawrenceville-ga.html">Lawrenceville</a>
-
-          <a class="mini-cta" href="/dacula-ga.html">Dacula</a>
-
-          <a class="mini-cta" href="/auburn-ga.html">Auburn</a>
-
-          <a class="mini-cta" href="/athens-ga.html">Athens</a>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <section class="trust">
-
-      <div class="container">
-
-        <h2>What a Civil Support Scope Can Include</h2>
-
-        <p class="section-intro">
-
-          Every project is different. Some scopes need access and clearing. Others need grading, drainage, erosion-control support, site stabilization, driveway access, pad preparation or practical subcontract support to move the schedule forward.
-
-        </p>
-
-        <div class="split-grid">
-
-          <article class="info-card">
-
-            <h3>Typical Work Items</h3>
-
-            <ul>
-
-              <li>Review project location, plans, photos, field notes and site access</li>
-
-              <li>Identify clearing, grading, drainage, erosion-control and access issues</li>
-
-              <li>Open or prepare work areas for equipment, trades or future site work</li>
-
-              <li>Shape access roads, driveway entrances, pads, shoulders and usable areas</li>
-
-              <li>Support drainage correction, water movement and stabilization needs</li>
-
-              <li>Help move defined scopes toward the next phase of the project</li>
-
-            </ul>
-
-          </article>
-
-          <article class="note">
-
-            <h3>Landco Standard</h3>
-
-            <p>Civil work is not just moving dirt. The work has to support access, drainage, sequence, stabilization and the next trade on site. Landco looks at the project like a land-development problem, not just a machine pass.</p>
-
-            <p><strong>That is the difference between basic equipment work and development-minded site preparation.</strong></p>
-
-          </article>
-
-        </div>
-
-        <div class="split-grid">
-
-          <article class="info-card">
-
-            <h3>Why Civil Site Work Slows Down</h3>
-
-            <ul>
-
-              <li>No clear field plan for access, drainage or sequencing</li>
-
-              <li>Clearing, grading and drainage treated as separate problems</li>
-
-              <li>Runoff or soft areas ignored until they delay the next phase</li>
-
-              <li>Access routes not prepared for equipment, deliveries or trades</li>
-
-              <li>Small scope gaps left between contractors</li>
-
-              <li>Site not shaped or stabilized for practical use</li>
-
-            </ul>
-
-          </article>
-
-          <article class="info-card">
-
-            <h3>Best-Fit Project Requests</h3>
-
-            <ul>
-
-              <li>Civil site preparation and access support</li>
-
-              <li>Contractor or subcontract grading support</li>
-
-              <li>Drainage correction and water-control support</li>
-
-              <li>Land clearing before grading, utilities, fencing or site work</li>
-
-              <li>Pad preparation, driveway access and small site scopes</li>
-
-              <li>Defined site work tied to plans, photos, notes or project schedules</li>
-
-            </ul>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <section class="projects" id="projects">
-
-      <div class="container">
-
-        <h2>Civil Site Prep &amp; Field Support Proof</h2>
-
-        <p class="section-intro">
-
-          Project owners, contractors and managers need to see that the work supports the next step. The goal is access, usable grade, drainage awareness and forward motion on the site.
-
-        </p>
-
-        <div class="proof-grid">
-
-          <article class="proof-card">
-
-            <img src="/images/IMG_5910.JPG" alt="Access road and site preparation support by Landco Development LLC" loading="lazy" decoding="async" />
-
-            <div class="proof-card-content">
-
-              <h3>Access &amp; Site Prep</h3>
-
-              <p>Access routes and work areas shaped so equipment, materials and the next phase can move through the site more efficiently.</p>
-
-            </div>
-
-          </article>
-
-          <article class="proof-card">
-
-            <img src="/images/IMG_5908.JPG" alt="Civil grading and clay surface correction by Landco Development LLC" loading="lazy" decoding="async" />
-
-            <div class="proof-card-content">
-
-              <h3>Grading &amp; Surface Correction</h3>
-
-              <p>Red clay shaped and corrected with slope, transition, pad area and site usability in mind.</p>
-
-            </div>
-
-          </article>
-
-          <article class="proof-card">
-
-            <img src="/images/IMG_5909.JPG" alt="Finished stabilized site area after grading by Landco Development LLC" loading="lazy" decoding="async" />
-
-            <div class="proof-card-content">
-
-              <h3>Stabilized Finish</h3>
-
-              <p>Finished site conditions that support maintenance, access, drainage and the next stage of work.</p>
-
-            </div>
-
-          </article>
-
-        </div>
-
-        <p class="gallery-note">
-
-          For more project proof, field updates and business presence, view Landco Development LLC on Google, YouTube, Thumbtack and Facebook.
+          Brush clearing • Fence line clearing • Lot clearing • Forestry mulching • Site prep • Clearing + grading
 
         </p>
 
@@ -1374,51 +596,35 @@
 
     </section>
 
-    <section class="trust" id="reviews">
+    <section class="services">
 
       <div class="container">
 
-        <h2>Built for Practical Field Execution</h2>
+        <h2>Common Land Clearing Problems We Correct</h2>
 
-        <p class="section-intro">
+        <ul class="bullet-list">
 
-          Landco Development LLC is built around hands-on grading, drainage, clearing and site preparation experience. The focus is practical field work that supports access, schedule, water movement and the next phase of development.
+          <li>Overgrown property that cannot be walked, maintained, fenced or used cleanly</li>
 
-        </p>
+          <li>Brush, vines, briars, saplings and small growth blocking access</li>
 
-        <div class="trust-grid">
+          <li>Fence lines that need to be cleared before installation, repair or maintenance</li>
 
-          <a class="trust-card" href="https://share.google/VPTTty0vot6EEEihj" target="_blank" rel="noopener">
+          <li>Driveway, pad, drainage, grading or site prep work blocked by vegetation</li>
 
-            <h3>Google Business Profile</h3>
+          <li>Rough property that needs clearing and grading together</li>
 
-            <p>See the local business profile, customer-facing updates and field presence directly on Google.</p>
+          <li>Areas that need a cleaner, more usable finish after clearing or mulching</li>
 
-          </a>
-
-          <a class="trust-card" href="https://www.thumbtack.com/pro/referral/ZLnEyCIeTjnC7H0" target="_blank" rel="noopener">
-
-            <h3>Service Profile</h3>
-
-            <p>Review active service positioning and project-driven lead history.</p>
-
-          </a>
-
-          <a class="trust-card" href="https://youtube.com/@Landco321" target="_blank" rel="noopener">
-
-            <h3>YouTube Project Content</h3>
-
-            <p>Project footage and business content that support legitimacy, field experience and real work.</p>
-
-          </a>
-
-        </div>
+        </ul>
 
         <div class="callout">
 
-          <h3>Send the Scope</h3>
+          <p>
 
-          <p>Send project location, plans, photos, site notes or schedule pressure. Call or text <a href="tel:+19122541918" onclick="gtag('event','phone_call_click',{event_category:'lead',event_label:'civil_direct_contact'});">912-254-1918</a> for the fastest path.</p>
+            <strong>Landco Standard:</strong> clearing should not just knock down brush. It should leave the property cleaner, more accessible, easier to maintain and ready for grading, drainage, driveways, pads, fencing or the next phase of work.
+
+          </p>
 
         </div>
 
@@ -1426,27 +632,265 @@
 
     </section>
 
-    <section class="services" id="service-area">
+    <section class="services">
 
       <div class="container">
 
-        <h2>Civil Site Prep Service Areas</h2>
+        <h2>Land Clearing Work Built Around Real Property Problems</h2>
 
-        <p class="section-intro">
+        <p class="section-sub">
 
-          Landco Development LLC provides civil site preparation, grading support, drainage work, land clearing, access preparation and contractor support across Georgia, with a strong focus on North Georgia, Northeast Georgia and Gwinnett County service areas.
+          A good clearing job starts with what the property needs after the vegetation is removed. Some projects only need brush cleared. Others need forestry mulching, debris handling, grading, drainage correction, access improvement or site prep before the property is ready for use.
 
         </p>
 
-        <div class="area-list" aria-label="Civil site preparation service areas">
+        <div class="landco-card-grid">
 
-          <a href="/lawrenceville-ga.html">Lawrenceville</a>
+          <article class="landco-card">
 
-          <a href="/dacula-ga.html">Dacula</a>
+            <h3>Brush &amp; Overgrowth Clearing</h3>
 
-          <a href="/auburn-ga.html">Auburn</a>
+            <p>Clearing thick vegetation, saplings, vines, briars and unwanted growth so the property can be accessed, maintained, improved or prepared for the next step.</p>
 
-          <a href="/athens-ga.html">Athens</a>
+          </article>
+
+          <article class="landco-card">
+
+            <h3>Fence Line Clearing</h3>
+
+            <p>Cleaning property lines, fence rows, access lanes and boundary areas before fence installation, fence repair, livestock use, maintenance or property cleanup.</p>
+
+          </article>
+
+          <article class="landco-card">
+
+            <h3>Lot Clearing</h3>
+
+            <p>Residential and light commercial lot clearing for property owners who need vegetation removed before grading, drainage, driveway work, pads or site prep.</p>
+
+          </article>
+
+          <article class="landco-card">
+
+            <h3>Forestry Mulching</h3>
+
+            <p>Forestry mulching can be a strong option for brush, saplings and overgrowth when the goal is access, cleanup and a more natural finished surface.</p>
+
+          </article>
+
+          <article class="landco-card">
+
+            <h3>Land Clearing &amp; Grading</h3>
+
+            <p>Many properties need more than clearing. Landco can clear the work area and then shape the ground so the property becomes more usable.</p>
+
+          </article>
+
+          <article class="landco-card">
+
+            <h3>Site Preparation</h3>
+
+            <p>Clearing tied to driveways, pads, drainage correction, access paths, fencing, erosion control, maintenance areas and the next phase of property work.</p>
+
+          </article>
+
+        </div>
+
+        <div class="landco-link-row">
+
+          <a href="/grading">Grading</a>
+
+          <a href="/french-drains">French Drains</a>
+
+          <a href="/drainage-correction">Drainage Correction</a>
+
+          <a href="/civil-government">Civil &amp; Government</a>
+
+          <a href="/lawrenceville-ga">Lawrenceville</a>
+
+          <a href="/dacula-ga">Dacula</a>
+
+          <a href="/auburn-ga">Auburn</a>
+
+          <a href="/athens-ga">Athens</a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="services">
+
+      <div class="container">
+
+        <h2>What a Typical Land Clearing Scope Can Include</h2>
+
+        <div class="landco-card-grid">
+
+          <article class="landco-card">
+
+            <h3>Typical Work Items</h3>
+
+            <ul class="bullet-list">
+
+              <li>Walk the site and identify access, vegetation, debris and next-phase needs</li>
+
+              <li>Clear brush, overgrowth, vines, briars, saplings and unwanted vegetation</li>
+
+              <li>Clean up fence lines, access paths, work areas and property edges</li>
+
+              <li>Use forestry mulching when appropriate for the site and finish goal</li>
+
+              <li>Plan debris handling: mulch, pile, haul-off or client-directed cleanup</li>
+
+              <li>Prepare the area for grading, drainage, driveways, pads, fencing or site prep</li>
+
+            </ul>
+
+          </article>
+
+          <article class="landco-card">
+
+            <h3>Why Clearing Jobs Fail</h3>
+
+            <ul class="bullet-list">
+
+              <li>No plan for what happens after the brush is removed</li>
+
+              <li>Access paths and fence lines left too rough to use</li>
+
+              <li>Stumps, debris or uneven ground block the next phase of work</li>
+
+              <li>Drainage and runoff problems get ignored during clearing</li>
+
+              <li>Property is cleared but not shaped, stabilized or prepared</li>
+
+              <li>Clearing, grading and drainage are treated as separate problems</li>
+
+            </ul>
+
+          </article>
+
+          <article class="landco-card">
+
+            <h3>Best-Fit Projects</h3>
+
+            <ul class="bullet-list">
+
+              <li>Brush clearing and overgrowth removal</li>
+
+              <li>Fence line clearing and property line cleanup</li>
+
+              <li>Small lot clearing for residential and light commercial sites</li>
+
+              <li>Forestry mulching for brush, saplings and access improvement</li>
+
+              <li>Land clearing before grading, drainage, pads, driveways or fencing</li>
+
+              <li>Clearing plus rough or finish grading</li>
+
+            </ul>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="services" id="projects">
+
+      <div class="container">
+
+        <h2>Recent Land Clearing &amp; Forestry Mulching Work</h2>
+
+        <p class="section-sub">
+
+          Real project proof helps property owners understand the difference between a quick cutdown and a cleared area that is ready for use, maintenance, grading, drainage, fencing or the next phase of work.
+
+        </p>
+
+        <div class="landco-proof-grid">
+
+          <article class="landco-proof-card">
+
+            <img src="/images/mulch-before.jpg" alt="Before forestry mulching and brush clearing by Landco Development LLC" loading="lazy" />
+
+            <div>
+
+              <h3>Before Clearing</h3>
+
+              <p>Dense brush, overgrowth and limited access before forestry mulching and property cleanup.</p>
+
+            </div>
+
+          </article>
+
+          <article class="landco-proof-card">
+
+            <img src="/images/mulch-after.jpg" alt="After forestry mulching and land clearing by Landco Development LLC" loading="lazy" />
+
+            <div>
+
+              <h3>After Mulching</h3>
+
+              <p>Cleared and mulched work area with better access, cleaner ground and improved usability.</p>
+
+            </div>
+
+          </article>
+
+          <article class="landco-proof-card">
+
+            <img src="/images/IMG_5910.JPG" alt="Cleared access and site prep work by Landco Development LLC" loading="lazy" />
+
+            <div>
+
+              <h3>Ready for the Next Phase</h3>
+
+              <p>Clearing and site prep often lead into grading, driveway access, pads, drainage, fencing or finish work.</p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+        <p>
+
+          <a class="cta-btn" href="tel:+19122541918" onclick="return landcoTrack('click_to_call', 'project_section_land_clearing');">Call or Text Now</a>
+
+          <a class="cta-btn secondary" href="#quote" onclick="return landcoTrack('quote_button_click', 'project_section_land_clearing');">Quote Form</a>
+
+        </p>
+
+      </div>
+
+    </section>
+
+    <section class="services" id="service-areas">
+
+      <div class="container">
+
+        <h2>Land Clearing Service Areas</h2>
+
+        <p class="section-sub">
+
+          Landco Development LLC provides land clearing, brush clearing, fence line clearing, forestry mulching, grading, drainage correction and site preparation across North Georgia, with a strong focus on Gwinnett County, Lawrenceville, Dacula, Auburn, Athens and nearby service areas.
+
+        </p>
+
+        <div class="landco-link-row">
+
+          <a href="/lawrenceville-ga">Lawrenceville</a>
+
+          <a href="/dacula-ga">Dacula</a>
+
+          <a href="/auburn-ga">Auburn</a>
+
+          <a href="/athens-ga">Athens</a>
 
           <span>Gwinnett County</span>
 
@@ -1466,207 +910,167 @@
 
           <span>North Georgia</span>
 
-          <span>Northeast Georgia</span>
-
         </div>
 
       </div>
 
     </section>
 
-    <section class="trust faq" id="faq">
+    <section class="services" id="faq">
 
       <div class="container">
 
-        <h2>Civil Site Work Questions</h2>
+        <h2>Land Clearing Questions</h2>
 
-        <p class="section-intro">
+        <h3>Do you handle small land clearing jobs?</h3>
 
-          A few common questions before sending a civil, contractor-support or project site work request.
+        <p>Yes. Landco Development LLC handles brush clearing, fence line clearing, access clearing, small lot clearing and clearing tied to grading, drainage or site prep when the scope fits the equipment and property.</p>
 
-        </p>
+        <h3>Do you provide grading after clearing?</h3>
 
-        <details>
+        <p>Yes. Many land clearing projects need grading afterward so the property is not just cleared, but also shaped into usable ground for driveways, pads, drainage, fencing or the next phase of work.</p>
 
-          <summary>What type of civil site work does Landco support?</summary>
+        <h3>Do you haul away debris?</h3>
 
-          <p>Landco Development LLC supports civil site preparation, grading, access preparation, drainage correction, land clearing, erosion-control support, pad preparation, driveway or access road grading and defined subcontract site work scopes.</p>
+        <p>Debris handling depends on the job. Some projects involve mulching, piling, haul-off or client-directed cleanup. The right approach depends on access, site conditions, budget and final use.</p>
 
-        </details>
+        <h3>Is forestry mulching always the best option?</h3>
 
-        <details>
+        <p>Not always. Forestry mulching can be efficient for brush, saplings and overgrowth, but some properties also need grading, debris handling, access correction, drainage work or site preparation.</p>
 
-          <summary>Can I send plans or drawings for review?</summary>
+        <h3>Can clearing help prepare for fencing?</h3>
 
-          <p>Yes. Send the project location, plans or drawing link, scope notes, site photos and schedule pressure. Landco will review the field scope and respond with the fastest practical next step.</p>
+        <p>Yes. Fence line clearing can clean up property lines, access lanes and boundary areas before fence installation, fence repair, livestock areas or regular maintenance.</p>
 
-        </details>
+        <h3>What should I send for a quote?</h3>
 
-        <details>
-
-          <summary>Do you work with contractors, developers and project managers?</summary>
-
-          <p>Yes. Landco Development LLC can support contractors, developers, engineers, project managers and property owners when the scope fits the company’s equipment, schedule and field capabilities.</p>
-
-        </details>
-
-        <details>
-
-          <summary>Can Landco help when site work is holding up the next phase?</summary>
-
-          <p>Yes. Landco focuses on practical site work that helps improve access, drainage, grading, stabilization and readiness so the project can move toward the next trade or next phase.</p>
-
-        </details>
-
-        <details>
-
-          <summary>Does Landco handle government or municipal-related site work?</summary>
-
-          <p>Landco Development LLC is positioned for civil, contractor-support and government-related site work where the scope involves practical land clearing, grading, drainage, access preparation or site preparation.</p>
-
-        </details>
-
-        <details>
-
-          <summary>What should I send for a civil project request?</summary>
-
-          <p>Send the project location, company or organization name, project type, scope needed, timeline, site photos, plan link if available and the specific site problem or bottleneck that needs to be moved forward.</p>
-
-        </details>
+        <p>Send the project location, project type, photos or video if available, what needs to be cleared, whether grading or drainage is needed afterward and whether debris should be mulched, piled, hauled off or handled another way.</p>
 
       </div>
 
     </section>
 
-    <section class="contact" id="project-request">
+    <section class="contact" id="quote">
 
       <div class="container">
 
-        <h2>Send a Civil Project Request</h2>
+        <h2>Get a Fast Land Clearing Quote</h2>
 
-        <p class="section-intro">
+        <p class="section-sub">
 
-          Send the project location, scope, timeline and any plans or site photos available. Landco will review the field scope and respond with the fastest practical next step.
+          Send your city, project type and what needs to be cleared. You can text photos after submitting.
 
         </p>
 
-        <div class="quote-grid">
+        <form name="land-clearing-quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you" onsubmit="return landcoSubmitForm(event, 'land_clearing_quote_form');">
 
-          <article class="quote-card">
+          <input type="hidden" name="form-name" value="land-clearing-quote" />
 
-            <h3>Good Fit Requests</h3>
+          <input type="hidden" name="page-source" value="land-clearing" />
 
-            <ul>
+          <input type="hidden" name="page_url" value="" />
 
-              <li>Civil site preparation and grading support</li>
+          <input type="hidden" name="referrer" value="" />
 
-              <li>Access roads, driveway entrances and work area prep</li>
+          <input type="hidden" name="utm_source" value="" />
 
-              <li>Land clearing before grading, drainage, fencing or pads</li>
+          <input type="hidden" name="utm_medium" value="" />
 
-              <li>Drainage correction, runoff control and site stabilization support</li>
+          <input type="hidden" name="utm_campaign" value="" />
 
-              <li>Defined contractor or subcontract site work scopes</li>
+          <input type="hidden" name="utm_term" value="" />
 
-              <li>Project requests with plans, photos, notes or timeline pressure</li>
+          <input type="hidden" name="utm_content" value="" />
 
-            </ul>
+          <input type="hidden" name="gclid" value="" />
 
-            <a class="cta-btn" href="/civil-contractor-request.html">Open Project Request Page</a>
+          <input type="hidden" name="msclkid" value="" />
 
-          </article>
+          <p class="form-hide">
 
-          <form class="quote-form" name="civil-project-request" method="POST" action="/thank-you.html" data-netlify="true" data-netlify-honeypot="bot-field" onsubmit="gtag('event','form_submit_click',{event_category:'lead',event_label:'civil_project_request_form'});">
+            <label>Do not fill this out:
 
-            <input type="hidden" name="form-name" value="civil-project-request" />
+              <input name="bot-field" />
 
-            <p class="hidden">
+            </label>
 
-              <label>Do not fill this out: <input name="bot-field" /></label>
+          </p>
 
-            </p>
+          <label>
 
-            <input type="hidden" name="page" value="civil-government" />
+            Name
 
-            <input type="hidden" name="utm_source" value="" />
+            <input type="text" name="name" autocomplete="name" required />
 
-            <input type="hidden" name="utm_medium" value="" />
+          </label>
 
-            <input type="hidden" name="utm_campaign" value="" />
+          <label>
 
-            <input type="hidden" name="utm_term" value="" />
+            Phone
 
-            <input type="hidden" name="utm_content" value="" />
+            <input type="tel" name="phone" autocomplete="tel" required />
 
-            <input type="hidden" name="gclid" value="" />
+          </label>
 
-            <input type="hidden" name="landing_page" value="" />
+          <label>
 
-            <label for="name">Name</label>
+            Email
 
-            <input id="name" name="name" type="text" autocomplete="name" required />
+            <input type="email" name="email" autocomplete="email" />
 
-            <label for="company">Company / Organization</label>
+          </label>
 
-            <input id="company" name="company" type="text" autocomplete="organization" placeholder="Company, contractor, developer, municipality, or property owner" />
+          <label>
 
-            <label for="phone">Phone</label>
+            Project Location
 
-            <input id="phone" name="phone" type="tel" autocomplete="tel" required />
+            <input type="text" name="project-location" placeholder="City / county / nearby landmark" required />
 
-            <label for="email">Email</label>
+          </label>
 
-            <input id="email" name="email" type="email" autocomplete="email" />
+          <label>
 
-            <label for="location">Project Location</label>
+            Service Type
 
-            <input id="location" name="project_location" type="text" placeholder="City / county / address area" required />
-
-            <label for="service">Project Type</label>
-
-            <select id="service" name="project_type" required>
+            <select name="service-type" required>
 
               <option value="">Select one</option>
 
-              <option>Civil site preparation</option>
+              <option value="Brush clearing">Brush clearing</option>
 
-              <option>Grading support</option>
+              <option value="Fence line clearing">Fence line clearing</option>
 
-              <option>Drainage work</option>
+              <option value="Lot clearing">Lot clearing</option>
 
-              <option>Land clearing before site work</option>
+              <option value="Forestry mulching">Forestry mulching</option>
 
-              <option>Access road / driveway access</option>
+              <option value="Land clearing and grading">Land clearing + grading</option>
 
-              <option>Erosion-control support</option>
+              <option value="Site preparation">Site preparation</option>
 
-              <option>Contractor / subcontract support</option>
-
-              <option>Government or municipal-related site work</option>
-
-              <option>Other civil site work</option>
+              <option value="Other land clearing work">Other</option>
 
             </select>
 
-            <label for="timeline">Timeline / Schedule Pressure</label>
+          </label>
 
-            <input id="timeline" name="timeline" type="text" placeholder="Example: ASAP, this week, before next trade, bid deadline, permit deadline" />
+          <label>
 
-            <label for="plans">Plans / Drawing Link</label>
+            Project Details
 
-            <input id="plans" name="plans_link" type="text" placeholder="Paste Google Drive, Dropbox, plan room, or file link if available" />
+            <textarea name="project-details" placeholder="Tell us what needs to be cleared, what the property needs after clearing, and whether photos or video are available." required></textarea>
 
-            <label for="details">Scope Needed</label>
+          </label>
 
-            <textarea id="details" name="project_details" placeholder="Describe the plans, site problem, access issue, grading scope, drainage issue, clearing need, schedule pressure, or next phase that needs to move forward." required></textarea>
+          <button class="cta-btn" type="submit">Request Project Quote</button>
 
-            <button type="submit">Send Project Request</button>
+        </form>
 
-            <p class="fine-print">Prefer to talk now? Call or text <a href="tel:+19122541918" onclick="gtag('event','phone_call_click',{event_category:'lead',event_label:'civil_form_phone'});">912-254-1918</a>.</p>
+        <p class="section-sub">
 
-          </form>
+          Fastest contact: call or text <a href="tel:+19122541918" onclick="return landcoTrack('click_to_call', 'quote_section_phone_land_clearing');">912-254-1918</a>.
 
-        </div>
+        </p>
 
       </div>
 
@@ -1678,17 +1082,27 @@
 
     <div class="container footer-inner">
 
-      <p><strong>© 2026 Landco Development LLC</strong></p>
+      <p class="footer-brand">© 2026 Landco Development LLC</p>
 
-      <p class="footer-nap">Call/Text: <a href="tel:+19122541918">912-254-1918</a> • Email: <a href="mailto:landcodevelopment2@gmail.com">landcodevelopment2@gmail.com</a></p>
+      <p class="footer-nap">
+
+        <strong>Call/Text:</strong>
+
+        <a href="tel:+19122541918" onclick="return landcoTrack('click_to_call', 'footer_land_clearing');">912-254-1918</a> •
+
+        <strong>Email:</strong>
+
+        <a href="mailto:landcodevelopment2@gmail.com" onclick="return landcoTrack('email_click', 'footer_land_clearing');">landcodevelopment2@gmail.com</a>
+
+      </p>
 
       <p class="footer-links">
 
-        <a href="https://share.google/VPTTty0vot6EEEihj" target="_blank" rel="noopener">Google Reviews</a> •
+        <a href="https://share.google/VPTTty0vot6EEEihj" rel="noopener" target="_blank" onclick="return landcoTrack('outbound_click', 'footer_google_land_clearing');">Google Reviews</a> •
 
-        <a href="https://www.thumbtack.com/pro/referral/ZLnEyCIeTjnC7H0" target="_blank" rel="noopener">Thumbtack</a> •
+        <a href="https://www.thumbtack.com/pro/referral/ZLnEyCIeTjnC7H0" rel="noopener" target="_blank" onclick="return landcoTrack('outbound_click', 'footer_thumbtack_land_clearing');">Thumbtack</a> •
 
-        <a href="https://youtube.com/@Landco321" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://youtube.com/@Landco321" rel="noopener" target="_blank" onclick="return landcoTrack('outbound_click', 'footer_youtube_land_clearing');">YouTube</a>
 
       </p>
 
@@ -1696,49 +1110,13 @@
 
   </footer>
 
-  <div class="sticky-cta" aria-label="Mobile contact shortcuts">
+  <div class="floating-cta" aria-label="Mobile contact buttons">
 
-    <a class="sticky-call" href="tel:+19122541918" onclick="gtag('event','phone_call_click',{event_category:'lead',event_label:'civil_sticky_call'});">Call/Text 912-254-1918</a>
+    <a href="tel:+19122541918" onclick="return landcoTrack('click_to_call', 'floating_land_clearing_call_now');">Call Now</a>
 
-    <a class="sticky-quote" href="#project-request">Send Request</a>
+    <a href="#quote" onclick="return landcoTrack('quote_button_click', 'floating_land_clearing_get_quote');">Get Quote</a>
 
   </div>
-
-  <script>
-
-    (function () {
-
-      const params = new URLSearchParams(window.location.search);
-
-      const fieldNames = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid'];
-
-      fieldNames.forEach(function (name) {
-
-        const value = params.get(name) || sessionStorage.getItem('landco_' + name) || '';
-
-        if (value) {
-
-          sessionStorage.setItem('landco_' + name, value);
-
-        }
-
-        document.querySelectorAll('input[name="' + name + '"]').forEach(function (input) {
-
-          input.value = value;
-
-        });
-
-      });
-
-      document.querySelectorAll('input[name="landing_page"]').forEach(function (input) {
-
-        input.value = window.location.href;
-
-      });
-
-    })();
-
-  </script>
 
 </body>
 
