@@ -66,7 +66,7 @@
 
         gtag("event", action, {
 
-          event_category: "Land Clearing Lead",
+          event_category: "lead",
 
           event_label: label || "land_clearing_page",
 
@@ -81,6 +81,90 @@
       return true;
 
     }
+
+    function landcoSubmitForm(event, label) {
+
+      event.preventDefault();
+
+      var form = event.target;
+
+      var submitted = false;
+
+      function submitOnce() {
+
+        if (submitted) return;
+
+        submitted = true;
+
+        form.submit();
+
+      }
+
+      if (typeof gtag === "function") {
+
+        gtag("event", "generate_lead", {
+
+          event_category: "lead",
+
+          event_label: label || "land_clearing_quote_form",
+
+          page_title: document.title,
+
+          page_location: window.location.href,
+
+          event_callback: submitOnce,
+
+          event_timeout: 800
+
+        });
+
+        setTimeout(submitOnce, 900);
+
+      } else {
+
+        submitOnce();
+
+      }
+
+      return false;
+
+    }
+
+    function landcoSetHiddenValue(name, value) {
+
+      var field = document.querySelector('[name="' + name + '"]');
+
+      if (field && value) {
+
+        field.value = value;
+
+      }
+
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+
+      var params = new URLSearchParams(window.location.search);
+
+      landcoSetHiddenValue("page_url", window.location.href);
+
+      landcoSetHiddenValue("referrer", document.referrer);
+
+      landcoSetHiddenValue("utm_source", params.get("utm_source"));
+
+      landcoSetHiddenValue("utm_medium", params.get("utm_medium"));
+
+      landcoSetHiddenValue("utm_campaign", params.get("utm_campaign"));
+
+      landcoSetHiddenValue("utm_term", params.get("utm_term"));
+
+      landcoSetHiddenValue("utm_content", params.get("utm_content"));
+
+      landcoSetHiddenValue("gclid", params.get("gclid"));
+
+      landcoSetHiddenValue("msclkid", params.get("msclkid"));
+
+    });
 
   </script>
 
@@ -1056,11 +1140,25 @@
 
           <article class="project-card">
 
-            <img src="/images/mulch-after.jpg" alt="Finished forestry mulching and land clearing by Landco Development LLC" loading="lazy" />
+            <img src="/images/mulch-before.jpg" alt="Before forestry mulching and brush clearing by Landco Development LLC" loading="lazy" />
 
             <div>
 
-              <h3>Forestry Mulching</h3>
+              <h3>Before Clearing</h3>
+
+              <p>Dense brush, overgrowth, and limited access before forestry mulching and property cleanup.</p>
+
+            </div>
+
+          </article>
+
+          <article class="project-card">
+
+            <img src="/images/mulch-after.jpg" alt="After forestry mulching and land clearing by Landco Development LLC" loading="lazy" />
+
+            <div>
+
+              <h3>After Mulching</h3>
 
               <p>Cleared and mulched work area with better access, cleaner ground, and improved usability.</p>
 
@@ -1068,33 +1166,27 @@
 
           </article>
 
-          <article class="proof-card">
+          <article class="project-card">
 
-            <h3>Clearing With the Next Phase in Mind</h3>
+            <img src="/images/IMG_5910.JPG" alt="Cleared access and site prep work by Landco Development LLC" loading="lazy" />
 
-            <p>
+            <div>
 
-              Clearing and forestry mulching often lead into grading, driveway access, pads, drainage, fence work, or site prep. Landco looks at what the property needs after the vegetation is gone.
+              <h3>Ready for the Next Phase</h3>
 
-            </p>
+              <p>Clearing and site prep often lead into grading, driveway access, pads, drainage, fencing, or finish work.</p>
 
-            <a class="cta-btn secondary" href="/grading">See Grading Work</a>
-
-          </article>
-
-          <article class="proof-card">
-
-            <h3>Built for Real Property Use</h3>
-
-            <p>
-
-              The end goal is usable land: cleaner access, better movement, visible work areas, and a property that is ready for maintenance or the next stage of site preparation.
-
-            </p>
-
-            <a class="cta-btn secondary" href="#quote" onclick="return landcoTrack('quote_button_click', 'project_proof_land_clearing');">Request Quote</a>
+            </div>
 
           </article>
+
+        </div>
+
+        <div class="button-row">
+
+          <a class="cta-btn" href="tel:+19122541918" onclick="return landcoTrack('click_to_call', 'project_section_land_clearing');">Call or Text Now</a>
+
+          <a class="cta-btn secondary" href="#quote" onclick="return landcoTrack('quote_button_click', 'project_section_land_clearing');">Quote Form</a>
 
         </div>
 
@@ -1334,9 +1426,29 @@
 
           <div class="quote-card">
 
-            <form class="quote-form" name="land-clearing-quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you" onsubmit="landcoTrack('generate_lead', 'land_clearing_quote_form');">
+            <form class="quote-form" name="land-clearing-quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you" onsubmit="return landcoSubmitForm(event, 'land_clearing_quote_form');">
 
               <input type="hidden" name="form-name" value="land-clearing-quote" />
+
+              <input type="hidden" name="page-source" value="land-clearing" />
+
+              <input type="hidden" name="page_url" value="" />
+
+              <input type="hidden" name="referrer" value="" />
+
+              <input type="hidden" name="utm_source" value="" />
+
+              <input type="hidden" name="utm_medium" value="" />
+
+              <input type="hidden" name="utm_campaign" value="" />
+
+              <input type="hidden" name="utm_term" value="" />
+
+              <input type="hidden" name="utm_content" value="" />
+
+              <input type="hidden" name="gclid" value="" />
+
+              <input type="hidden" name="msclkid" value="" />
 
               <p class="form-hide">
 
@@ -1410,6 +1522,54 @@
 
               <label>
 
+                Approximate Area Size
+
+                <input type="text" name="area-size" placeholder="Example: fence line, backyard, 1 acre, small lot, driveway path" />
+
+              </label>
+
+              <label>
+
+                Is grading needed afterward?
+
+                <select name="grading-needed">
+
+                  <option value="">Select one</option>
+
+                  <option value="Yes">Yes</option>
+
+                  <option value="No">No</option>
+
+                  <option value="Not sure">Not sure</option>
+
+                </select>
+
+              </label>
+
+              <label>
+
+                Debris Handling Preference
+
+                <select name="debris-handling">
+
+                  <option value="">Select one</option>
+
+                  <option value="Mulch in place">Mulch in place</option>
+
+                  <option value="Pile on site">Pile on site</option>
+
+                  <option value="Haul off">Haul off</option>
+
+                  <option value="Client directed">Client directed</option>
+
+                  <option value="Not sure">Not sure</option>
+
+                </select>
+
+              </label>
+
+              <label>
+
                 Project Details
 
                 <textarea name="project-details" placeholder="Tell us what needs to be cleared, what the property needs after clearing, and whether photos or video are available." required></textarea>
@@ -1456,7 +1616,9 @@
 
         <a href="https://www.thumbtack.com/pro/referral/ZLnEyCIeTjnC7H0" rel="noopener" target="_blank" onclick="return landcoTrack('outbound_click', 'footer_thumbtack_land_clearing');">Thumbtack</a> •
 
-        <a href="https://youtube.com/@Landco321" rel="noopener" target="_blank" onclick="return landcoTrack('outbound_click', 'footer_youtube_land_clearing');">YouTube</a>
+        <a href="https://youtube.com/@Landco321" rel="noopener" target="_blank" onclick="return landcoTrack('outbound_click', 'footer_youtube_land_clearing');">YouTube</a> •
+
+        <a href="https://facebook.com/Landco123" rel="noopener" target="_blank" onclick="return landcoTrack('outbound_click', 'footer_facebook_land_clearing');">Facebook</a>
 
       </p>
 
