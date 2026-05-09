@@ -168,6 +168,318 @@
 
   </script>
 
+  <!-- Landco page-level layout controls only: keeps photos/cards/form from breaking brand layout. -->
+
+  <style>
+
+    .landco-hero-media {
+
+      max-width: 780px;
+
+      margin: 1.75rem auto 0;
+
+      border-radius: 18px;
+
+      overflow: hidden;
+
+      border: 1px solid rgba(0,0,0,0.08);
+
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+      background: #fff;
+
+    }
+
+    .landco-hero-media img {
+
+      width: 100%;
+
+      height: 360px;
+
+      object-fit: cover;
+
+      object-position: center;
+
+      display: block;
+
+    }
+
+    .landco-hero-media figcaption {
+
+      padding: 0.9rem 1rem;
+
+      line-height: 1.45;
+
+      font-size: 0.95rem;
+
+    }
+
+    .landco-card-grid,
+
+    .landco-photo-grid,
+
+    .landco-trust-grid,
+
+    .landco-quote-grid {
+
+      display: grid;
+
+      gap: 1rem;
+
+      margin-top: 1.35rem;
+
+    }
+
+    .landco-card-grid,
+
+    .landco-photo-grid,
+
+    .landco-trust-grid {
+
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    }
+
+    .landco-quote-grid {
+
+      grid-template-columns: minmax(0, 0.9fr) minmax(300px, 1.1fr);
+
+      align-items: start;
+
+    }
+
+    .landco-card,
+
+    .landco-photo-card,
+
+    .landco-trust-card,
+
+    .landco-quote-card {
+
+      background: #fff;
+
+      border-radius: 18px;
+
+      border: 1px solid rgba(0,0,0,0.08);
+
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+
+      overflow: hidden;
+
+    }
+
+    .landco-card,
+
+    .landco-trust-card,
+
+    .landco-quote-card {
+
+      padding: 1.15rem;
+
+    }
+
+    .landco-card h3,
+
+    .landco-trust-card h3,
+
+    .landco-quote-card h3 {
+
+      margin-top: 0;
+
+    }
+
+    .landco-photo-card img {
+
+      width: 100%;
+
+      height: 240px;
+
+      object-fit: cover;
+
+      object-position: center;
+
+      display: block;
+
+    }
+
+    .landco-photo-card figcaption {
+
+      padding: 0.9rem 1rem;
+
+      line-height: 1.45;
+
+      font-size: 0.95rem;
+
+    }
+
+    .landco-link-row {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 0.6rem;
+
+      margin-top: 1.25rem;
+
+    }
+
+    .landco-link-row a,
+
+    .landco-link-row span {
+
+      display: inline-flex;
+
+      border-radius: 999px;
+
+      padding: 0.55rem 0.75rem;
+
+      background: #f3f3f3;
+
+      color: #111;
+
+      text-decoration: none;
+
+      font-weight: 700;
+
+      font-size: 0.92rem;
+
+    }
+
+    .landco-quote-form {
+
+      display: grid;
+
+      gap: 0.85rem;
+
+    }
+
+    .landco-quote-form label {
+
+      display: grid;
+
+      gap: 0.35rem;
+
+      font-weight: 800;
+
+    }
+
+    .landco-quote-form input,
+
+    .landco-quote-form select,
+
+    .landco-quote-form textarea {
+
+      width: 100%;
+
+      min-height: 46px;
+
+      border: 1px solid #d0d0d0;
+
+      border-radius: 12px;
+
+      padding: 0.75rem;
+
+      font: inherit;
+
+      background: #fff;
+
+    }
+
+    .landco-quote-form textarea {
+
+      min-height: 130px;
+
+      resize: vertical;
+
+    }
+
+    .form-hide {
+
+      display: none;
+
+    }
+
+    .floating-cta {
+
+      display: none;
+
+    }
+
+    @media (max-width: 850px) {
+
+      .landco-card-grid,
+
+      .landco-photo-grid,
+
+      .landco-trust-grid,
+
+      .landco-quote-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+      .landco-hero-media img,
+
+      .landco-photo-card img {
+
+        height: 240px;
+
+      }
+
+      .floating-cta {
+
+        display: flex;
+
+        position: fixed;
+
+        left: 0;
+
+        right: 0;
+
+        bottom: 0;
+
+        z-index: 999;
+
+        background: #111;
+
+        border-top: 1px solid rgba(255,255,255,0.16);
+
+      }
+
+      .floating-cta a {
+
+        flex: 1;
+
+        text-align: center;
+
+        padding: 0.9rem 0.5rem;
+
+        color: #fff;
+
+        font-weight: 800;
+
+        text-decoration: none;
+
+      }
+
+      .floating-cta a + a {
+
+        border-left: 1px solid rgba(255,255,255,0.16);
+
+      }
+
+      body {
+
+        padding-bottom: 58px;
+
+      }
+
+    }
+
+  </style>
+
   <script type="application/ld+json">
 
   {
@@ -346,7 +658,7 @@
 
               "@type": "Answer",
 
-              "text": "Send the project location, photos or video, what needs to be cleared, whether grading or drainage is needed afterward and whether debris should be mulched, piled, hauled off or handled another way."
+              "text": "Send the project location, project type, photos or video if available, what needs to be cleared, whether grading or drainage is needed afterward and whether debris should be mulched, piled, hauled off or handled another way."
 
             }
 
@@ -434,7 +746,7 @@
 
         </p>
 
-        <figure>
+        <figure class="landco-hero-media">
 
           <img src="/images/mulch-after.jpg" alt="Forestry mulching and land clearing work by Landco Development LLC in Georgia" loading="eager" />
 
@@ -484,31 +796,59 @@
 
         </p>
 
-        <h3>Brush &amp; Overgrowth Clearing</h3>
+        <div class="landco-card-grid">
 
-        <p>Clearing thick vegetation, saplings, vines, briars, and unwanted growth so the property can be accessed, maintained, improved, or prepared for the next step.</p>
+          <article class="landco-card">
 
-        <h3>Fence Line Clearing</h3>
+            <h3>Brush &amp; Overgrowth Clearing</h3>
 
-        <p>Cleaning property lines, fence rows, access lanes, and boundary areas before fence installation, fence repair, livestock use, maintenance, or property cleanup.</p>
+            <p>Clearing thick vegetation, saplings, vines, briars, and unwanted growth so the property can be accessed, maintained, improved, or prepared for the next step.</p>
 
-        <h3>Lot Clearing</h3>
+          </article>
 
-        <p>Residential and light commercial lot clearing for property owners who need vegetation removed before grading, drainage, driveway work, pads, or site prep.</p>
+          <article class="landco-card">
 
-        <h3>Forestry Mulching</h3>
+            <h3>Fence Line Clearing</h3>
 
-        <p>Forestry mulching can be a strong option for brush, saplings, and overgrowth when the goal is speed, access, cleanup, and a more natural finished surface.</p>
+            <p>Cleaning property lines, fence rows, access lanes, and boundary areas before fence installation, fence repair, livestock use, maintenance, or property cleanup.</p>
 
-        <h3>Land Clearing &amp; Grading</h3>
+          </article>
 
-        <p>Many properties need more than clearing. Landco can clear the work area and then shape the ground so the property becomes more usable.</p>
+          <article class="landco-card">
 
-        <h3>Site Prep</h3>
+            <h3>Lot Clearing</h3>
 
-        <p>Clearing tied to driveways, pads, drainage correction, access paths, fencing, erosion control, maintenance areas, and the next phase of property work.</p>
+            <p>Residential and light commercial lot clearing for property owners who need vegetation removed before grading, drainage, driveway work, pads, or site prep.</p>
 
-        <p>
+          </article>
+
+          <article class="landco-card">
+
+            <h3>Forestry Mulching</h3>
+
+            <p>Forestry mulching can be a strong option for brush, saplings, and overgrowth when the goal is speed, access, cleanup, and a more natural finished surface.</p>
+
+          </article>
+
+          <article class="landco-card">
+
+            <h3>Land Clearing &amp; Grading</h3>
+
+            <p>Many properties need more than clearing. Landco can clear the work area and then shape the ground so the property becomes more usable.</p>
+
+          </article>
+
+          <article class="landco-card">
+
+            <h3>Site Prep</h3>
+
+            <p>Clearing tied to driveways, pads, drainage correction, access paths, fencing, erosion control, maintenance areas, and the next phase of property work.</p>
+
+          </article>
+
+        </div>
+
+        <div class="landco-link-row">
 
           <a href="/grading">Grading</a>
 
@@ -526,7 +866,7 @@
 
           <a href="/auburn-ga">Auburn</a>
 
-        </p>
+        </div>
 
       </div>
 
@@ -544,73 +884,67 @@
 
         </p>
 
-        <h3>Typical Work Items</h3>
+        <div class="landco-card-grid">
 
-        <ul class="bullet-list">
+          <article class="landco-card">
 
-          <li>Walk the site and identify access, vegetation, debris, and next-phase needs</li>
+            <h3>Typical Work Items</h3>
 
-          <li>Clear brush, overgrowth, vines, briars, saplings, and unwanted vegetation</li>
+            <ul class="bullet-list">
 
-          <li>Clean up fence lines, access paths, work areas, and property edges</li>
+              <li>Walk the site and identify access, vegetation, debris, and next-phase needs</li>
 
-          <li>Use forestry mulching when appropriate for the site and finish goal</li>
+              <li>Clear brush, overgrowth, vines, briars, saplings, and unwanted vegetation</li>
 
-          <li>Plan debris handling: mulch, pile, haul-off, or client-directed cleanup</li>
+              <li>Clean up fence lines, access paths, work areas, and property edges</li>
 
-          <li>Prepare the area for grading, drainage, driveways, pads, fencing, or site prep</li>
+              <li>Use forestry mulching when appropriate for the site and finish goal</li>
 
-        </ul>
+              <li>Plan debris handling: mulch, pile, haul-off, or client-directed cleanup</li>
 
-        <h3>Landco Standard</h3>
+              <li>Prepare the area for grading, drainage, driveways, pads, fencing, or site prep</li>
 
-        <p>
+            </ul>
 
-          The goal is not just to knock down brush. The goal is to leave the property cleaner, more accessible, easier to maintain, and ready for grading, drainage, driveways, pads, fencing, or the next phase of work.
+          </article>
 
-        </p>
+          <article class="landco-card">
 
-        <p>
+            <h3>Landco Standard</h3>
 
-          That is the difference between a quick brush pass and development-minded land clearing.
+            <p>
 
-        </p>
+              The goal is not just to knock down brush. The goal is to leave the property cleaner, more accessible, easier to maintain, and ready for grading, drainage, driveways, pads, fencing, or the next phase of work.
 
-        <h3>Why Clearing Jobs Fail</h3>
+            </p>
 
-        <ul class="bullet-list">
+            <p>That is the difference between a quick brush pass and development-minded land clearing.</p>
 
-          <li>No plan for what happens after the brush is removed</li>
+          </article>
 
-          <li>Access paths and fence lines left too rough to use</li>
+          <article class="landco-card">
 
-          <li>Stumps, debris, or uneven ground block the next phase of work</li>
+            <h3>Why Clearing Jobs Fail</h3>
 
-          <li>Drainage and runoff problems get ignored during clearing</li>
+            <ul class="bullet-list">
 
-          <li>Property is cleared but not shaped, stabilized, or prepared</li>
+              <li>No plan for what happens after the brush is removed</li>
 
-          <li>Clearing, grading, and drainage are treated as separate problems</li>
+              <li>Access paths and fence lines left too rough to use</li>
 
-        </ul>
+              <li>Stumps, debris, or uneven ground block the next phase of work</li>
 
-        <h3>Best-Fit Projects</h3>
+              <li>Drainage and runoff problems get ignored during clearing</li>
 
-        <ul class="bullet-list">
+              <li>Property is cleared but not shaped, stabilized, or prepared</li>
 
-          <li>Brush clearing and overgrowth removal</li>
+              <li>Clearing, grading, and drainage are treated as separate problems</li>
 
-          <li>Fence line clearing and property line cleanup</li>
+            </ul>
 
-          <li>Small lot clearing for residential and light commercial sites</li>
+          </article>
 
-          <li>Forestry mulching for brush, saplings, and access improvement</li>
-
-          <li>Land clearing before grading, drainage, pads, driveways, or fencing</li>
-
-          <li>Clearing plus rough or finish grading</li>
-
-        </ul>
+        </div>
 
       </div>
 
@@ -628,29 +962,51 @@
 
         </p>
 
-        <figure>
+        <div class="landco-photo-grid">
 
-          <img src="/images/mulch-before.jpg" alt="Before forestry mulching and brush clearing by Landco Development LLC" loading="lazy" />
+          <figure class="landco-photo-card">
 
-          <figcaption>Before clearing: dense brush, overgrowth, and limited access before forestry mulching and property cleanup.</figcaption>
+            <img src="/images/mulch-before.jpg" alt="Before forestry mulching and brush clearing by Landco Development LLC" loading="lazy" />
 
-        </figure>
+            <figcaption>
 
-        <figure>
+              <strong>Before Clearing</strong><br />
 
-          <img src="/images/mulch-after.jpg" alt="After forestry mulching and land clearing by Landco Development LLC" loading="lazy" />
+              Dense brush, overgrowth, and limited access before forestry mulching and property cleanup.
 
-          <figcaption>After mulching: cleared and mulched work area with better access, cleaner ground, and improved usability.</figcaption>
+            </figcaption>
 
-        </figure>
+          </figure>
 
-        <figure>
+          <figure class="landco-photo-card">
 
-          <img src="/images/IMG_5910.JPG" alt="Cleared access and site prep work by Landco Development LLC" loading="lazy" />
+            <img src="/images/mulch-after.jpg" alt="After forestry mulching and land clearing by Landco Development LLC" loading="lazy" />
 
-          <figcaption>Ready for the next phase: clearing and site prep often lead into grading, driveway access, pads, drainage, fencing, or finish work.</figcaption>
+            <figcaption>
 
-        </figure>
+              <strong>After Mulching</strong><br />
+
+              Cleared and mulched work area with better access, cleaner ground, and improved usability.
+
+            </figcaption>
+
+          </figure>
+
+          <figure class="landco-photo-card">
+
+            <img src="/images/IMG_5910.JPG" alt="Cleared access and site prep work by Landco Development LLC" loading="lazy" />
+
+            <figcaption>
+
+              <strong>Ready for the Next Phase</strong><br />
+
+              Clearing and site prep often lead into grading, driveway access, pads, drainage, fencing, or finish work.
+
+            </figcaption>
+
+          </figure>
+
+        </div>
 
         <p>
 
@@ -676,35 +1032,33 @@
 
         </p>
 
-        <p>
+        <div class="landco-trust-grid">
 
-          <a href="https://share.google/VPTTty0vot6EEEihj" rel="noopener" target="_blank" onclick="return landcoTrack('outbound_click', 'google_profile_land_clearing');">
+          <a class="landco-trust-card" href="https://share.google/VPTTty0vot6EEEihj" rel="noopener" target="_blank" onclick="return landcoTrack('outbound_click', 'google_profile_land_clearing');">
 
-            <strong>Google Reviews</strong> See the business profile, local presence, and customer-facing project updates directly on Google.
+            <h3>Google Reviews</h3>
 
-          </a>
-
-        </p>
-
-        <p>
-
-          <a href="https://www.thumbtack.com/pro/referral/ZLnEyCIeTjnC7H0" rel="noopener" target="_blank" onclick="return landcoTrack('outbound_click', 'thumbtack_land_clearing');">
-
-            <strong>Thumbtack Profile</strong> Review the active service profile and project-driven lead history.
+            <p>See the business profile, local presence, and customer-facing project updates directly on Google.</p>
 
           </a>
 
-        </p>
+          <a class="landco-trust-card" href="https://www.thumbtack.com/pro/referral/ZLnEyCIeTjnC7H0" rel="noopener" target="_blank" onclick="return landcoTrack('outbound_click', 'thumbtack_land_clearing');">
 
-        <p>
+            <h3>Thumbtack Profile</h3>
 
-          <a href="https://youtube.com/@Landco321" rel="noopener" target="_blank" onclick="return landcoTrack('outbound_click', 'youtube_land_clearing');">
-
-            <strong>YouTube Project Content</strong> Project footage and business content that support legitimacy and field experience.
+            <p>Review the active service profile and project-driven lead history.</p>
 
           </a>
 
-        </p>
+          <a class="landco-trust-card" href="https://youtube.com/@Landco321" rel="noopener" target="_blank" onclick="return landcoTrack('outbound_click', 'youtube_land_clearing');">
+
+            <h3>YouTube Project Content</h3>
+
+            <p>Project footage and business content that support legitimacy and field experience.</p>
+
+          </a>
+
+        </div>
 
         <h3>Direct Contact</h3>
 
@@ -726,7 +1080,7 @@
 
         </p>
 
-        <p>
+        <div class="landco-link-row">
 
           <a href="/lawrenceville-ga">Lawrenceville</a>
 
@@ -736,9 +1090,25 @@
 
           <a href="/athens-ga">Athens</a>
 
-          Gwinnett County Snellville Loganville Grayson Lilburn Buford Suwanee Duluth Northeast Georgia
+          <span>Gwinnett County</span>
 
-        </p>
+          <span>Snellville</span>
+
+          <span>Loganville</span>
+
+          <span>Grayson</span>
+
+          <span>Lilburn</span>
+
+          <span>Buford</span>
+
+          <span>Suwanee</span>
+
+          <span>Duluth</span>
+
+          <span>Northeast Georgia</span>
+
+        </div>
 
       </div>
 
@@ -758,51 +1128,27 @@
 
         <h3>Do you handle small land clearing jobs?</h3>
 
-        <p>
-
-          Yes. Landco Development LLC handles brush clearing, fence line clearing, access clearing, small lot clearing and clearing tied to grading, drainage or site prep when the scope fits the equipment and property.
-
-        </p>
+        <p>Yes. Landco Development LLC handles brush clearing, fence line clearing, access clearing, small lot clearing and clearing tied to grading, drainage or site prep when the scope fits the equipment and property.</p>
 
         <h3>Do you provide grading after clearing?</h3>
 
-        <p>
-
-          Yes. Many land clearing projects need grading afterward so the property is not just cleared, but also shaped into usable ground for driveways, pads, drainage, fencing or the next phase of work.
-
-        </p>
+        <p>Yes. Many land clearing projects need grading afterward so the property is not just cleared, but also shaped into usable ground for driveways, pads, drainage, fencing or the next phase of work.</p>
 
         <h3>Do you haul away debris?</h3>
 
-        <p>
-
-          Debris handling depends on the job. Some projects involve mulching, piling, haul-off, or client-directed cleanup. The right approach depends on access, site conditions, budget and final use.
-
-        </p>
+        <p>Debris handling depends on the job. Some projects involve mulching, piling, haul-off, or client-directed cleanup. The right approach depends on access, site conditions, budget and final use.</p>
 
         <h3>Is forestry mulching always the best option?</h3>
 
-        <p>
-
-          Not always. Forestry mulching can be efficient for brush, saplings and overgrowth, but some properties also need grading, debris handling, access correction, drainage work or site preparation.
-
-        </p>
+        <p>Not always. Forestry mulching can be efficient for brush, saplings and overgrowth, but some properties also need grading, debris handling, access correction, drainage work or site preparation.</p>
 
         <h3>Can clearing help prepare for fencing?</h3>
 
-        <p>
-
-          Yes. Fence line clearing can clean up property lines, access lanes and boundary areas before fence installation, fence repair, livestock areas, or regular maintenance.
-
-        </p>
+        <p>Yes. Fence line clearing can clean up property lines, access lanes and boundary areas before fence installation, fence repair, livestock areas, or regular maintenance.</p>
 
         <h3>What should I send for a quote?</h3>
 
-        <p>
-
-          Send the project location, project type, photos or video if available, what needs to be cleared, whether grading or drainage is needed afterward and whether debris should be mulched, piled, hauled off or handled another way.
-
-        </p>
+        <p>Send the project location, project type, photos or video if available, what needs to be cleared, whether grading or drainage is needed afterward and whether debris should be mulched, piled, hauled off or handled another way.</p>
 
       </div>
 
@@ -820,141 +1166,151 @@
 
         </p>
 
-        <h3>Good Fit Requests</h3>
+        <div class="landco-quote-grid">
 
-        <ul class="bullet-list">
+          <div class="landco-quote-card">
 
-          <li>Brush clearing and overgrowth removal</li>
+            <h3>Good Fit Requests</h3>
 
-          <li>Fence line clearing and property line cleanup</li>
+            <ul class="bullet-list">
 
-          <li>Lot clearing and small clearing projects</li>
+              <li>Brush clearing and overgrowth removal</li>
 
-          <li>Forestry mulching</li>
+              <li>Fence line clearing and property line cleanup</li>
 
-          <li>Land clearing plus rough or finish grading</li>
+              <li>Lot clearing and small clearing projects</li>
 
-          <li>Site prep for driveways, pads, drainage, or fencing</li>
+              <li>Forestry mulching</li>
 
-        </ul>
+              <li>Land clearing plus rough or finish grading</li>
 
-        <p>
+              <li>Site prep for driveways, pads, drainage, or fencing</li>
 
-          <a class="cta-btn" href="tel:+19122541918" onclick="return landcoTrack('click_to_call', 'quote_card_land_clearing');">Call or Text Now</a>
+            </ul>
 
-        </p>
+            <p><strong>Fastest contact:</strong> call or text <a href="tel:+19122541918" onclick="return landcoTrack('click_to_call', 'quote_box_phone_land_clearing');">912-254-1918</a>.</p>
 
-        <form name="land-clearing-quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you" onsubmit="return landcoSubmitForm(event, 'land_clearing_quote_form');">
+            <a class="cta-btn" href="tel:+19122541918" onclick="return landcoTrack('click_to_call', 'quote_card_land_clearing');">Call or Text Now</a>
 
-          <input type="hidden" name="form-name" value="land-clearing-quote" />
+          </div>
 
-          <input type="hidden" name="page-source" value="land-clearing" />
+          <div class="landco-quote-card">
 
-          <input type="hidden" name="page_url" value="" />
+            <form class="landco-quote-form" name="land-clearing-quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you" onsubmit="return landcoSubmitForm(event, 'land_clearing_quote_form');">
 
-          <input type="hidden" name="referrer" value="" />
+              <input type="hidden" name="form-name" value="land-clearing-quote" />
 
-          <input type="hidden" name="utm_source" value="" />
+              <input type="hidden" name="page-source" value="land-clearing" />
 
-          <input type="hidden" name="utm_medium" value="" />
+              <input type="hidden" name="page_url" value="" />
 
-          <input type="hidden" name="utm_campaign" value="" />
+              <input type="hidden" name="referrer" value="" />
 
-          <input type="hidden" name="utm_term" value="" />
+              <input type="hidden" name="utm_source" value="" />
 
-          <input type="hidden" name="utm_content" value="" />
+              <input type="hidden" name="utm_medium" value="" />
 
-          <input type="hidden" name="gclid" value="" />
+              <input type="hidden" name="utm_campaign" value="" />
 
-          <input type="hidden" name="msclkid" value="" />
+              <input type="hidden" name="utm_term" value="" />
 
-          <p class="form-hide">
+              <input type="hidden" name="utm_content" value="" />
 
-            <label>Do not fill this out:
+              <input type="hidden" name="gclid" value="" />
 
-              <input name="bot-field" />
+              <input type="hidden" name="msclkid" value="" />
 
-            </label>
+              <p class="form-hide">
 
-          </p>
+                <label>Do not fill this out:
 
-          <label>
+                  <input name="bot-field" />
 
-            Name
+                </label>
 
-            <input type="text" name="name" autocomplete="name" required />
+              </p>
 
-          </label>
+              <label>
 
-          <label>
+                Name
 
-            Phone
+                <input type="text" name="name" autocomplete="name" required />
 
-            <input type="tel" name="phone" autocomplete="tel" required />
+              </label>
 
-          </label>
+              <label>
 
-          <label>
+                Phone
 
-            Email
+                <input type="tel" name="phone" autocomplete="tel" required />
 
-            <input type="email" name="email" autocomplete="email" />
+              </label>
 
-          </label>
+              <label>
 
-          <label>
+                Email
 
-            Project Location
+                <input type="email" name="email" autocomplete="email" />
 
-            <input type="text" name="project-location" placeholder="City / county / nearby landmark" required />
+              </label>
 
-          </label>
+              <label>
 
-          <label>
+                Project Location
 
-            Service Type
+                <input type="text" name="project-location" placeholder="City / county / nearby landmark" required />
 
-            <select name="service-type" required>
+              </label>
 
-              <option value="">Select one</option>
+              <label>
 
-              <option value="Brush clearing">Brush clearing</option>
+                Service Type
 
-              <option value="Fence line clearing">Fence line clearing</option>
+                <select name="service-type" required>
 
-              <option value="Lot clearing">Lot clearing</option>
+                  <option value="">Select one</option>
 
-              <option value="Forestry mulching">Forestry mulching</option>
+                  <option value="Brush clearing">Brush clearing</option>
 
-              <option value="Access path clearing">Access path clearing</option>
+                  <option value="Fence line clearing">Fence line clearing</option>
 
-              <option value="Land clearing and grading">Land clearing + grading</option>
+                  <option value="Lot clearing">Lot clearing</option>
 
-              <option value="Site prep">Site prep</option>
+                  <option value="Forestry mulching">Forestry mulching</option>
 
-              <option value="Other land clearing work">Other</option>
+                  <option value="Access path clearing">Access path clearing</option>
 
-            </select>
+                  <option value="Land clearing and grading">Land clearing + grading</option>
 
-          </label>
+                  <option value="Site prep">Site prep</option>
 
-          <label>
+                  <option value="Other land clearing work">Other</option>
 
-            Project Details
+                </select>
 
-            <textarea name="project-details" placeholder="Tell us what needs to be cleared, what the property needs after clearing, and whether photos or video are available." required></textarea>
+              </label>
 
-          </label>
+              <label>
 
-          <button class="cta-btn" type="submit">Request Project Quote</button>
+                Project Details
 
-        </form>
+                <textarea name="project-details" placeholder="Tell us what needs to be cleared, what the property needs after clearing, and whether photos or video are available." required></textarea>
 
-        <p class="section-sub">
+              </label>
 
-          Tip: mention if the clearing is tied to grading, driveway access, drainage, fencing, pads, or site prep.
+              <button class="cta-btn" type="submit">Request Project Quote</button>
 
-        </p>
+            </form>
+
+            <p class="section-sub">
+
+              Tip: mention if the clearing is tied to grading, driveway access, drainage, fencing, pads, or site prep.
+
+            </p>
+
+          </div>
+
+        </div>
 
       </div>
 
