@@ -400,3 +400,44 @@ form button:hover{
   opacity:0.92;
 }
 .
+/* === LANDCO PHONE BUTTON STYLE (added 2026-05-13) ============= */
+
+a[href^="tel:"],
+
+button.landco-call,          /* for any future buttons that use this class */
+
+[role="button"].landco-call {
+
+  background: #b39214;       /* Landco gold */
+
+  color: #ffffff;
+
+  padding: 0.75rem 1.25rem;
+
+  border: none;
+
+  border-radius: 6px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  display: inline-block;
+
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+}
+
+a[href^="tel:"]:hover,
+
+button.landco-call:hover,
+
+[role="button"].landco-call:hover {
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+
+}
