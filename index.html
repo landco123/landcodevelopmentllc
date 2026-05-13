@@ -26,7 +26,7 @@
 
 <meta content="North Georgia grading, Athens GA grading, French drains, drainage contractor, yard drainage, standing water, erosion control, land clearing, forestry mulching, site preparation, skid steer grading" name="keywords"/>
 
-<!-- Google tag only. No call-click JavaScript on this page. -->
+<!-- Google tag: GA4 + Google Ads -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ60VDSDTD"></script>
 
@@ -38,7 +38,11 @@
 
   gtag('js', new Date());
 
-  gtag('config', 'G-KJ60VDSDTD');
+  gtag('config', 'G-KJ60VDSDTD', {
+
+    transport_type: 'beacon'
+
+  });
 
   gtag('config', 'AW-11478133009');
 
@@ -358,6 +362,14 @@
 
   color: #111;
 
+  text-decoration: none;
+
+}
+
+.phone-display:hover {
+
+  color: #c9a227;
+
 }
 
 .sticky-mobile-cta {
@@ -626,7 +638,7 @@
 
     </nav>
 
-    <a class="header-call" href="#contact">Call / Text 912-254-1918</a>
+    <a class="header-call" href="tel:+19122541918" data-call-track="header_call">Call / Text 912-254-1918</a>
 
   </div>
 
@@ -640,7 +652,7 @@
 
     <p class="hero-sub">French drains, drainage correction, skid steer grading, erosion control and land clearing across North Georgia.</p>
 
-    <a class="cta-btn" href="#contact">Call / Text 912-254-1918</a>
+    <a class="cta-btn" href="tel:+19122541918" data-call-track="hero_call">Call / Text 912-254-1918</a>
 
     <br><br>
 
@@ -712,7 +724,7 @@
 
     <p class="section-sub">Tell us about your project. We’ll review it and contact you quickly.</p>
 
-    <form name="project-request" method="POST" data-netlify="true" action="/thank-you.html">
+    <form name="project-request" method="POST" data-netlify="true" action="/thank-you.html" data-form-track="homepage_quote_form">
 
       <input type="hidden" name="form-name" value="project-request"/>
 
@@ -846,7 +858,7 @@
 
     </div>
 
-    <a class="cta-btn" href="#contact">Call / Text 912-254-1918</a>
+    <a class="cta-btn" href="tel:+19122541918" data-call-track="projects_call">Call / Text 912-254-1918</a>
 
     <p class="gallery-note">Want more photos?</p>
 
@@ -896,7 +908,7 @@
 
       <p><strong>Need a quote fast?</strong><br>Call or text Landco Development LLC directly.</p>
 
-      <a class="cta-btn" href="#contact">Call / Text 912-254-1918</a>
+      <a class="cta-btn" href="tel:+19122541918" data-call-track="reviews_call_button">Call / Text 912-254-1918</a>
 
     </div>
 
@@ -940,11 +952,15 @@
 
     <p><strong>Phone:</strong></p>
 
-    <p class="phone-display">912-254-1918</p>
+    <p><a class="phone-display" href="tel:+19122541918" data-call-track="contact_phone_text">912-254-1918</a></p>
 
     <p><strong>Email:</strong> <a href="mailto:landcodevelopment2@gmail.com">landcodevelopment2@gmail.com</a></p>
 
-    <a class="cta-btn" href="#quote-form">Request a Quote Online</a>
+    <a class="cta-btn" href="tel:+19122541918" data-call-track="contact_call_button">Call / Text 912-254-1918</a>
+
+    <br><br>
+
+    <a class="cta-btn secondary" href="#quote-form">Request a Quote Online</a>
 
   </div>
 
@@ -958,7 +974,9 @@
 
     <p class="footer-nap">
 
-      <strong>Call/Text:</strong> 912-254-1918
+      <strong>Call/Text:</strong>
+
+      <a href="tel:+19122541918" data-call-track="footer_phone">912-254-1918</a>
 
       •
 
@@ -984,11 +1002,75 @@
 
 <div class="sticky-mobile-cta" aria-label="Mobile quick contact">
 
-  <a class="sticky-call" href="#contact">Call Now</a>
+  <a class="sticky-call" href="tel:+19122541918" data-call-track="mobile_sticky_call">Call Now</a>
 
   <a class="sticky-quote" href="#quote-form">Quote Now</a>
 
 </div>
+
+<script>
+
+  document.addEventListener('DOMContentLoaded', function () {
+
+    var callLinks = document.querySelectorAll('a[href^="tel:"][data-call-track]');
+
+    callLinks.forEach(function (link) {
+
+      link.addEventListener('click', function () {
+
+        try {
+
+          if (typeof gtag === 'function') {
+
+            gtag('event', 'click_call', {
+
+              event_category: 'phone',
+
+              event_label: link.getAttribute('data-call-track'),
+
+              transport_type: 'beacon'
+
+            });
+
+          }
+
+        } catch (error) {}
+
+      });
+
+    });
+
+    var quoteForm = document.querySelector('form[data-form-track="homepage_quote_form"]');
+
+    if (quoteForm) {
+
+      quoteForm.addEventListener('submit', function () {
+
+        try {
+
+          if (typeof gtag === 'function') {
+
+            gtag('event', 'generate_lead', {
+
+              event_category: 'form',
+
+              event_label: 'homepage_quote_form',
+
+              transport_type: 'beacon'
+
+            });
+
+          }
+
+        } catch (error) {}
+
+      });
+
+    }
+
+  });
+
+</script>
 
 </body>
 
