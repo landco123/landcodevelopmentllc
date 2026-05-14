@@ -38,11 +38,7 @@
 
   gtag('js', new Date());
 
-  gtag('config', 'G-KJ60VDSDTD', {
-
-    transport_type: 'beacon'
-
-  });
+  gtag('config', 'G-KJ60VDSDTD', {transport_type:'beacon'});
 
   gtag('config', 'AW-11478133009');
 
@@ -50,425 +46,117 @@
 
 <!-- Open Graph -->
 
-<meta content="website" property="og:type"/>
+<meta property="og:type" content="website"/>
 
-<meta content="Landco Development LLC" property="og:site_name"/>
+<meta property="og:site_name" content="Landco Development LLC"/>
 
-<meta content="https://www.landcodevelopmentllc.com/" property="og:url"/>
+<meta property="og:url" content="https://www.landcodevelopmentllc.com/"/>
 
-<meta content="Land Clearing, Grading &amp; French Drains | Landco Development LLC | North Georgia" property="og:title"/>
+<meta property="og:title" content="Land Clearing, Grading &amp; French Drains | Landco Development LLC | North Georgia"/>
 
-<meta content="Land clearing, grading, house pads, French drains and drainage correction. Call Now 912-254-1918 for a fast quote." property="og:description"/>
+<meta property="og:description" content="Land clearing, grading, house pads, French drains and drainage correction. Call Now 912-254-1918 for a fast quote."/>
 
-<meta content="https://landcodevelopmentllc.netlify.app/images/creek-before.jpg" property="og:image"/>
+<meta property="og:image" content="https://landcodevelopmentllc.netlify.app/images/creek-before.jpg"/>
 
 <!-- Twitter -->
 
-<meta content="summary_large_image" name="twitter:card"/>
+<meta name="twitter:card" content="summary_large_image"/>
 
-<meta content="Land Clearing, Grading &amp; French Drains | Landco Development LLC | North Georgia" name="twitter:title"/>
+<meta name="twitter:title" content="Land Clearing, Grading &amp; French Drains | Landco Development LLC | North Georgia"/>
 
-<meta content="Land clearing, grading, house pads, French drains and drainage correction. Call Now 912-254-1918 for a fast quote." name="twitter:description"/>
+<meta name="twitter:description" content="Land clearing, grading, house pads, French drains and drainage correction. Call Now 912-254-1918 for a fast quote."/>
 
-<meta content="https://landcodevelopmentllc.netlify.app/images/creek-before.jpg" name="twitter:image"/>
+<meta name="twitter:image" content="https://landcodevelopmentllc.netlify.app/images/creek-before.jpg"/>
 
-<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"/>
 
-<link href="sitemap.xml" rel="sitemap" title="Sitemap" type="application/xml"/>
+<link rel="sitemap" href="sitemap.xml" title="Sitemap" type="application/xml"/>
 
 <style>
 
-.trust-grid {
+/* --- original styles (unchanged) --- */
 
-  display: grid;
+.trust-grid{display:grid;gap:18px;}
 
-  gap: 18px;
+.trust-card{display:block;padding:28px;border-radius:18px;background:#fff;border:1px solid rgba(0,0,0,.12);text-decoration:none;color:#111;box-shadow:0 8px 22px rgba(0,0,0,.06);}
 
-}
+.trust-card h3{margin:0 0 10px;color:#111;}
 
-.trust-card {
+.trust-card p{margin:0;color:#555;}
 
-  display: block;
+.callout{margin-top:28px;padding:28px;border-radius:18px;background:#fff;border:1px solid rgba(0,0,0,.12);text-align:center;}
 
-  padding: 28px;
+.callout .cta-btn,.contact .cta-btn,.hero .cta-btn,.projects .cta-btn,.services .cta-btn{display:inline-flex;align-items:center;justify-content:center;background:#050505;color:#fff;border:2px solid #c9a227;border-radius:14px;padding:16px 24px;font-weight:800;text-decoration:none;box-shadow:0 10px 24px rgba(0,0,0,.18);}
 
-  border-radius: 18px;
+.callout .cta-btn:hover,.contact .cta-btn:hover,.hero .cta-btn:hover,.projects .cta-btn:hover,.services .cta-btn:hover{background:#c9a227;color:#050505;}
 
-  background: #fff;
+.cta-btn.secondary{background:transparent;color:#111;border:2px solid #c9a227;}
 
-  border: 1px solid rgba(0,0,0,.12);
+.cta-btn.secondary:hover{background:#c9a227;color:#050505;}
 
-  text-decoration: none;
+.service-area{padding:70px 20px;text-align:center;}
 
-  color: #111;
+.service-area .container{max-width:1100px;margin:0 auto;}
 
-  box-shadow: 0 8px 22px rgba(0,0,0,.06);
+.service-area ul{list-style:none;padding:0;margin:24px auto 0;display:grid;gap:12px;max-width:720px;}
 
-}
+.service-area li{margin:0;}
 
-.trust-card h3 {
+.service-area a{display:block;padding:15px 18px;border-radius:14px;background:#fff;border:1px solid rgba(0,0,0,.12);color:#111;text-decoration:none;font-weight:800;}
 
-  margin: 0 0 10px;
+.service-area a:hover{border-color:#c9a227;color:#111;}
 
-  color: #111;
+.header-call{display:inline-flex;align-items:center;justify-content:center;background:#050505;color:#fff;border:2px solid #c9a227;border-radius:14px;padding:12px 18px;font-weight:800;text-decoration:none;}
 
-}
+.header-call:hover{background:#c9a227;color:#050505;}
 
-.trust-card p {
+.mini-ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin:28px auto;}
 
-  margin: 0;
+.mini-cta{display:inline-flex;align-items:center;justify-content:center;padding:14px 20px;border-radius:14px;background:#050505;border:2px solid #c9a227;color:#fff;text-decoration:none;font-weight:900;box-shadow:0 6px 16px rgba(0,0,0,.22);}
 
-  color: #555;
+.mini-cta:hover{background:#c9a227;color:#050505;}
 
-}
+.phone-display{font-size:1.35rem;font-weight:900;letter-spacing:.5px;color:#111;text-decoration:none;}
 
-.callout {
+.phone-display:hover{color:#c9a227;}
 
-  margin-top: 28px;
+.sticky-mobile-cta{display:none;}
 
-  padding: 28px;
+@media(max-width:760px){
 
-  border-radius: 18px;
+  body{padding-bottom:82px;}
 
-  background: #fff;
+  .mini-ctas{display:grid;grid-template-columns:1fr;gap:10px;}
 
-  border: 1px solid rgba(0,0,0,.12);
+  .mini-cta{width:100%;border-radius:14px;}
 
-  text-align: center;
+  .sticky-mobile-cta{
 
-}
+    position:fixed;left:0;right:0;bottom:0;z-index:9999;
 
-.callout .cta-btn,
+    display:grid;grid-template-columns:1fr 1fr;gap:10px;
 
-.contact .cta-btn,
+    padding:10px;background:rgba(5,5,5,.96);
 
-.hero .cta-btn,
+    border-top:2px solid #c9a227;box-shadow:0 -8px 22px rgba(0,0,0,.25);}
 
-.projects .cta-btn,
+  /* --- size/match update --- */
 
-.services .cta-btn {
+  .sticky-mobile-cta a{
 
-  display: inline-flex;
+    display:flex;align-items:center;justify-content:center;
 
-  align-items: center;
+    min-height:48px;padding:16px 24px;border-radius:14px;
 
-  justify-content: center;
+    font-weight:900;text-decoration:none;text-align:center;}
 
-  background: #050505;
+  .sticky-mobile-cta .sticky-call{background:#c9a227;color:#050505;}
 
-  color: #fff;
-
-  border: 2px solid #c9a227;
-
-  border-radius: 14px;
-
-  padding: 16px 24px;
-
-  font-weight: 800;
-
-  text-decoration: none;
-
-  box-shadow: 0 10px 24px rgba(0,0,0,.18);
+  .sticky-mobile-cta .sticky-quote{background:#fff;color:#050505;}
 
 }
 
-.callout .cta-btn:hover,
-
-.contact .cta-btn:hover,
-
-.hero .cta-btn:hover,
-
-.projects .cta-btn:hover,
-
-.services .cta-btn:hover {
-
-  background: #c9a227;
-
-  color: #050505;
-
-}
-
-.cta-btn.secondary {
-
-  background: transparent;
-
-  color: #111;
-
-  border: 2px solid #c9a227;
-
-}
-
-.cta-btn.secondary:hover {
-
-  background: #c9a227;
-
-  color: #050505;
-
-}
-
-.service-area {
-
-  padding: 70px 20px;
-
-  text-align: center;
-
-}
-
-.service-area .container {
-
-  max-width: 1100px;
-
-  margin: 0 auto;
-
-}
-
-.service-area ul {
-
-  list-style: none;
-
-  padding: 0;
-
-  margin: 24px auto 0;
-
-  display: grid;
-
-  gap: 12px;
-
-  max-width: 720px;
-
-}
-
-.service-area li {
-
-  margin: 0;
-
-}
-
-.service-area a {
-
-  display: block;
-
-  padding: 15px 18px;
-
-  border-radius: 14px;
-
-  background: #fff;
-
-  border: 1px solid rgba(0,0,0,.12);
-
-  color: #111;
-
-  text-decoration: none;
-
-  font-weight: 800;
-
-}
-
-.service-area a:hover {
-
-  border-color: #c9a227;
-
-  color: #111;
-
-}
-
-.header-call {
-
-  display: inline-flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  background: #050505;
-
-  color: #fff;
-
-  border: 2px solid #c9a227;
-
-  border-radius: 14px;
-
-  padding: 12px 18px;
-
-  font-weight: 800;
-
-  text-decoration: none;
-
-}
-
-.header-call:hover {
-
-  background: #c9a227;
-
-  color: #050505;
-
-}
-
-.mini-ctas {
-
-  display: flex;
-
-  flex-wrap: wrap;
-
-  justify-content: center;
-
-  gap: 12px;
-
-  margin: 28px auto;
-
-}
-
-.mini-cta {
-
-  display: inline-flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  padding: 14px 20px;
-
-  border-radius: 14px;
-
-  background: #050505;
-
-  border: 2px solid #c9a227;
-
-  color: #fff;
-
-  text-decoration: none;
-
-  font-weight: 900;
-
-  box-shadow: 0 6px 16px rgba(0,0,0,.22);
-
-}
-
-.mini-cta:hover {
-
-  background: #c9a227;
-
-  color: #050505;
-
-}
-
-.phone-display {
-
-  font-size: 1.35rem;
-
-  font-weight: 900;
-
-  letter-spacing: .5px;
-
-  color: #111;
-
-  text-decoration: none;
-
-}
-
-.phone-display:hover {
-
-  color: #c9a227;
-
-}
-
-.sticky-mobile-cta {
-
-  display: none;
-
-}
-
-@media (max-width: 760px) {
-
-  body {
-
-    padding-bottom: 82px;
-
-  }
-
-  .mini-ctas {
-
-    display: grid;
-
-    grid-template-columns: 1fr;
-
-    gap: 10px;
-
-  }
-
-  .mini-cta {
-
-    width: 100%;
-
-    border-radius: 14px;
-
-  }
-
-  .sticky-mobile-cta {
-
-    position: fixed;
-
-    left: 0;
-
-    right: 0;
-
-    bottom: 0;
-
-    z-index: 9999;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 10px;
-
-    padding: 10px;
-
-    background: rgba(5,5,5,.96);
-
-    border-top: 2px solid #c9a227;
-
-    box-shadow: 0 -8px 22px rgba(0,0,0,.25);
-
-  }
-
-  .sticky-mobile-cta a {
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    min-height: 48px;
-
-    border-radius: 12px;
-
-    font-weight: 900;
-
-    text-decoration: none;
-
-    text-align: center;
-
-  }
-
-  .sticky-mobile-cta .sticky-call {
-
-    background: #c9a227;
-
-    color: #050505;
-
-  }
-
-  .sticky-mobile-cta .sticky-quote {
-
-    background: #fff;
-
-    color: #050505;
-
-  }
-
-}
+/* --- end of style block --- */
 
 </style>
 
@@ -716,6 +404,100 @@
 
 </section>
 
+<section class="projects" id="projects">
+
+  <div class="container">
+
+    <h2>Before &amp; After Results</h2>
+
+    <p class="section-sub">Real work. Real results.</p>
+
+    <div class="ba-grid">
+
+      <!-- image cards unchanged -->
+
+      <figure class="ba-card">
+
+        <picture>
+
+          <source srcset="images/creek-before.webp" type="image/webp"/>
+
+          <img src="images/creek-before.jpg" alt="Before: standing water routed through yard before creek bed drainage install." loading="lazy"/>
+
+        </picture>
+
+        <figcaption>Creek Bed Drainage — Before</figcaption>
+
+      </figure>
+
+      <figure class="ba-card">
+
+        <picture>
+
+          <source srcset="images/creek-after.webp" type="image/webp"/>
+
+          <img src="images/creek-after.jpg" alt="After: clean creek bed drainage installed to move water away from the home." loading="lazy"/>
+
+        </picture>
+
+        <figcaption>Creek Bed Drainage — After</figcaption>
+
+      </figure>
+
+      <figure class="ba-card">
+
+        <picture>
+
+          <img src="images/creek-finished.JPEG" alt="Finished creek bed drainage system with clean stone and proper grading for long-term water control." loading="lazy"/>
+
+        </picture>
+
+        <figcaption>French Drain &amp; Creek Bed — Finished</figcaption>
+
+      </figure>
+
+      <figure class="ba-card">
+
+        <picture>
+
+          <source srcset="images/mulch-before.webp" type="image/webp"/>
+
+          <img src="images/mulch-before.jpg" alt="Before: dense brush and overgrowth in work area." loading="lazy"/>
+
+        </picture>
+
+        <figcaption>Forestry Mulching — Before</figcaption>
+
+      </figure>
+
+      <figure class="ba-card">
+
+        <picture>
+
+          <source srcset="images/mulch-after.webp" type="image/webp"/>
+
+          <img src="images/mulch-after.jpg" alt="After: mulched and cleaned work area ready for use." loading="lazy"/>
+
+        </picture>
+
+        <figcaption>Forestry Mulching — After</figcaption>
+
+      </figure>
+
+    </div>
+
+    <a class="cta-btn" href="tel:+19122541918" data-call-track="projects_call">Call Now 912-254-1918</a>
+
+    <p class="gallery-note">Want more photos?</p>
+
+    <a class="cta-btn secondary" href="https://facebook.com/Landco123" target="_blank" rel="noopener">See More Real Projects</a>
+
+  </div>
+
+</section>
+
+<!-- ***** QUOTE FORM MOVED HERE ***** -->
+
 <section class="contact" id="quote-form">
 
   <div class="container">
@@ -778,95 +560,7 @@
 
 </section>
 
-<section class="projects" id="projects">
-
-  <div class="container">
-
-    <h2>Before &amp; After Results</h2>
-
-    <p class="section-sub">Real work. Real results.</p>
-
-    <div class="ba-grid">
-
-      <figure class="ba-card">
-
-        <picture>
-
-          <source srcset="images/creek-before.webp" type="image/webp"/>
-
-          <img alt="Before: standing water routed through yard before creek bed drainage install." loading="lazy" src="images/creek-before.jpg"/>
-
-        </picture>
-
-        <figcaption>Creek Bed Drainage — Before</figcaption>
-
-      </figure>
-
-      <figure class="ba-card">
-
-        <picture>
-
-          <source srcset="images/creek-after.webp" type="image/webp"/>
-
-          <img alt="After: clean creek bed drainage installed to move water away from the home." loading="lazy" src="images/creek-after.jpg"/>
-
-        </picture>
-
-        <figcaption>Creek Bed Drainage — After</figcaption>
-
-      </figure>
-
-      <figure class="ba-card">
-
-        <picture>
-
-          <img alt="Finished creek bed drainage system with clean stone and proper grading for long-term water control." loading="lazy" src="images/creek-finished.JPEG"/>
-
-        </picture>
-
-        <figcaption>French Drain &amp; Creek Bed — Finished</figcaption>
-
-      </figure>
-
-      <figure class="ba-card">
-
-        <picture>
-
-          <source srcset="images/mulch-before.webp" type="image/webp"/>
-
-          <img alt="Before: dense brush and overgrowth in work area." loading="lazy" src="images/mulch-before.jpg"/>
-
-        </picture>
-
-        <figcaption>Forestry Mulching — Before</figcaption>
-
-      </figure>
-
-      <figure class="ba-card">
-
-        <picture>
-
-          <source srcset="images/mulch-after.webp" type="image/webp"/>
-
-          <img alt="After: mulched and cleaned work area ready for use." loading="lazy" src="images/mulch-after.jpg"/>
-
-        </picture>
-
-        <figcaption>Forestry Mulching — After</figcaption>
-
-      </figure>
-
-    </div>
-
-    <a class="cta-btn" href="tel:+19122541918" data-call-track="projects_call">Call Now 912-254-1918</a>
-
-    <p class="gallery-note">Want more photos?</p>
-
-    <a class="cta-btn secondary" href="https://facebook.com/Landco123" rel="noopener" target="_blank">See More Real Projects</a>
-
-  </div>
-
-</section>
+<!-- ***** END MOVED FORM ***** -->
 
 <section class="trust" id="reviews">
 
@@ -878,7 +572,7 @@
 
     <div class="trust-grid">
 
-      <a class="trust-card" href="https://share.google/VPTTty0vot6EEEihj" rel="noopener" target="_blank">
+      <a class="trust-card" href="https://share.google/VPTTty0vot6EEEihj" target="_blank" rel="noopener">
 
         <h3>Google Business Profile</h3>
 
@@ -886,7 +580,7 @@
 
       </a>
 
-      <a class="trust-card" href="https://youtube.com/@Landco321" rel="noopener" target="_blank">
+      <a class="trust-card" href="https://youtube.com/@Landco321" target="_blank" rel="noopener">
 
         <h3>YouTube Projects</h3>
 
@@ -894,7 +588,7 @@
 
       </a>
 
-      <a class="trust-card" href="https://facebook.com/Landco123" rel="noopener" target="_blank">
+      <a class="trust-card" href="https://facebook.com/Landco123" target="_blank" rel="noopener">
 
         <h3>Facebook</h3>
 
@@ -988,17 +682,19 @@
 
     <p class="footer-links">
 
-      <a href="https://share.google/VPTTty0vot6EEEihj" rel="noopener" target="_blank">Google Reviews</a> •
+      <a href="https://share.google/VPTTty0vot6EEEihj" target="_blank" rel="noopener">Google Reviews</a> •
 
-      <a href="https://youtube.com/@Landco321" rel="noopener" target="_blank">YouTube</a> •
+      <a href="https://youtube.com/@Landco321" target="_blank" rel="noopener">YouTube</a> •
 
-      <a href="https://facebook.com/Landco123" rel="noopener" target="_blank">Facebook</a>
+      <a href="https://facebook.com/Landco123" target="_blank" rel="noopener">Facebook</a>
 
     </p>
 
   </div>
 
 </footer>
+
+<!-- Sticky mobile CTA -->
 
 <div class="sticky-mobile-cta" aria-label="Mobile quick contact">
 
@@ -1010,65 +706,33 @@
 
 <script>
 
-  document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded',function(){
 
-    var callLinks = document.querySelectorAll('a[href^="tel:"][data-call-track]');
+  var callLinks=document.querySelectorAll('a[href^="tel:"][data-call-track]');
 
-    callLinks.forEach(function (link) {
+  callLinks.forEach(function(link){
 
-      link.addEventListener('click', function () {
+    link.addEventListener('click',function(){
 
-        try {
-
-          if (typeof gtag === 'function') {
-
-            gtag('event', 'click_call', {
-
-              event_category: 'phone',
-
-              event_label: link.getAttribute('data-call-track'),
-
-              transport_type: 'beacon'
-
-            });
-
-          }
-
-        } catch (error) {}
-
-      });
+      try{if(typeof gtag==='function'){gtag('event','click_call',{event_category:'phone',event_label:link.getAttribute('data-call-track'),transport_type:'beacon'});} }catch(e){}
 
     });
 
-    var quoteForm = document.querySelector('form[data-form-track="homepage_quote_form"]');
-
-    if (quoteForm) {
-
-      quoteForm.addEventListener('submit', function () {
-
-        try {
-
-          if (typeof gtag === 'function') {
-
-            gtag('event', 'generate_lead', {
-
-              event_category: 'form',
-
-              event_label: 'homepage_quote_form',
-
-              transport_type: 'beacon'
-
-            });
-
-          }
-
-        } catch (error) {}
-
-      });
-
-    }
-
   });
+
+  var quoteForm=document.querySelector('form[data-form-track="homepage_quote_form"]');
+
+  if(quoteForm){
+
+    quoteForm.addEventListener('submit',function(){
+
+      try{if(typeof gtag==='function'){gtag('event','generate_lead',{event_category:'form',event_label:'homepage_quote_form',transport_type:'beacon'});} }catch(e){}
+
+    });
+
+  }
+
+});
 
 </script>
 
