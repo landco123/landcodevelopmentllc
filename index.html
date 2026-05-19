@@ -150,7 +150,7 @@
 
     font-weight:900;text-decoration:none;text-align:center;}
 
-  .sticky-mobile-cta .sticky-call{background:#c9a227;color:#050505;}
+.sticky-mobile-cta .sticky-call{background:#fff;color:#050505;}
 
   .sticky-mobile-cta .sticky-quote{background:#fff;color:#050505;}
 
@@ -498,63 +498,67 @@
 
 <!-- ***** QUOTE FORM MOVED HERE ***** -->
 
-<section class="contact" id="quote-form">
+<form name="project-request"
 
-  <div class="container">
+      method="POST"
 
-    <h2>Request a Quote</h2>
+      data-netlify="true"
 
-    <p class="section-sub">Tell us about your project. We’ll review it and contact you quickly.</p>
+      action="/thank-you.html">
 
-    <form name="project-request" method="POST" data-netlify="true" action="/thank-you.html" data-form-track="homepage_quote_form">
+  <!-- Netlify needs this -->
 
-      <input type="hidden" name="form-name" value="project-request"/>
+  <input type="hidden" name="form-name" value="project-request">
 
-      <label for="name">Name</label>
+  <!-- new tracking fields -->
 
-      <input id="name" type="text" name="name" autocomplete="name" required/>
+  <input type="hidden" name="utm_source">
 
-      <label for="phone">Phone</label>
+  <input type="hidden" name="utm_medium">
 
-      <input id="phone" type="tel" name="phone" autocomplete="tel" required/>
+  <input type="hidden" name="utm_campaign">
 
-      <label for="project_type">Project Type</label>
+  <input type="hidden" name="gclid">
 
-      <select id="project_type" name="project_type" required>
+  <!-- visible fields -->
 
-        <option value="">Select service</option>
+  <label>Name <input type="text"  name="name"  required></label>
 
-        <option>French Drain</option>
+  <label>Phone <input type="tel"   name="phone" required></label>
 
-        <option>Grading / House Pad</option>
+  <label>Project Type
 
-        <option>Driveway</option>
+    <select name="project_type" required>
 
-        <option>Land Clearing</option>
+      <option value="">Select service</option>
 
-        <option>Drainage Correction</option>
+      <option>French Drain</option>
 
-        <option>Erosion Control</option>
+      <option>Grading / House Pad</option>
 
-        <option>Other</option>
+      <option>Driveway</option>
 
-      </select>
+      <option>Land Clearing</option>
 
-      <label for="location">Project Location</label>
+      <option>Drainage Correction</option>
 
-      <input id="location" type="text" name="location" autocomplete="street-address" required/>
+      <option>Erosion Control</option>
 
-      <label for="email">Email</label>
+      <option>Other</option>
 
-      <input id="email" type="email" name="email" autocomplete="email"/>
+    </select>
 
-      <label for="description">Project Details</label>
+  </label>
 
-      <textarea id="description" name="description" required></textarea>
+  <label>Location <input type="text" name="location" required></label>
 
-      <button type="submit">Submit Request</button>
+  <label>Email    <input type="email" name="email"></label>
 
-    </form>
+  <label>Project Details <textarea name="description" required></textarea></label>
+
+  <button type="submit">Submit Request</button>
+
+</form>
 
   </div>
 
