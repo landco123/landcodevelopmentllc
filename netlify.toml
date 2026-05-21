@@ -1,5 +1,5 @@
-[[edge_functions]]
+# Landco Development LLC static site
 
-path = "/*"
+# Phone links are hard-coded in the HTML.
 
-function = "landco-phone-fix"
+# Old sitewide phone Edge Function disabled for stability.
