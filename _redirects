@@ -1,4 +1,52 @@
-https://landcodevelopmentllc.com/* https://www.landcodevelopmentllc.com/:splat 301
+# Old .html service pages — send directly to final clean HTTPS www URLs
+
+http://landcodevelopmentllc.com/land-clearing.html https://www.landcodevelopmentllc.com/land-clearing 301!
+
+https://landcodevelopmentllc.com/land-clearing.html https://www.landcodevelopmentllc.com/land-clearing 301!
+
+http://www.landcodevelopmentllc.com/land-clearing.html https://www.landcodevelopmentllc.com/land-clearing 301!
+
+https://www.landcodevelopmentllc.com/land-clearing.html https://www.landcodevelopmentllc.com/land-clearing 301!
+
+http://landcodevelopmentllc.com/grading.html https://www.landcodevelopmentllc.com/grading 301!
+
+https://landcodevelopmentllc.com/grading.html https://www.landcodevelopmentllc.com/grading 301!
+
+http://www.landcodevelopmentllc.com/grading.html https://www.landcodevelopmentllc.com/grading 301!
+
+https://www.landcodevelopmentllc.com/grading.html https://www.landcodevelopmentllc.com/grading 301!
+
+http://landcodevelopmentllc.com/french-drains.html https://www.landcodevelopmentllc.com/french-drains 301!
+
+https://landcodevelopmentllc.com/french-drains.html https://www.landcodevelopmentllc.com/french-drains 301!
+
+http://www.landcodevelopmentllc.com/french-drains.html https://www.landcodevelopmentllc.com/french-drains 301!
+
+https://www.landcodevelopmentllc.com/french-drains.html https://www.landcodevelopmentllc.com/french-drains 301!
+
+http://landcodevelopmentllc.com/civil-government.html https://www.landcodevelopmentllc.com/civil-government 301!
+
+https://landcodevelopmentllc.com/civil-government.html https://www.landcodevelopmentllc.com/civil-government 301!
+
+http://www.landcodevelopmentllc.com/civil-government.html https://www.landcodevelopmentllc.com/civil-government 301!
+
+https://www.landcodevelopmentllc.com/civil-government.html https://www.landcodevelopmentllc.com/civil-government 301!
+
+# Force all non-www / old protocol traffic to final HTTPS www domain
+
+http://landcodevelopmentllc.com/* https://www.landcodevelopmentllc.com/:splat 301!
+
+https://landcodevelopmentllc.com/* https://www.landcodevelopmentllc.com/:splat 301!
+
+http://www.landcodevelopmentllc.com/* https://www.landcodevelopmentllc.com/:splat 301!
+
+# Keep sitemap and robots accessible
+
+/sitemap.xml /sitemap.xml 200
+
+/robots.txt /robots.txt 200
+
+# Old WordPress / junk cleanup
 
 /author/* / 301
 
@@ -6,16 +54,8 @@ https://landcodevelopmentllc.com/* https://www.landcodevelopmentllc.com/:splat 3
 
 /index.php / 301
 
-/sitemap.xml /sitemap.xml 200
-
-/robots.txt /robots.txt 200
-
 /hello-world/ / 301
 
-/land-clearing.html /land-clearing 301!
+# Static site fallback — must stay last
 
-/grading.html /grading 301!
-
-/french-drains.html /french-drains 301!
-
-/civil-government.html /civil-government 301!
+/* /index.html 200
