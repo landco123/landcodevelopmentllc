@@ -63,8 +63,9 @@
       Tell us where you are in the process, where the project is located, and what work you need.
     </p>
 
-    <form name="project-request" method="POST" data-netlify="true" action="/thank-you.html">
+    <form name="project-request" method="POST" data-netlify="true" action="/thank-you.html" enctype="multipart/form-data">
       <input type="hidden" name="form-name" value="project-request"/>
+<input type="hidden" name="landing_page" value=""><input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value=""><input type="hidden" name="utm_term" value=""><input type="hidden" name="utm_content" value=""><input type="hidden" name="gclid" value="">
 
       <label>Project Stage</label>
       <select name="project_stage" required>
@@ -83,7 +84,10 @@
       <label>Project Description</label>
       <textarea name="description" rows="6" required></textarea>
 
-      <button type="submit">Submit Project Request</button>
+      <fieldset class="form-upload"><legend>Project photos (optional)</legend><label>Photo 1<input name="project_photo_1" type="file" accept="image/jpeg,image/png,image/webp"></label><label>Photo 2<input name="project_photo_2" type="file" accept="image/jpeg,image/png,image/webp"></label><label>Photo 3<input name="project_photo_3" type="file" accept="image/jpeg,image/png,image/webp"></label></fieldset>
+<p class="form-notice"><strong>For your protection:</strong> Keep all uploads under 8 MB total. Do not submit Social Security numbers, payment-card or bank information, identification documents, alarm/access codes, medical information or other sensitive data. Avoid faces, license plates and unrelated private areas. Upload only project-relevant JPG, PNG or WebP images that you have authority to share.</p>
+<input type="hidden" name="policy_version" value="2026-09-20"><input type="hidden" name="submitted_at" value=""><label class="consent"><input type="checkbox" name="contact_consent" value="authorized" required> I authorize Landco Development LLC to contact me by phone, text or email about this project request. Message and data rates may apply; I may ask Landco to stop future messages.</label><label class="consent"><input type="checkbox" name="terms_acknowledgment" value="accepted" required> I acknowledge the <a href="/privacy-policy.html" target="_blank" rel="noopener">Privacy Policy</a> and <a href="/terms.html" target="_blank" rel="noopener">Website Terms</a>. If I upload photos, I confirm I have authority to share them and understand they will not be used for public marketing without separate permission.</label>
+<button type="submit">Submit Project Request</button>
     </form>
 
     <p>
@@ -119,7 +123,10 @@
       © 2026 Landco Development LLC
     </p>
   </div>
+<p class="legal-links"><a href="/privacy-policy.html">Privacy Policy</a> • <a href="/terms.html">Website Terms</a></p>
+<p class="legal-links"><a href="/service-areas.html">Service Areas</a></p>
 </footer>
 
+<script src="/site.js" defer></script>
 </body>
 </html>

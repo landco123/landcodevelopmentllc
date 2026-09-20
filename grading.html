@@ -749,8 +749,6 @@
 
           "https://youtube.com/@Landco321",
 
-          "https://www.thumbtack.com/pro/referral/ZLnEyCIeTjnC7H0",
-
           "https://share.google/VPTTty0vot6EEEihj",
 
           "https://facebook.com/Landco123"
@@ -1347,7 +1345,7 @@
 
         <p class="gallery-note">
 
-          For more project proof, before-and-after work and recent field updates, view Landco Development LLC on Google, YouTube, Thumbtack and Facebook.
+          For more project proof, before-and-after work and recent field updates, view Landco Development LLC on Google, YouTube and Facebook.
 
         </p>
 
@@ -1375,17 +1373,7 @@
 
             <p>See the business profile, local presence and customer-facing project updates directly on Google.</p>
 
-          </a>
-
-          <a class="trust-card" href="https://www.thumbtack.com/pro/referral/ZLnEyCIeTjnC7H0" target="_blank" rel="noopener">
-
-            <h3>Thumbtack Profile</h3>
-
-            <p>Review the active service profile and project-driven lead history.</p>
-
-          </a>
-
-          <a class="trust-card" href="https://youtube.com/@Landco321" target="_blank" rel="noopener">
+          </a><a class="trust-card" href="https://youtube.com/@Landco321" target="_blank" rel="noopener">
 
             <h3>YouTube Project Content</h3>
 
@@ -1545,7 +1533,7 @@
 
           </article>
 
-          <form class="quote-form" name="grading-quote" method="POST" action="/thank-you.html" data-netlify="true" data-netlify-honeypot="bot-field" onsubmit="gtag('event','form_submit_click',{event_category:'lead',event_label:'grading_quote_form'});">
+          <form class="quote-form" name="grading-quote" method="POST" action="/thank-you.html" data-netlify="true" data-netlify-honeypot="bot-field" onsubmit="gtag('event','form_submit_click',{event_category:'lead',event_label:'grading_quote_form'});" enctype="multipart/form-data">
 
             <input type="hidden" name="form-name" value="grading-quote" />
 
@@ -1617,7 +1605,10 @@
 
             <textarea id="details" name="project_details" placeholder="Describe the driveway, yard, pad, slope, runoff, access, gravel prep or site work needed." required></textarea>
 
-            <button type="submit">Send Quote Request</button>
+            <fieldset class="form-upload"><legend>Project photos (optional)</legend><label>Photo 1<input name="project_photo_1" type="file" accept="image/jpeg,image/png,image/webp"></label><label>Photo 2<input name="project_photo_2" type="file" accept="image/jpeg,image/png,image/webp"></label><label>Photo 3<input name="project_photo_3" type="file" accept="image/jpeg,image/png,image/webp"></label></fieldset>
+<p class="form-notice"><strong>For your protection:</strong> Keep all uploads under 8 MB total. Do not submit Social Security numbers, payment-card or bank information, identification documents, alarm/access codes, medical information or other sensitive data. Avoid faces, license plates and unrelated private areas. Upload only project-relevant JPG, PNG or WebP images that you have authority to share.</p>
+<input type="hidden" name="policy_version" value="2026-09-20"><input type="hidden" name="submitted_at" value=""><label class="consent"><input type="checkbox" name="contact_consent" value="authorized" required> I authorize Landco Development LLC to contact me by phone, text or email about this project request. Message and data rates may apply; I may ask Landco to stop future messages.</label><label class="consent"><input type="checkbox" name="terms_acknowledgment" value="accepted" required> I acknowledge the <a href="/privacy-policy.html" target="_blank" rel="noopener">Privacy Policy</a> and <a href="/terms.html" target="_blank" rel="noopener">Website Terms</a>. If I upload photos, I confirm I have authority to share them and understand they will not be used for public marketing without separate permission.</label>
+<button type="submit">Send Quote Request</button>
 
             <p class="fine-print">Prefer to talk now? Call or text <a href="tel:+19122541918" onclick="gtag('event','phone_call_click',{event_category:'lead',event_label:'grading_form_phone'});">912-254-1918</a>.</p>
 
@@ -1643,15 +1634,15 @@
 
         <a href="https://share.google/VPTTty0vot6EEEihj" target="_blank" rel="noopener">Google Reviews</a> •
 
-        <a href="https://www.thumbtack.com/pro/referral/ZLnEyCIeTjnC7H0" target="_blank" rel="noopener">Thumbtack</a> •
-
         <a href="https://youtube.com/@Landco321" target="_blank" rel="noopener">YouTube</a>
 
       </p>
 
     </div>
 
-  </footer>
+  <p class="legal-links"><a href="/privacy-policy.html">Privacy Policy</a> • <a href="/terms.html">Website Terms</a></p>
+<p class="legal-links"><a href="/service-areas.html">Service Areas</a></p>
+</footer>
 
   <div class="sticky-cta" aria-label="Mobile contact shortcuts">
 
@@ -1697,6 +1688,7 @@
 
   </script>
 
+<script src="/site.js" defer></script>
 </body>
 
 </html>
