@@ -1,0 +1,196 @@
+/*
+ * Homepage visual layer: restores the established April Landco presentation.
+ * Content, schema, tracking, forms and service-area SEO remain in index.html.
+ */
+
+/* Undo the later global telephone-link treatment on ordinary text links. */
+body a[href^="tel:"] {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  transform: none;
+  transition: none;
+}
+
+body a[href^="tel:"]:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* April header call button. */
+body .header-call,
+body a.header-call[href^="tel:"] {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 12px 22px;
+  background: var(--gold);
+  color: #000;
+  border: 0;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* April primary and secondary CTA treatment. */
+body .cta-btn,
+body a.cta-btn[href^="tel:"] {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 28px;
+  background: #000;
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: none;
+  transition: transform .15s ease, opacity .15s ease;
+}
+
+body .cta-btn:hover,
+body a.cta-btn[href^="tel:"]:hover {
+  color: #fff;
+  opacity: .92;
+  transform: translateY(-1px);
+}
+
+body .cta-btn.secondary {
+  background: transparent;
+  color: #000;
+  border: 2px solid #000;
+}
+
+body .cta-btn.secondary:hover {
+  color: #000;
+}
+
+/* Keep the familiar April chips and proof cards. */
+body .mini-cta {
+  display: inline-block;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--text);
+  box-shadow: none;
+  font-weight: 700;
+}
+
+body .mini-cta:hover {
+  background: #fff;
+  color: var(--text);
+  border-color: var(--gold);
+}
+
+body .phone-display,
+body a.phone-display[href^="tel:"] {
+  display: inline;
+  padding: 0;
+  background: transparent;
+  color: #000;
+  border: 0;
+  box-shadow: none;
+}
+
+/* April service-area block, extended to today's complete coverage hub. */
+section.service-area {
+  margin: 0;
+  padding: 60px 20px;
+  background: var(--gray);
+  color: var(--text);
+}
+
+section.service-area .container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section.service-area ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 900px;
+  margin: 24px auto 0;
+  padding: 0;
+  list-style: none;
+}
+
+section.service-area li {
+  margin: 0;
+}
+
+section.service-area a {
+  display: inline-block;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+section.service-area a:hover {
+  border-color: var(--gold);
+}
+
+/* Retain the approved mobile Call / Quote utility without changing desktop. */
+.sticky-mobile-cta {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  body {
+    padding-bottom: 76px;
+  }
+
+  .sticky-mobile-cta {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+    background: rgba(5, 5, 5, .97);
+    border-top: 2px solid #c9a227;
+    box-shadow: 0 -8px 22px rgba(0, 0, 0, .25);
+  }
+
+  body .sticky-mobile-cta a,
+  body .sticky-mobile-cta a[href^="tel:"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    margin: 0;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: 900;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  body .sticky-mobile-cta .sticky-call,
+  body .sticky-mobile-cta a.sticky-call[href^="tel:"] {
+    background: #c9a227;
+    color: #050505;
+    border: 1px solid #c9a227;
+  }
+
+  body .sticky-mobile-cta .sticky-quote {
+    background: #fff;
+    color: #050505;
+    border: 1px solid #fff;
+  }
+}
