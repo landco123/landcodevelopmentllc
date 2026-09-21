@@ -6,7 +6,11 @@
   <title>Civil Contractor Project Request | Landco Development LLC</title>
   <meta name="description" content="Submit a civil contractor project request to Landco Development LLC for grading, drainage, land clearing, and site preparation services in Georgia."/>
   <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="coverage.css"/>
   <link rel="canonical" href="https://www.landcodevelopmentllc.com/civil-contractor-request.html"/>
+  <meta name="robots" content="index,follow,max-image-preview:large"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KJ60VDSDTD"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-KJ60VDSDTD');gtag('config','AW-11478133009');</script>
 </head>
 
 <body>
@@ -63,8 +67,27 @@
       Tell us where you are in the process, where the project is located, and what work you need.
     </p>
 
-    <form name="project-request" method="POST" data-netlify="true" action="/thank-you.html">
-      <input type="hidden" name="form-name" value="project-request"/>
+    <form class="quote-form" name="civil-contractor-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html" enctype="multipart/form-data">
+      <input type="hidden" name="form-name" value="civil-contractor-request"/>
+      <input type="hidden" name="landing_page" value=""/>
+      <input type="hidden" name="utm_source" value=""/>
+      <input type="hidden" name="utm_medium" value=""/>
+      <input type="hidden" name="utm_campaign" value=""/>
+      <input type="hidden" name="utm_term" value=""/>
+      <input type="hidden" name="utm_content" value=""/>
+      <input type="hidden" name="gclid" value=""/>
+      <input type="hidden" name="policy_version" value="2026-09-21"/>
+      <input type="hidden" name="submitted_at" value=""/>
+      <p class="hidden"><label>Leave blank <input name="bot-field"/></label></p>
+
+      <label>Contact Name</label>
+      <input type="text" name="name" autocomplete="name" required/>
+
+      <label>Company or Agency</label>
+      <input type="text" name="company" autocomplete="organization"/>
+
+      <label>Phone</label>
+      <input type="tel" name="phone" autocomplete="tel" required/>
 
       <label>Project Stage</label>
       <select name="project_stage" required>
@@ -78,10 +101,18 @@
       <input type="text" name="location" required>
 
       <label>Email</label>
-      <input type="email" name="email" required>
+      <input type="email" name="email" autocomplete="email" required/>
 
       <label>Project Description</label>
       <textarea name="description" rows="6" required></textarea>
+
+      <label>Plans or bid-document link (optional)</label>
+      <input type="url" name="plans_link" placeholder="https://"/>
+
+      <fieldset class="form-upload"><legend>Project files or photos (optional)</legend><label>File 1<input name="project_file_1" type="file" accept="image/jpeg,image/png,image/webp,application/pdf"/></label><label>File 2<input name="project_file_2" type="file" accept="image/jpeg,image/png,image/webp,application/pdf"/></label></fieldset>
+      <p class="form-notice"><strong>Upload safety:</strong> Keep uploads under 8 MB total and do not submit payment, banking, identification, access-code or controlled information.</p>
+      <label class="consent"><input type="checkbox" name="contact_consent" value="authorized" required/> I authorize Landco Development LLC to contact me about this project request.</label>
+      <label class="consent"><input type="checkbox" name="terms_acknowledgment" value="accepted" required/> I acknowledge the <a href="/privacy-policy.html" target="_blank" rel="noopener">Privacy Policy</a> and <a href="/terms.html" target="_blank" rel="noopener">Website Terms</a>.</label>
 
       <button type="submit">Submit Project Request</button>
     </form>
@@ -120,6 +151,8 @@
     </p>
   </div>
 </footer>
+
+<script src="/site.js" defer></script>
 
 </body>
 </html>

@@ -46,6 +46,76 @@ http://www.landcodevelopmentllc.com/* https://www.landcodevelopmentllc.com/:spla
 
 /robots.txt /robots.txt 200
 
+# Preserve every public extensionless route before the true 404 fallback
+
+/land-clearing /land-clearing.html 200
+
+/grading /grading.html 200
+
+/french-drains /french-drains.html 200
+
+/civil-government /civil-government.html 200
+
+/drainage-correction /drainage-correction.html 200
+
+/drainage /drainage.html 200
+
+/standing-water-yard-drainage /standing-water-yard-drainage.html 200
+
+/gallery /gallery.html 200
+
+/civil-contractor-request /civil-contractor-request.html 200
+
+/service-areas /service-areas.html 200
+
+/privacy-policy /privacy-policy.html 200
+
+/terms /terms.html 200
+
+/thank-you /thank-you.html 200
+
+/athens-ga /athens-ga.html 200
+
+/auburn-ga /auburn-ga.html 200
+
+/bethlehem-ga /bethlehem-ga.html 200
+
+/bogart-ga /bogart-ga.html 200
+
+/braselton-ga /braselton-ga.html 200
+
+/buford-ga /buford-ga.html 200
+
+/conyers-ga /conyers-ga.html 200
+
+/dacula-ga /dacula-ga.html 200
+
+/duluth-ga /duluth-ga.html 200
+
+/grayson-ga /grayson-ga.html 200
+
+/hoschton-ga /hoschton-ga.html 200
+
+/jefferson-ga /jefferson-ga.html 200
+
+/lawrenceville-ga /lawrenceville-ga.html 200
+
+/lilburn-ga /lilburn-ga.html 200
+
+/loganville-ga /loganville-ga.html 200
+
+/monroe-ga /monroe-ga.html 200
+
+/snellville-ga /snellville-ga.html 200
+
+/sugar-hill-ga /sugar-hill-ga.html 200
+
+/suwanee-ga /suwanee-ga.html 200
+
+/watkinsville-ga /watkinsville-ga.html 200
+
+/winder-ga /winder-ga.html 200
+
 # Old WordPress / junk cleanup
 
 /author/* / 301
@@ -56,6 +126,6 @@ http://www.landcodevelopmentllc.com/* https://www.landcodevelopmentllc.com/:spla
 
 /hello-world/ / 301
 
-# Static site fallback — must stay last
+# True 404 fallback — must stay last
 
-/* /index.html 200
+/* /404.html 404

@@ -8,15 +8,14 @@
     });
   });
   document.querySelectorAll('input[name="landing_page"]').forEach(function (input) { input.value = window.location.href; });
-  document.querySelectorAll('a[href^="tel:"]').forEach(function (link) {
+  document.querySelectorAll('a[href^="tel:"]:not([data-call-track])').forEach(function (link) {
     link.addEventListener('click', function () { if (typeof window.gtag === 'function') window.gtag('event','click_call',{event_category:'lead',event_label:location.pathname}); });
   });
   document.querySelectorAll('form').forEach(function (form) {
     form.addEventListener('submit', function () {
       var submittedAt = form.querySelector('input[name="submitted_at"]');
       if (submittedAt) submittedAt.value = new Date().toISOString();
-      if (typeof window.gtag === 'function') window.gtag('event','generate_lead',{event_category:'form',event_label:form.getAttribute('name') || location.pathname});
+      if (!form.hasAttribute('data-form-track') && typeof window.gtag === 'function') window.gtag('event','generate_lead',{event_category:'form',event_label:form.getAttribute('name') || location.pathname});
     });
   });
 })();
-

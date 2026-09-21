@@ -194,3 +194,50 @@ section.service-area a:hover {
     border: 1px solid #fff;
   }
 }
+
+/* Protected lead intake layered onto the approved April presentation. */
+#quote-form form fieldset.form-upload {
+  margin: 4px 0 18px;
+  padding: 16px;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  text-align: left;
+}
+
+#quote-form form fieldset.form-upload legend {
+  padding: 0 8px;
+  font-weight: 800;
+}
+
+#quote-form form .form-notice {
+  margin: 0 0 18px;
+  padding: 12px 14px;
+  background: #fff8df;
+  border-left: 4px solid #c9a227;
+  color: #222;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+#quote-form form .consent {
+  display: block;
+  margin-bottom: 14px;
+  font-weight: 400;
+  text-align: left;
+}
+
+#quote-form form .consent input {
+  width: auto;
+  margin-right: 8px;
+}
+
+#quote-form form .consent a {
+  color: #111;
+  text-decoration: underline;
+}
+
+.hidden {
+  position: absolute !important;
+  left: -10000px !important;
+}

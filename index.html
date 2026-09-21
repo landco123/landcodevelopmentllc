@@ -60,7 +60,7 @@
 
 <meta content="Land clearing, grading, house pads, French drains and drainage correction. Call Now 912-254-1918 for a fast quote." property="og:description"/>
 
-<meta content="https://landcodevelopmentllc.netlify.app/images/creek-before.jpg" property="og:image"/>
+<meta content="https://www.landcodevelopmentllc.com/images/creek-before.jpg" property="og:image"/>
 
 <!-- Twitter -->
 
@@ -70,7 +70,7 @@
 
 <meta content="Land clearing, grading, house pads, French drains and drainage correction. Call Now 912-254-1918 for a fast quote." name="twitter:description"/>
 
-<meta content="https://landcodevelopmentllc.netlify.app/images/creek-before.jpg" name="twitter:image"/>
+<meta content="https://www.landcodevelopmentllc.com/images/creek-before.jpg" name="twitter:image"/>
 
 <link href="favicon.svg" rel="icon" type="image/svg+xml"/>
 
@@ -772,9 +772,21 @@ a[href^="tel:"] {
 
     <p class="section-sub">Tell us about your project. We’ll review it and contact you quickly.</p>
 
-    <form name="project-request" method="POST" data-netlify="true" action="/thank-you.html" data-form-track="homepage_quote_form">
+    <form name="project-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html" data-form-track="homepage_quote_form" enctype="multipart/form-data">
 
       <input type="hidden" name="form-name" value="project-request"/>
+
+      <input type="hidden" name="landing_page" value=""/>
+      <input type="hidden" name="utm_source" value=""/>
+      <input type="hidden" name="utm_medium" value=""/>
+      <input type="hidden" name="utm_campaign" value=""/>
+      <input type="hidden" name="utm_term" value=""/>
+      <input type="hidden" name="utm_content" value=""/>
+      <input type="hidden" name="gclid" value=""/>
+      <input type="hidden" name="policy_version" value="2026-09-21"/>
+      <input type="hidden" name="submitted_at" value=""/>
+
+      <p class="hidden"><label>Leave blank <input name="bot-field"/></label></p>
 
       <label for="name">Name</label>
 
@@ -817,6 +829,19 @@ a[href^="tel:"] {
       <label for="description">Project Details</label>
 
       <textarea id="description" name="description" required></textarea>
+
+      <fieldset class="form-upload">
+        <legend>Project photos (optional)</legend>
+        <label>Photo 1<input name="project_photo_1" type="file" accept="image/jpeg,image/png,image/webp"/></label>
+        <label>Photo 2<input name="project_photo_2" type="file" accept="image/jpeg,image/png,image/webp"/></label>
+        <label>Photo 3<input name="project_photo_3" type="file" accept="image/jpeg,image/png,image/webp"/></label>
+      </fieldset>
+
+      <p class="form-notice"><strong>Upload safety:</strong> Keep all files under 8 MB total. Upload only project-relevant JPG, PNG or WebP images that you have authority to share. Do not submit payment, banking, identification, access-code or other sensitive information.</p>
+
+      <label class="consent"><input type="checkbox" name="contact_consent" value="authorized" required/> I authorize Landco Development LLC to contact me by phone, text or email about this project request. Message and data rates may apply.</label>
+
+      <label class="consent"><input type="checkbox" name="terms_acknowledgment" value="accepted" required/> I acknowledge the <a href="/privacy-policy.html" target="_blank" rel="noopener">Privacy Policy</a> and <a href="/terms.html" target="_blank" rel="noopener">Website Terms</a>. If I upload photos, I confirm that I have authority to share them.</label>
 
       <button type="submit">Submit Request</button>
 
@@ -1046,6 +1071,8 @@ a[href^="tel:"] {
 
     </p>
 
+    <p class="footer-links"><a href="/service-areas.html">Service Areas</a> • <a href="/privacy-policy.html">Privacy Policy</a> • <a href="/terms.html">Website Terms</a></p>
+
   </div>
 
 </footer>
@@ -1121,6 +1148,8 @@ a[href^="tel:"] {
   });
 
 </script>
+
+<script src="/site.js" defer></script>
 
 </body>
 
