@@ -22,4 +22,7 @@ An owned open-weight model could be added later after identifying the download a
 
 ## Validation limits
 
-Local checks cover approved responses and DOM behavior, including service-page mounting, quote prefill, unchecked consent, safe text rendering, direct phone link, keyboard close and consumed draft notes. Full browser visual checks could not run because a browser executable was unavailable and its download failed. Desktop/mobile layout, production form delivery and any deploy preview still require review before launch. Production has not been merged or deployed.
+Local checks cover approved responses and DOM behavior, including service-page mounting, quote prefill, unchecked consent, safe text rendering, direct phone link, keyboard close and consumed draft notes. The Netlify preview was checked in the browser for desktop appearance, service-page loading and quote handoff. Production form delivery and mobile layout still require verification. Production has not been merged or deployed.
+# Website information
+
+The assistant includes a local search index of 317 service descriptions, FAQs and other public website sections across 33 pages, with links to their source pages. Rebuild it after website content changes with `python3 assistant/build-knowledge.py`. This uses Python's standard library and adds no browser dependency or subscription. The assistant is a scripted website search and service guide; it does not run a language model. It asks visitors to contact Zach when a question has no clear website answer. Mass grading scope and landscaping work beyond the listed ground-preparation services require Zach's confirmation.

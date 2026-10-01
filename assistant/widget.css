@@ -12,6 +12,7 @@
 #landco-assistant .lc-messages { flex:1; overflow:auto; min-height:70px; padding:16px; }
 #landco-assistant .lc-message { padding:11px 13px; border-radius:12px; background:#292929; margin-bottom:12px; white-space:pre-wrap; overflow-wrap:anywhere; }
 #landco-assistant .lc-user { background:#d1ad48; color:#101010; margin-left:28px; }
+#landco-assistant .lc-source { display:block; color:#f3d881; margin-top:8px; font-size:13px; text-decoration:underline; }
 #landco-assistant .lc-choices { display:flex; flex-wrap:wrap; gap:7px; padding:0 16px 12px; }
 #landco-assistant .lc-choices button { border:1px solid #6b5a30; border-radius:20px; padding:6px 10px; background:#171717; color:#e7d59e; font-size:13px; }
 #landco-assistant .lc-input { padding:0 16px 12px; display:flex; gap:8px; }

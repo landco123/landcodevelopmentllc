@@ -18,7 +18,7 @@ function init() {
   document.body.append(root);
   const panel = root.querySelector('.lc-panel'), launch = root.querySelector('.lc-launch'), input = root.querySelector('input'), log = root.querySelector('.lc-messages'), send = root.querySelector('.lc-send');
   let opened = false, pending = false, service = '', messages = [];
-  function add(text, user = false) { const p = document.createElement('div'); p.className = 'lc-message' + (user ? ' lc-user' : ''); p.textContent = text; log.append(p); log.scrollTop = log.scrollHeight; }
+  function add(text, user = false, links = []) { const p = document.createElement('div'); p.className = 'lc-message' + (user ? ' lc-user' : ''); p.textContent = text; for (const link of links) { if (!/^\/(?!\/)/.test(link.url)) continue; const a = document.createElement('a'); a.href = link.url; a.textContent = link.label; a.className = 'lc-source'; p.append(a); } log.append(p); log.scrollTop = log.scrollHeight; requestAnimationFrame(() => { log.scrollTop = log.scrollHeight; }); }
   add('Welcome to Landco. What are you working on—drainage, grading, a gravel driveway or land clearing? I can explain our services and help you start a quote request.');
   function close() { panel.hidden = true; launch.setAttribute('aria-expanded', 'false'); launch.focus(); }
   launch.addEventListener('click', () => {
@@ -30,10 +30,10 @@ function init() {
   root.addEventListener('keydown', e => { if (e.key === 'Escape' && !panel.hidden) close(); });
   async function ask(value) {
     const message = value.trim().slice(0, 1000); if (!message || pending) return;
-    pending = true; send.disabled = true; input.value = ''; add(message, true); messages.push(message); messages = messages.slice(-12);
+    pending = true; send.disabled = true; input.value = ''; root.querySelector('.lc-choices').hidden = true; add(message, true); messages.push(message); messages = messages.slice(-12);
     let answer = answerQuestion(message);
     if (answer.service) service = answer.service;
-    add(answer.reply); pending = false; send.disabled = false; input.focus();
+    add(answer.reply, false, answer.links); pending = false; send.disabled = false; input.focus({preventScroll:true});
   }
   root.querySelector('.lc-input').addEventListener('submit', e => { e.preventDefault(); ask(input.value); });
   root.querySelectorAll('.lc-choices button').forEach(b => b.addEventListener('click', () => ask(b.textContent)));
