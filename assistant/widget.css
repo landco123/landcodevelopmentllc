@@ -1,0 +1,26 @@
+#landco-assistant { --gold:#d1ad48; font:15px/1.5 system-ui,sans-serif; color:#f4f1e8; position:fixed; right:20px; bottom:24px; z-index:10000; }
+#landco-assistant * { box-sizing:border-box; }
+#landco-assistant button, #landco-assistant a { font:inherit; }
+#landco-assistant button { cursor:pointer; }
+#landco-assistant .lc-launch { border:1px solid var(--gold); border-radius:28px; padding:13px 20px; background:#171717; color:#f3d881; box-shadow:0 5px 24px #0005; font-weight:700; }
+#landco-assistant .lc-panel { width:370px; max-width:calc(100vw - 32px); height:580px; max-height:calc(100dvh - 130px); display:flex; flex-direction:column; background:#171717; border:1px solid #8a7138; border-radius:18px; box-shadow:0 16px 55px #0007; overflow:hidden; margin-bottom:12px; }
+#landco-assistant [hidden] { display:none!important; }
+#landco-assistant .lc-head { padding:17px 18px; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #493d25; background:#0c0c0c; }
+#landco-assistant .lc-head strong { color:#f3d881; font-size:18px; }
+#landco-assistant .lc-head small { display:block; color:#c2beb4; font-size:12px; }
+#landco-assistant .lc-close { border:0; color:white; background:transparent; font-size:24px; padding:4px 10px; }
+#landco-assistant .lc-messages { flex:1; overflow:auto; min-height:70px; padding:16px; }
+#landco-assistant .lc-message { padding:11px 13px; border-radius:12px; background:#292929; margin-bottom:12px; white-space:pre-wrap; overflow-wrap:anywhere; }
+#landco-assistant .lc-user { background:#d1ad48; color:#101010; margin-left:28px; }
+#landco-assistant .lc-choices { display:flex; flex-wrap:wrap; gap:7px; padding:0 16px 12px; }
+#landco-assistant .lc-choices button { border:1px solid #6b5a30; border-radius:20px; padding:6px 10px; background:#171717; color:#e7d59e; font-size:13px; }
+#landco-assistant .lc-input { padding:0 16px 12px; display:flex; gap:8px; }
+#landco-assistant input { margin:0; min-width:0; flex:1; border:1px solid #777; border-radius:8px; padding:10px; background:#fff; color:#111; font:inherit; width:auto; }
+#landco-assistant .lc-send { padding:9px 12px; border:0; border-radius:8px; color:#111; background:var(--gold); font-weight:700; }
+#landco-assistant .lc-actions { display:flex; gap:8px; padding:0 16px 12px; }
+#landco-assistant .lc-actions a, #landco-assistant .lc-actions button { flex:1; text-align:center; border:1px solid var(--gold); border-radius:8px; padding:9px 5px; background:var(--gold); color:#111!important; text-decoration:none; font-weight:700; }
+#landco-assistant .lc-actions a { background:#171717; color:#f3d881!important; }
+#landco-assistant .lc-note { padding:0 16px 13px; font-size:11px; color:#bcb7aa; margin:0; }
+#landco-assistant .lc-note a { color:#e9cf82; }
+#landco-assistant button:focus-visible, #landco-assistant a:focus-visible, #landco-assistant input:focus-visible { outline:3px solid #fff; outline-offset:2px; }
+@media(max-width:760px) { #landco-assistant { right:12px; bottom:calc(96px + env(safe-area-inset-bottom)); } #landco-assistant .lc-panel { width:370px; max-width:calc(100vw - 24px); max-height:calc(100dvh - 210px); } #landco-assistant .lc-launch { padding:10px 16px; } }
