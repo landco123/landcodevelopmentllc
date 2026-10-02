@@ -1182,7 +1182,7 @@ export const websiteKnowledge = [
   },
   {
     "title": "Website project assistant",
-    "text": "The automated project assistant provides general service information and processes questions in your browser. Contact details and photos should be entered in the project request form. Choosing Request a Quote transfers your recent questions into the form for your review; it does not submit them. When moving between pages, those draft notes may be held temporarily in this browser tab and are removed from that temporary storage when the quote page loads. Assistant interactions such as opening it, requesting a quote or clicking to call may be measured by website analytics, without including message text in those events.",
+    "text": "The automated project assistant provides general service information and processes questions in your browser. You can use the assistant to enter your name, phone, email, project location and work requested one question at a time. These details remain in your browser until you review the request, choose the contact and policy acknowledgments, and press Send my request to Landco. Submission uses the existing Landco project request form. Photos can be added through the full form. When moving between pages, draft questions and request details may be held temporarily in this browser tab and are removed from that temporary storage when the quote page loads. Starting or reviewing a request does not send it. Assistant interactions such as opening it, requesting a quote or clicking to call may be measured by website analytics, without including message text in those events.",
     "url": "/privacy-policy"
   },
   {

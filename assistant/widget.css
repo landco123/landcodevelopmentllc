@@ -23,5 +23,17 @@
 #landco-assistant .lc-actions a { background:#171717; color:#f3d881!important; }
 #landco-assistant .lc-note { padding:0 16px 13px; font-size:11px; color:#bcb7aa; margin:0; }
 #landco-assistant .lc-note a { color:#e9cf82; }
+#landco-assistant .lc-progress { padding:0 16px 10px; color:#f3d881; font-size:12px; }
+#landco-assistant .lc-use-notes { margin:0 16px 12px; background:#292929; color:#f3d881; border:1px solid #6b5a30; padding:8px; border-radius:8px; }
+#landco-assistant .lc-review { display:block; margin:0; padding:0 16px 12px; overflow:auto; flex:1; min-height:0; color:#f4f1e8; }
+#landco-assistant .lc-summary { margin:12px 0; }
+#landco-assistant .lc-summary dt { color:#c2beb4; font-size:11px; margin-top:8px; }
+#landco-assistant .lc-summary dd { margin:0; overflow-wrap:anywhere; white-space:pre-wrap; }
+#landco-assistant .lc-consent { display:flex; align-items:flex-start; gap:8px; font-size:12px; line-height:1.4; margin:12px 0; font-weight:400; }
+#landco-assistant .lc-consent input { flex:none; width:16px; height:16px; padding:0; margin:2px 0 0; }
+#landco-assistant .lc-consent a { color:#f3d881; }
+#landco-assistant .lc-review button { width:100%; margin:5px 0; padding:10px; border-radius:8px; border:1px solid #6b5a30; background:#292929; color:#f3d881; }
+#landco-assistant .lc-review .lc-submit-request { background:var(--gold); color:#111; font-weight:700; }
+#landco-assistant .lc-review p { font-size:11px; color:#c2beb4; margin:10px 0 0; }
 #landco-assistant button:focus-visible, #landco-assistant a:focus-visible, #landco-assistant input:focus-visible { outline:3px solid #fff; outline-offset:2px; }
 @media(max-width:760px) { #landco-assistant { right:12px; bottom:calc(96px + env(safe-area-inset-bottom)); } #landco-assistant .lc-panel { width:370px; max-width:calc(100vw - 24px); max-height:calc(100dvh - 210px); } #landco-assistant .lc-launch { padding:10px 16px; } }
