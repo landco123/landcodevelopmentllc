@@ -992,47 +992,11 @@
 
   </script>
 
-</head>
+<link rel="stylesheet" href="/landco-design.css"></head>
 
-<body>
+<body class="landco-polished">
 
-  <header class="header">
-
-    <div class="container">
-
-      <p class="brand-name">Landco Development LLC</p>
-
-      <p class="tagline">Land Clearing • Grading • French Drains • Drainage Correction (Georgia)</p>
-
-      <nav class="nav" aria-label="Main navigation">
-
-        <a href="/">Home</a>
-
-        <a href="/#services">Services</a>
-
-        <a href="/land-clearing" aria-current="page">Land Clearing</a>
-
-        <a href="/grading">Grading</a>
-
-        <a href="/french-drains">French Drains</a>
-
-        <a href="/civil-government.html">Civil &amp; Government</a>
-
-        <a href="/#projects">Projects</a>
-
-        <a href="#service-area">Service Areas</a>
-
-        <a href="#reviews">Reviews</a>
-
-        <a href="#quote-form">Contact</a>
-
-      </nav>
-
-      <a class="header-call" href="tel:+19122541918" onclick="gtag('event','phone_call_click',{event_category:'lead',event_label:'land_clearing_header'});">Call 912-254-1918</a>
-
-    </div>
-
-  </header>
+  <header class="header" id="top"><div class="container"><p class="brand-name"><a href="/">Landco Development LLC</a></p><p class="tagline">Drainage • Grading • Land Clearing · North Georgia</p><nav class="nav" aria-label="Main navigation"><a href="/">Home</a><a href="/french-drains">Drainage</a><a href="/grading">Grading</a><a href="/land-clearing">Land Clearing</a><a href="/civil-government">Civil &amp; Sitework</a><a href="/gallery">Projects</a><a href="/service-areas">Service Areas</a></nav><a class="header-call" href="tel:+19122541918">Call Zach · 912-254-1918</a><a class="header-quote" href="#quote-form">Request a Quote</a></div></header>
 
   <main>
 
@@ -1558,7 +1522,7 @@
 
           </article>
 
-          <form class="quote-form" name="land-clearing-quote" method="POST" action="/thank-you.html" data-netlify="true" data-netlify-honeypot="bot-field" onsubmit="gtag('event','form_submit_click',{event_category:'lead',event_label:'land_clearing_quote_form'});">
+          <form class="quote-form" name="land-clearing-quote" method="POST" action="/thank-you.html" data-netlify="true" data-netlify-honeypot="bot-field" onsubmit="gtag('event','form_submit_click',{event_category:'lead',event_label:'land_clearing_quote_form'});"><input type="hidden" name="gbraid" value=""><input type="hidden" name="wbraid" value="">
 
             <input type="hidden" name="form-name" value="land-clearing-quote" />
 
@@ -1626,7 +1590,10 @@
 
             <textarea id="details" name="project_details" placeholder="Describe the brush, lot, fence line, overgrowth, access, debris, grading, drainage or site prep needed." required></textarea>
 
-            <button type="submit">Send Quote Request</button>
+            <input type="hidden" name="policy_version" value="2026-10-01"><input type="hidden" name="submitted_at" value="">
+<label class="consent"><input type="checkbox" name="contact_consent" value="authorized" required> I authorize Landco to contact me by phone, text or email about this request. Message and data rates may apply.</label>
+<label class="consent"><input type="checkbox" name="terms_acknowledgment" value="accepted" required> I acknowledge the <a href="/privacy-policy.html" target="_blank" rel="noopener">Privacy Policy</a> and <a href="/terms.html" target="_blank" rel="noopener">Website Terms</a>.</label>
+<button type="submit">Send Quote Request</button>
 
             <p class="fine-print">Prefer to talk now? Call or text <a href="tel:+19122541918" onclick="gtag('event','phone_call_click',{event_category:'lead',event_label:'land_clearing_form_phone'});">912-254-1918</a>.</p>
 
@@ -1640,73 +1607,13 @@
 
   </main>
 
-  <footer>
+  <footer><div class="container"><p><strong>Landco Development LLC</strong> · North Georgia</p><p><a href="tel:+19122541918">Call or text 912-254-1918</a> · <a href="mailto:landcodevelopment2@gmail.com">landcodevelopment2@gmail.com</a></p><p><a href="https://share.google/VPTTty0vot6EEEihj" target="_blank" rel="noopener">Google Reviews</a> · <a href="https://youtube.com/@Landco321" target="_blank" rel="noopener">YouTube</a> · <a href="https://facebook.com/Landco123" target="_blank" rel="noopener">Facebook</a></p><p><a href="/privacy-policy">Privacy Policy</a> · <a href="/terms">Website Terms</a> · © 2026 Landco Development LLC</p></div></footer>
 
-    <div class="container footer-inner">
+  <div class="sticky-cta" aria-label="Mobile contact shortcuts"><a class="sticky-call" href="tel:+19122541918">Call Zach</a><a class="sticky-quote" href="#quote-form">Request a Quote</a></div>
 
-      <p><strong>© 2026 Landco Development LLC</strong></p>
 
-      <p class="footer-nap">Call/Text: <a href="tel:+19122541918">912-254-1918</a> • Email: <a href="mailto:landcodevelopment2@gmail.com">landcodevelopment2@gmail.com</a></p>
-
-      <p class="footer-links">
-
-        <a href="https://share.google/VPTTty0vot6EEEihj" target="_blank" rel="noopener">Google Reviews</a> •
-
-        <a href="https://www.thumbtack.com/pro/referral/ZLnEyCIeTjnC7H0" target="_blank" rel="noopener">Thumbtack</a> •
-
-        <a href="https://youtube.com/@Landco321" target="_blank" rel="noopener">YouTube</a>
-
-      </p>
-
-    </div>
-
-  </footer>
-
-  <div class="sticky-cta" aria-label="Mobile contact shortcuts">
-
-    <a class="sticky-call" href="tel:+19122541918" onclick="gtag('event','phone_call_click',{event_category:'lead',event_label:'land_clearing_sticky_call'});">Call Now</a>
-
-    <a class="sticky-quote" href="#quote-form">Get Quote</a>
-
-  </div>
-
-  <script>
-
-    (function () {
-
-      const params = new URLSearchParams(window.location.search);
-
-      const fieldNames = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid'];
-
-      fieldNames.forEach(function (name) {
-
-        const value = params.get(name) || sessionStorage.getItem('landco_' + name) || '';
-
-        if (value) {
-
-          sessionStorage.setItem('landco_' + name, value);
-
-        }
-
-        document.querySelectorAll('input[name="' + name + '"]').forEach(function (input) {
-
-          input.value = value;
-
-        });
-
-      });
-
-      document.querySelectorAll('input[name="landing_page"]').forEach(function (input) {
-
-        input.value = window.location.href;
-
-      });
-
-    })();
-
-  </script>
 
 <script type="module" src="/assistant/widget.mjs"></script>
-</body>
+<script src="/site.js" defer></script></body>
 
 </html>

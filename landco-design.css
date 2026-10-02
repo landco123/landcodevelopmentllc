@@ -1,0 +1,69 @@
+/* Shared Landco presentation. Forms, tracking, URLs and original assets remain intact. */
+body.landco-polished{--gold:#c9a227;--black:#080a09;--gray:#f3f2ed;--text:#20241f;--muted:#62675f;--radius:14px;font-family:Arial,Helvetica,sans-serif;background:#fff;color:var(--text);line-height:1.65;margin:0;text-align:center}
+.landco-polished .container{width:min(92%,1160px);max-width:1160px;margin:auto;padding:0 12px}
+.landco-polished .header{background:#080a09;color:#fff;padding:28px 0 20px;border-bottom:1px solid #756132;text-align:left}
+.landco-polished .header .container{position:relative}
+.landco-polished .header h1,.landco-polished .brand-name{font-size:28px;line-height:1.15;letter-spacing:-.7px;margin:0 250px 8px 0;color:#fff}
+.landco-polished .brand-name a{color:#fff;text-decoration:none}
+.landco-polished .tagline{font-size:13px;color:#bdbfb5;margin:0 250px 0 0;line-height:1.5}
+.landco-polished .nav{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-start;margin:22px 0 0}
+.landco-polished .nav a{background:transparent;color:#e9e9e1;border:1px solid transparent;border-radius:8px;padding:8px 10px;font-size:13px;line-height:1.3;font-weight:700;text-decoration:none}
+.landco-polished .nav a:hover,.landco-polished .nav a:focus-visible{background:#22271f;border-color:#76632d;color:#f4d272}
+body.landco-polished a.header-call[href^="tel:"]{position:absolute;right:12px;top:0;margin:0;display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;background:#c9a227;color:#080a09;border:1px solid #d8bd6f;border-radius:12px;font-weight:800;font-size:14px;text-decoration:none}
+.landco-polished .hero,.landco-polished .local-hero{padding:64px 0;background:#10170f;color:#fff;border-bottom:4px solid #c9a227;text-align:left}
+.landco-polished .hero h1,.landco-polished .hero h2,.landco-polished .local-hero h1{font-size:clamp(32px,4.2vw,54px);line-height:1.08;letter-spacing:-1.7px;color:#fff;max-width:860px;margin:0 0 22px;font-weight:800}
+.landco-polished .hero p,.landco-polished .hero-sub,.landco-polished .local-hero p{color:#d1d7ca;font-size:17px;line-height:1.7;max-width:800px;margin:0 0 24px}
+.landco-polished .local-hero .eyebrow{color:#e2c574!important;font-size:11px;letter-spacing:2px;margin-bottom:16px}
+.landco-polished .hero .container,.landco-polished .local-hero .container{margin:auto}
+.landco-polished .hero .hero-inner{display:block}
+.landco-polished .hero .cta-row,.landco-polished .local-hero .cta-row{justify-content:flex-start;display:flex;gap:12px;flex-wrap:wrap;margin:10px 0 22px}
+body.landco-polished .cta-btn,body.landco-polished a.cta-btn[href^="tel:"],body.landco-polished .cta{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:13px 21px;margin:6px 8px 6px 0;background:#c9a227;color:#080a09;border:1px solid #c9a227;border-radius:12px;font-weight:800;font-size:15px;line-height:1.4;text-decoration:none;box-shadow:none;transition:background .15s,transform .15s}
+body.landco-polished .cta-btn.secondary{background:#11170f;color:#fff;border:1px solid #8e7c4d}
+body.landco-polished .cta-btn:hover,body.landco-polished a.cta-btn[href^="tel:"]:hover{background:#e2c263;color:#080a09;transform:translateY(-1px)}
+body.landco-polished .cta-btn.secondary:hover{background:#293021;color:#fff}
+.landco-polished .hero-with-photo{display:grid!important;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);column-gap:56px;align-items:start}
+.landco-polished .hero-with-photo>*{grid-column:1;max-width:100%}
+.landco-polished .hero-with-photo>br{display:none}
+.landco-polished .hero-with-photo>.lead-photo{grid-column:2;grid-row:1/span 10;margin:0;align-self:stretch;border-radius:18px;overflow:hidden;border:1px solid #777653;position:relative;min-height:360px}
+.landco-polished .lead-photo img{width:100%;height:100%;min-height:360px;max-height:470px;object-fit:cover;display:block}
+.landco-polished .lead-photo figcaption{position:absolute;bottom:0;left:0;right:0;padding:26px 20px 16px;background:linear-gradient(transparent,#071005);color:#fff;font-size:12px;text-align:left}
+.landco-polished .hero-card{background:#1d2519;border:1px solid #5d654a;border-radius:14px;padding:24px;margin-top:26px;box-shadow:none}
+.landco-polished .hero-card h3,.landco-polished .hero-card li{color:#e8eddc}
+.landco-polished .hero-points{color:#d7c283;justify-content:flex-start;margin:22px 0;font-size:13px}
+.landco-polished .hero-points span{background:transparent;color:inherit;border:0}
+.landco-polished section.services,.landco-polished section.projects,.landco-polished .local-section,.landco-polished section.trust,.landco-polished section.contact,.landco-polished .section{padding:70px 0}
+.landco-polished h2{font-size:clamp(26px,3vw,36px);line-height:1.2;letter-spacing:-.8px;color:#171e14}
+.landco-polished h3{font-size:21px;line-height:1.3;color:#26311f}
+.landco-polished .service-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:28px;text-align:left}
+.landco-polished .service,.landco-polished .service-card,.landco-polished .trust-card,.landco-polished .local-proof,.landco-polished .quote-card{background:#fff;border:1px solid #e3e5db;border-top:3px solid #c9a227;border-radius:14px;padding:26px;box-shadow:0 9px 28px #17200d08;text-align:left}
+.landco-polished .service h3,.landco-polished .service-card h3,.landco-polished .trust-card h3{margin-top:0}
+.landco-polished .service p,.landco-polished .service-card p{font-size:15px;color:#62675f}
+.landco-polished .mini-cta,.landco-polished .service-area li a{display:inline-flex;padding:10px 14px;color:#171e14;background:#f9f8f3;border:1px solid #d0c59f;border-radius:9px;text-decoration:none;font-weight:700;font-size:13px}
+.landco-polished section.service-area,.landco-polished .local-section.alt{background:#f3f2ed}
+.landco-polished .gallery img,.landco-polished .ba-card,.landco-polished .photo-card{border-radius:14px}
+.landco-polished .contact{background:#f6f5f0;border-top:1px solid #e5e3d7}
+.landco-polished .contact form:not(.lc-input):not(.lc-review){background:#fff;padding:28px;border:1px solid #dddccb;border-radius:16px;text-align:left;box-shadow:0 12px 40px #11200908}
+.landco-polished form.quote-form{gap:12px}
+.landco-polished form:not(.lc-input):not(.lc-review) label{color:#252b20;font-size:14px}
+.landco-polished form:not(.lc-input):not(.lc-review) input,.landco-polished form:not(.lc-input):not(.lc-review) textarea,.landco-polished form:not(.lc-input):not(.lc-review) select{background:#fff;border:1px solid #c9cec2;border-radius:9px;color:#1c2217;font:inherit;padding:12px}
+.landco-polished form:not(.lc-input):not(.lc-review) .consent{font-size:12px;font-weight:400;display:block;line-height:1.5;text-align:left;margin:12px 0}
+.landco-polished form:not(.lc-input):not(.lc-review) .consent input{width:16px;height:16px;margin:0 6px 0 0;padding:0;vertical-align:middle}
+.landco-polished form:not(.lc-input):not(.lc-review) .consent a{color:#334224;text-decoration:underline}
+.landco-polished form:not(.lc-input):not(.lc-review) button[type="submit"]{min-height:52px;border:0;border-radius:10px;background:#c9a227;color:#080a09;font-weight:800;padding:13px 22px;font-size:16px;cursor:pointer}
+.landco-polished footer{background:#080a09;color:#a8af9f;padding:38px 0;text-align:left;border-top:2px solid #857036;font-size:13px}
+.landco-polished footer a,.landco-polished footer a[href^="tel:"]{color:#e2c574;background:transparent;border:0;border-radius:0;padding:0;display:inline;box-shadow:none}
+.landco-polished .sticky-cta,.landco-polished .sticky-mobile-cta{background:#fff!important;border-top:1px solid #d8d8ca!important;box-shadow:0 -5px 20px #0001}
+.landco-polished .sticky-cta a,.landco-polished .sticky-mobile-cta a{border-radius:10px!important;min-height:48px;font-size:14px}
+.landco-polished .sticky-cta .sticky-call,.landco-polished .sticky-mobile-cta .sticky-call{background:#c9a227!important;color:#080a09!important;border:1px solid #c9a227!important}
+.landco-polished .sticky-cta .sticky-quote,.landco-polished .sticky-mobile-cta .sticky-quote{background:#080a09!important;color:#fff!important;border:1px solid #080a09!important}
+.landco-polished :where(a,button,input,textarea,select):focus-visible{outline:3px solid #a18324;outline-offset:3px}
+@media(max-width:760px){.landco-polished .header{padding:22px 0 16px}.landco-polished .header h1,.landco-polished .brand-name{font-size:24px;margin-right:0}.landco-polished .tagline{margin-right:0;font-size:12px}.landco-polished .nav{flex-wrap:nowrap;overflow-x:auto;gap:4px;margin-top:16px;padding-bottom:5px}.landco-polished .nav a{flex-shrink:0;padding:8px 9px}body.landco-polished a.header-call[href^="tel:"]{position:static;margin-top:12px;padding:10px 15px;min-height:44px}.landco-polished .hero,.landco-polished .local-hero{padding:36px 0}.landco-polished .hero-with-photo{grid-template-columns:1fr;gap:0}.landco-polished .hero-with-photo>.lead-photo{grid-column:1;grid-row:auto;min-height:230px;margin-top:22px}.landco-polished .lead-photo img{min-height:230px;max-height:280px}.landco-polished .hero h1,.landco-polished .hero h2,.landco-polished .local-hero h1{letter-spacing:-1px}.landco-polished .hero p,.landco-polished .local-hero p{font-size:15px}.landco-polished .cta-row{gap:8px}.landco-polished .cta-row .cta-btn{margin-right:0}.landco-polished section.services,.landco-polished section.projects,.landco-polished .local-section,.landco-polished section.contact{padding:44px 0}.landco-polished .contact form:not(.lc-input):not(.lc-review){padding:19px}.landco-polished footer{padding-bottom:105px}}
+@media(prefers-reduced-motion:reduce){body.landco-polished .cta-btn{transition:none}}
+.landco-polished a.header-quote{position:absolute;top:54px;right:12px;display:inline-flex;align-items:center;justify-content:center;padding:7px 13px;border:1px solid #766438;border-radius:8px;color:#f1dfaa;font-size:12px;text-decoration:none;font-weight:700}
+@media(max-width:760px){.landco-polished a.header-quote{position:static;min-height:44px;margin:12px 0 0 8px}}
+.landco-polished .hero:not(section){padding:64px 4%;border-bottom:4px solid #c9a227}
+.landco-polished .legal-page{max-width:900px;width:92%;margin:auto;padding:50px 10px;text-align:left}
+.landco-polished .section{width:92%;max-width:1160px;margin:auto}
+.landco-polished .local-hero>.container:not(.hero-with-photo){max-width:1160px}
+.landco-polished .sticky-cta{display:none}
+@media(max-width:760px){body.landco-polished{padding-bottom:80px}.landco-polished .sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:9999;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom))}.landco-polished .sticky-cta a,.landco-polished .sticky-cta a[href^="tel:"]{display:flex;align-items:center;justify-content:center;padding:10px;margin:0;text-decoration:none;font-weight:800;box-shadow:none;transform:none}.landco-polished .sticky-cta .sticky-call{background:#c9a227!important;color:#080a09!important;border:1px solid #c9a227!important}}
