@@ -59,7 +59,7 @@ function init() {
     request.service = service || request.service || 'Other';
     previousNotes = request.notes || messages.join('\n').slice(0,1000);
     stepIndex = 0; review.hidden = true; log.hidden = false; questionForm.hidden = false; root.querySelector('.lc-choices').hidden = true;
-    quote.textContent = 'Cancel request'; send.textContent = 'Next'; promptStep();
+    quote.hidden = false; quote.textContent = 'Cancel request'; send.textContent = 'Next'; promptStep();
   }
   function showReview() {
     stepIndex = -2; questionForm.hidden = true; useNotes.hidden = true; log.hidden = true; review.hidden = false; progress.hidden = false; progress.textContent = 'Review and send · Direct to Landco'; quote.hidden = true;

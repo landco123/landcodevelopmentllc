@@ -29,7 +29,7 @@
 #landco-assistant .lc-summary { margin:12px 0; }
 #landco-assistant .lc-summary dt { color:#c2beb4; font-size:11px; margin-top:8px; }
 #landco-assistant .lc-summary dd { margin:0; overflow-wrap:anywhere; white-space:pre-wrap; }
-#landco-assistant .lc-consent { display:flex; align-items:flex-start; gap:8px; font-size:12px; line-height:1.4; margin:12px 0; font-weight:400; }
+#landco-assistant .lc-consent { color:#f4f1e8; display:flex; align-items:flex-start; gap:8px; font-size:12px; line-height:1.4; margin:12px 0; font-weight:400; }
 #landco-assistant .lc-consent input { flex:none; width:16px; height:16px; padding:0; margin:2px 0 0; }
 #landco-assistant .lc-consent a { color:#f3d881; }
 #landco-assistant .lc-review button { width:100%; margin:5px 0; padding:10px; border-radius:8px; border:1px solid #6b5a30; background:#292929; color:#f3d881; }
