@@ -2,7 +2,7 @@
 export const websiteKnowledge = [
   {
     "title": "Grading & Drainage Contractor in Athens, GA",
-    "text": "Athens properties often combine red-clay soils, sloped lots, older drainage paths and gravel access. Landco evaluates the water path, access and finish goal before moving material or installing pipe.\nReal Landco work · Drainage correction",
+    "text": "Athens properties often combine red-clay soils, sloped lots, older drainage paths and gravel access. Landco evaluates the water path, access and finish goal before moving material or installing pipe.",
     "url": "/athens-ga"
   },
   {
@@ -32,7 +32,7 @@ export const websiteKnowledge = [
   },
   {
     "title": "Site Preparation & Drainage in Auburn, GA",
-    "text": "Auburn properties commonly need a combination of access improvement, pad preparation, drainage correction and clearing. Landco coordinates the work around usable grades and the next construction phase.\nReal Landco work · Drainage correction",
+    "text": "Auburn properties commonly need a combination of access improvement, pad preparation, drainage correction and clearing. Landco coordinates the work around usable grades and the next construction phase.",
     "url": "/auburn-ga"
   },
   {
@@ -62,7 +62,7 @@ export const websiteKnowledge = [
   },
   {
     "title": "Grading & Drainage Contractor in Bethlehem, GA",
-    "text": "Bethlehem residential work often centers on correcting runoff, improving usable yard space, preparing pads and refreshing gravel access without unnecessary disturbance.\nReal Landco work · Drainage correction",
+    "text": "Bethlehem residential work often centers on correcting runoff, improving usable yard space, preparing pads and refreshing gravel access without unnecessary disturbance.",
     "url": "/bethlehem-ga"
   },
   {
@@ -92,7 +92,7 @@ export const websiteKnowledge = [
   },
   {
     "title": "Grading & Drainage Contractor in Bogart, GA",
-    "text": "Bogart is Landco’s home operating area. Local access supports efficient site visits and practical scheduling for residential grading, drainage and small site-preparation projects.\nReal Landco work · Drainage correction",
+    "text": "Bogart is Landco’s home operating area. Local access supports efficient site visits and practical scheduling for residential grading, drainage and small site-preparation projects.",
     "url": "/bogart-ga"
   },
   {
@@ -122,7 +122,7 @@ export const websiteKnowledge = [
   },
   {
     "title": "Grading & Site Preparation in Braselton, GA",
-    "text": "Braselton projects can cross county lines and development conditions. Landco verifies the site jurisdiction, access, drainage path and scope before mobilization.\nReal Landco work · Drainage correction",
+    "text": "Braselton projects can cross county lines and development conditions. Landco verifies the site jurisdiction, access, drainage path and scope before mobilization.",
     "url": "/braselton-ga"
   },
   {
@@ -152,7 +152,7 @@ export const websiteKnowledge = [
   },
   {
     "title": "Grading & Drainage Contractor in Buford, GA",
-    "text": "Buford projects can involve developed lots, lake-area drainage constraints and active construction corridors. Landco reviews access, discharge, jurisdiction and finish requirements before mobilization.\nReal Landco work · Drainage correction",
+    "text": "Buford projects can involve developed lots, lake-area drainage constraints and active construction corridors. Landco reviews access, discharge, jurisdiction and finish requirements before mobilization.",
     "url": "/buford-ga"
   },
   {
@@ -347,7 +347,7 @@ export const websiteKnowledge = [
   },
   {
     "title": "Grading, Drainage & Land Clearing in Conyers, GA",
-    "text": "Conyers work is scheduled by project fit, access, scope and mobilization requirements. Landco does not claim a Conyers office; we serve Rockdale County projects where our equipment and field experience fit the job.\nReal Landco work · Drainage correction",
+    "text": "Conyers work is scheduled by project fit, access, scope and mobilization requirements. Landco does not claim a Conyers office; we serve Rockdale County projects where our equipment and field experience fit the job.",
     "url": "/conyers-ga"
   },
   {
@@ -377,7 +377,7 @@ export const websiteKnowledge = [
   },
   {
     "title": "Grading & Drainage Contractor in Dacula, GA",
-    "text": "Dacula projects range from residential drainage corrections to larger access, import-fill and site-preparation work. Landco evaluates permitting, soil movement, compaction needs and private underground systems before production.\nReal Landco work · Drainage correction",
+    "text": "Dacula projects range from residential drainage corrections to larger access, import-fill and site-preparation work. Landco evaluates permitting, soil movement, compaction needs and private underground systems before production.",
     "url": "/dacula-ga"
   },
   {
@@ -427,7 +427,7 @@ export const websiteKnowledge = [
   },
   {
     "title": "Drainage & Grading Contractor in Duluth, GA",
-    "text": "Duluth lots can have tight access, mature improvements and fixed stormwater conditions. Landco qualifies the equipment path, outlet and protection needs before scheduling the work.\nReal Landco work · Drainage correction",
+    "text": "Duluth lots can have tight access, mature improvements and fixed stormwater conditions. Landco qualifies the equipment path, outlet and protection needs before scheduling the work.",
     "url": "/duluth-ga"
   },
   {
@@ -727,7 +727,7 @@ export const websiteKnowledge = [
   },
   {
     "title": "Drainage & Grading Contractor in Grayson, GA",
-    "text": "Grayson-area drainage and grading work often depends on careful elevation checks between the home, driveway, neighboring property and available outlet.\nReal Landco work · Drainage correction",
+    "text": "Grayson-area drainage and grading work often depends on careful elevation checks between the home, driveway, neighboring property and available outlet.",
     "url": "/grayson-ga"
   },
   {
@@ -757,7 +757,7 @@ export const websiteKnowledge = [
   },
   {
     "title": "Grading, Drainage & Land Clearing in Hoschton, GA",
-    "text": "Hoschton-area growth creates demand for practical access, clearing, drainage and grading that leaves property ready for the next phase.\nReal Landco work · Drainage correction",
+    "text": "Hoschton-area growth creates demand for practical access, clearing, drainage and grading that leaves property ready for the next phase.",
     "url": "/hoschton-ga"
   },
   {
@@ -787,7 +787,7 @@ export const websiteKnowledge = [
   },
   {
     "title": "Drainage & Grading That Actually Solves the Problem",
-    "text": "French drains, drainage correction, skid steer grading, erosion control and land clearing across North Georgia.\nReal Landco work · Drainage correction",
+    "text": "French drains, drainage correction, skid steer grading, erosion control and land clearing across North Georgia.",
     "url": "/"
   },
   {
@@ -847,7 +847,7 @@ export const websiteKnowledge = [
   },
   {
     "title": "Land Clearing & Site Preparation in Jefferson, GA",
-    "text": "Jefferson-area acreage and developing properties benefit from sequencing clearing, access, water control and grading as one site plan instead of isolated machine work.\nReal Landco work · Drainage correction",
+    "text": "Jefferson-area acreage and developing properties benefit from sequencing clearing, access, water control and grading as one site plan instead of isolated machine work.",
     "url": "/jefferson-ga"
   },
   {
@@ -1042,7 +1042,7 @@ export const websiteKnowledge = [
   },
   {
     "title": "Drainage & Grading Contractor in Lawrenceville, GA",
-    "text": "Developed Lawrenceville lots often require careful discharge planning, controlled equipment access and grading that works with fixed foundation, driveway and neighboring-property elevations.\nReal Landco work · Drainage correction",
+    "text": "Developed Lawrenceville lots often require careful discharge planning, controlled equipment access and grading that works with fixed foundation, driveway and neighboring-property elevations.",
     "url": "/lawrenceville-ga"
   },
   {
@@ -1072,7 +1072,7 @@ export const websiteKnowledge = [
   },
   {
     "title": "Drainage & Grading Contractor in Lilburn, GA",
-    "text": "Established Lilburn properties can require smaller-equipment access and careful protection of landscaping, fences and private underground systems while correcting runoff or grade.\nReal Landco work · Drainage correction",
+    "text": "Established Lilburn properties can require smaller-equipment access and careful protection of landscaping, fences and private underground systems while correcting runoff or grade.",
     "url": "/lilburn-ga"
   },
   {
@@ -1102,7 +1102,7 @@ export const websiteKnowledge = [
   },
   {
     "title": "Grading & Drainage Contractor in Loganville, GA",
-    "text": "Loganville properties frequently need drainage and grading tied to usable yards, outbuildings, driveways and larger residential lots.\nReal Landco work · Drainage correction",
+    "text": "Loganville properties frequently need drainage and grading tied to usable yards, outbuildings, driveways and larger residential lots.",
     "url": "/loganville-ga"
   },
   {
@@ -1132,7 +1132,7 @@ export const websiteKnowledge = [
   },
   {
     "title": "Land Clearing & Grading Contractor in Monroe, GA",
-    "text": "Larger Monroe-area properties may require clearing and access first, followed by grading, drainage and stabilization that prepare the site for its next use.\nReal Landco work · Drainage correction",
+    "text": "Larger Monroe-area properties may require clearing and access first, followed by grading, drainage and stabilization that prepare the site for its next use.",
     "url": "/monroe-ga"
   },
   {
@@ -1327,7 +1327,7 @@ export const websiteKnowledge = [
   },
   {
     "title": "Drainage & Grading Contractor in Snellville, GA",
-    "text": "Established Snellville lots can have limited machine access, mature landscaping and fixed elevations. Landco plans the drainage outlet and equipment path before work begins.\nReal Landco work · Drainage correction",
+    "text": "Established Snellville lots can have limited machine access, mature landscaping and fixed elevations. Landco plans the drainage outlet and equipment path before work begins.",
     "url": "/snellville-ga"
   },
   {
@@ -1412,7 +1412,7 @@ export const websiteKnowledge = [
   },
   {
     "title": "Drainage & Grading Contractor in Sugar Hill, GA",
-    "text": "Sugar Hill projects require practical control of runoff around established homes, driveways and neighboring elevations. Landco evaluates a workable discharge before recommending drainage or grade changes.\nReal Landco work · Drainage correction",
+    "text": "Sugar Hill projects require practical control of runoff around established homes, driveways and neighboring elevations. Landco evaluates a workable discharge before recommending drainage or grade changes.",
     "url": "/sugar-hill-ga"
   },
   {
@@ -1442,7 +1442,7 @@ export const websiteKnowledge = [
   },
   {
     "title": "Drainage & Grading Contractor in Suwanee, GA",
-    "text": "Suwanee properties often combine mature landscaping, fixed elevations and limited equipment access. Landco plans the outlet, machine path and surface restoration before disturbing the site.\nReal Landco work · Drainage correction",
+    "text": "Suwanee properties often combine mature landscaping, fixed elevations and limited equipment access. Landco plans the outlet, machine path and surface restoration before disturbing the site.",
     "url": "/suwanee-ga"
   },
   {
@@ -1527,7 +1527,7 @@ export const websiteKnowledge = [
   },
   {
     "title": "Grading & Drainage Contractor in Watkinsville, GA",
-    "text": "Watkinsville and Oconee County properties range from established residential lots to acreage. Landco sequences access, water control, grading and stabilization around the intended use of the property.\nReal Landco work · Drainage correction",
+    "text": "Watkinsville and Oconee County properties range from established residential lots to acreage. Landco sequences access, water control, grading and stabilization around the intended use of the property.",
     "url": "/watkinsville-ga"
   },
   {
@@ -1557,7 +1557,7 @@ export const websiteKnowledge = [
   },
   {
     "title": "Grading, Drainage & Land Clearing in Winder, GA",
-    "text": "Winder projects often involve red-clay runoff, driveway washout, low yard areas and properties transitioning from overgrowth to usable ground.\nReal Landco work · Drainage correction",
+    "text": "Winder projects often involve red-clay runoff, driveway washout, low yard areas and properties transitioning from overgrowth to usable ground.",
     "url": "/winder-ga"
   },
   {
