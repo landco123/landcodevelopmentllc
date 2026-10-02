@@ -19,3 +19,11 @@
     });
   });
 })();
+
+// Load the project assistant independently of form tracking.
+(function () {
+  const script = document.createElement('script');
+  script.type = 'module';
+  script.src = '/assistant/widget.mjs';
+  document.head.append(script);
+})();
