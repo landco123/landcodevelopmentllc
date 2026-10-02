@@ -4,6 +4,10 @@
   const read = key => { try { return sessionStorage.getItem(key) || ''; } catch { return ''; } };
   const write = (key,value) => { try { sessionStorage.setItem(key,value); } catch {} };
   const emit = (event,data) => { if (typeof window.gtag === 'function') window.gtag('event',event,data); };
+  if (['gclid','gbraid','wbraid','utm_source'].some(name => params.has(name))) {
+    tracked.forEach(name => write('landco_' + name, params.get(name) || ''));
+    write('landco_first_landing',window.location.href);
+  }
   // Capture attribution even on a landing page without a form. Keep it across navigation.
   tracked.forEach(function (name) {
     const value = params.get(name) || read('landco_' + name);
@@ -16,7 +20,12 @@
   document.querySelectorAll('a[href^="tel:"]:not([data-call-track]):not([onclick*="gtag"])').forEach(function (link) {
     link.addEventListener('click', () => emit('click_call',{event_category:'lead',event_label:location.pathname}));
   });
-  document.querySelectorAll('form[data-netlify="true"]').forEach(function (form) {
+  document.querySelectorAll('a[href*="#quote-form"]:not([onclick*="gtag"])').forEach(link => {
+    link.addEventListener('click',() => emit('click_quote',{event_category:'engagement',event_label:location.pathname}));
+  });
+  document.querySelectorAll('form').forEach(function (form) {
+    // Netlify removes data-netlify during deployment; the registered form-name field remains.
+    if (!form.querySelector('input[name="form-name"]')) return;
     const uploads = [...form.querySelectorAll('input[type="file"]')];
     function validateUploads() {
       uploads.forEach(input => input.setCustomValidity(''));
