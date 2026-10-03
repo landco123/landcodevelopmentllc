@@ -998,9 +998,9 @@
 
   </script>
 
-</head>
+<link rel="stylesheet" href="/landco-design.css"></head>
 
-<body>
+<body class="landco-polished">
 
   <header class="header">
 
@@ -1576,7 +1576,7 @@
 
           </article>
 
-          <form class="quote-form" name="civil-project-request" method="POST" action="/thank-you.html" data-netlify="true" data-netlify-honeypot="bot-field" onsubmit="gtag('event','form_submit_click',{event_category:'lead',event_label:'civil_project_request_form'});">
+          <form class="quote-form" name="civil-project-request" method="POST" action="/thank-you.html" data-netlify="true" data-netlify-honeypot="bot-field" onsubmit="gtag('event','form_submit_click',{event_category:'lead',event_label:'civil_project_request_form'});"><input type="hidden" name="gbraid" value=""><input type="hidden" name="wbraid" value="">
 
             <input type="hidden" name="form-name" value="civil-project-request" />
 
@@ -1660,7 +1660,10 @@
 
             <textarea id="details" name="project_details" placeholder="Describe the plans, site problem, access issue, grading scope, drainage issue, clearing need, schedule pressure, or next phase that needs to move forward." required></textarea>
 
-            <button type="submit">Send Project Request</button>
+            <input type="hidden" name="policy_version" value="2026-10-01"><input type="hidden" name="submitted_at" value="">
+<label class="consent"><input type="checkbox" name="contact_consent" value="authorized" required> I authorize Landco to contact me by phone, text or email about this request. Message and data rates may apply.</label>
+<label class="consent"><input type="checkbox" name="terms_acknowledgment" value="accepted" required> I acknowledge the <a href="/privacy-policy.html" target="_blank" rel="noopener">Privacy Policy</a> and <a href="/terms.html" target="_blank" rel="noopener">Website Terms</a>.</label>
+<button type="submit">Send Project Request</button>
 
             <p class="fine-print">Prefer to talk now? Call or text <a href="tel:+19122541918" onclick="gtag('event','phone_call_click',{event_category:'lead',event_label:'civil_form_phone'});">912-254-1918</a>.</p>
 
@@ -1704,43 +1707,9 @@
 
   </div>
 
-  <script>
 
-    (function () {
-
-      const params = new URLSearchParams(window.location.search);
-
-      const fieldNames = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid'];
-
-      fieldNames.forEach(function (name) {
-
-        const value = params.get(name) || sessionStorage.getItem('landco_' + name) || '';
-
-        if (value) {
-
-          sessionStorage.setItem('landco_' + name, value);
-
-        }
-
-        document.querySelectorAll('input[name="' + name + '"]').forEach(function (input) {
-
-          input.value = value;
-
-        });
-
-      });
-
-      document.querySelectorAll('input[name="landing_page"]').forEach(function (input) {
-
-        input.value = window.location.href;
-
-      });
-
-    })();
-
-  </script>
 
 <script type="module" src="/assistant/widget.mjs"></script>
-</body>
+<script src="/site.js" defer></script></body>
 
 </html>

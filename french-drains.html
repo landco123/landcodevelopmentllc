@@ -367,9 +367,9 @@
     ]
   }
   </script>
-</head>
+<link rel="stylesheet" href="/landco-design.css"></head>
 
-<body>
+<body class="landco-polished">
   <header class="header" id="top">
     <div class="container">
       <h1>Landco Development LLC</h1>
@@ -513,7 +513,7 @@
     <section class="projects" id="projects">
       <div class="container">
         <h2>Recent Drainage Work</h2>
-        
+
 
         <div class="ba-grid">
           <figure class="ba-card">
@@ -538,7 +538,7 @@
 
     <section class="trust" id="reviews">
       <div class="container">
-        
+
 
         <div class="trust-grid">
           <a class="trust-card" href="https://share.google/VPTTty0vot6EEEihj" target="_blank" rel="noopener">
@@ -567,7 +567,7 @@
     <section class="services" id="service-area">
       <div class="container">
         <h2>French Drain Service Areas</h2>
-       
+
 
         <ul class="bullet-list">
           <li><a href="athens-ga.html">Athens, GA French Drain &amp; Drainage Services</a></li>
@@ -582,7 +582,7 @@
     <section class="trust faq" id="faq">
       <div class="container">
         <h2>French Drain Questions</h2>
-       
+
 
         <details open>
           <summary>What does a French drain help with?</summary>
@@ -615,7 +615,7 @@
 
         <div class="quote-grid">
           <div class="quote-card">
-            
+
             <ul>
               <li>French drain installation</li>
               <li>Standing water and muddy yard correction</li>
@@ -624,13 +624,13 @@
               <li>French drain + grading solutions</li>
             </ul>
 
-           
+
 
             <a class="cta-btn" href="tel:+19122541918" onclick="gtag('event','click_call',{'event_category':'phone','event_label':'french_quote_call'});">Call or Text Now</a>
           </div>
 
           <div class="quote-card">
-            <form class="quote-form" name="french-drain-quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html" onsubmit="gtag('event','generate_lead',{'event_category':'form','event_label':'french_drain_quote_form'});">
+            <form class="quote-form" name="french-drain-quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html" onsubmit="gtag('event','landco_form_attempt',{'event_category':'form','event_label':'french_drain_quote_form'});"><input type="hidden" name="utm_source" value=""><input type="hidden" name="utm_medium" value=""><input type="hidden" name="utm_campaign" value=""><input type="hidden" name="utm_term" value=""><input type="hidden" name="utm_content" value=""><input type="hidden" name="gclid" value=""><input type="hidden" name="gbraid" value=""><input type="hidden" name="wbraid" value=""><input type="hidden" name="landing_page" value="">
               <input type="hidden" name="form-name" value="french-drain-quote" />
               <p class="hidden"><label>Don’t fill this out: <input name="bot-field" /></label></p>
 
@@ -658,7 +658,10 @@
               <label for="fd-details">Project Details</label>
               <textarea id="fd-details" name="project_details" placeholder="Tell us where the water starts, where it travels, and what the problem is doing after rain." required></textarea>
 
-              <button type="submit">Request Project Quote</button>
+              <input type="hidden" name="policy_version" value="2026-10-01"><input type="hidden" name="submitted_at" value="">
+<label class="consent"><input type="checkbox" name="contact_consent" value="authorized" required> I authorize Landco to contact me by phone, text or email about this request. Message and data rates may apply.</label>
+<label class="consent"><input type="checkbox" name="terms_acknowledgment" value="accepted" required> I acknowledge the <a href="/privacy-policy.html" target="_blank" rel="noopener">Privacy Policy</a> and <a href="/terms.html" target="_blank" rel="noopener">Website Terms</a>.</label>
+<button type="submit">Request Project Quote</button>
               <p class="fine-print">Tip: if downspouts are feeding the problem area, mention that in the details box.</p>
             </form>
           </div>
@@ -687,5 +690,5 @@
     <a class="sticky-quote" href="#quote-form" onclick="gtag('event','click_quote',{'event_category':'engagement','event_label':'french_sticky_quote'});">Get Quote</a>
   </div>
 <script type="module" src="/assistant/widget.mjs"></script>
-</body>
+<script src="/site.js" defer></script></body>
 </html>

@@ -1,0 +1,26 @@
+/* Landco polish only: existing layouts, navigation, photos and assistant remain unchanged. */
+body.landco-polished{--gold:#c9a227;--black:#111;--radius:10px}
+body.landco-polished .header,body.landco-polished footer{background:#111;color:#fff}
+body.landco-polished .nav a{background:#171717;color:#fff;border-color:#76632d}
+body.landco-polished .nav a:hover{background:#26231a;color:#f1d783;border-color:#c9a227}
+body.landco-polished a.header-call[href^="tel:"]{background:#c9a227;color:#111;border-color:#c9a227;text-decoration:none}
+body.landco-polished .cta-btn,body.landco-polished a.cta-btn[href^="tel:"],body.landco-polished .cta{background:#c9a227;color:#111;border-color:#c9a227;font-weight:800;text-decoration:none;box-shadow:none}
+body.landco-polished .cta-btn.secondary{background:#111;color:#fff;border-color:#c9a227}
+body.landco-polished .cta-btn:hover,body.landco-polished a.cta-btn[href^="tel:"]:hover{background:#dfc064;color:#111}
+body.landco-polished .cta-btn.secondary:hover{background:#28241b;color:#fff}
+body.landco-polished .mini-cta{background:#111;color:#fff;border-color:#c9a227;box-shadow:none}
+body.landco-polished .mini-cta:hover{background:#28241b;color:#f1d783;border-color:#c9a227}
+body.landco-polished section.service-area a{background:#111;color:#fff;border-color:#c9a227}
+body.landco-polished .service,body.landco-polished .service-card,body.landco-polished .trust-card,body.landco-polished .quote-card,body.landco-polished .local-proof,body.landco-polished .hero-card{border-color:#d8ceb0;box-shadow:none}
+body.landco-polished .local-proof{border-left-color:#c9a227}
+body.landco-polished .eyebrow{color:#786014!important}
+body.landco-polished form:not(.lc-input):not(.lc-review) button[type="submit"]{background:#c9a227;color:#111;font-weight:800;cursor:pointer}
+body.landco-polished form:not(.lc-input):not(.lc-review) input,body.landco-polished form:not(.lc-input):not(.lc-review) select,body.landco-polished form:not(.lc-input):not(.lc-review) textarea{border-color:#bdb9ac}
+body.landco-polished form:not(.lc-input):not(.lc-review) .consent{display:block;font-size:12px;font-weight:400;line-height:1.5;color:#222;margin:12px 0;text-align:left}
+body.landco-polished form:not(.lc-input):not(.lc-review) .consent input{width:auto;margin:0 6px 0 0;vertical-align:middle}
+body.landco-polished form:not(.lc-input):not(.lc-review) .consent a{color:#111;text-decoration:underline}
+body.landco-polished footer a{color:#e4cb7b}
+body.landco-polished .sticky-cta,body.landco-polished .sticky-mobile-cta{background:#fff;border-top-color:#c9a227}
+body.landco-polished .sticky-cta .sticky-call,body.landco-polished .sticky-cta a.sticky-call[href^="tel:"],body.landco-polished .sticky-mobile-cta .sticky-call,body.landco-polished .sticky-mobile-cta a.sticky-call[href^="tel:"]{background:#c9a227;color:#111;border-color:#c9a227}
+body.landco-polished .sticky-cta .sticky-quote,body.landco-polished .sticky-mobile-cta .sticky-quote{background:#111;color:#fff;border-color:#111}
+body.landco-polished :where(a,button,input,select,textarea):focus-visible{outline:3px solid #a18324;outline-offset:3px}

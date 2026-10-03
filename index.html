@@ -542,7 +542,7 @@ a[href^="tel:"] {
 
       "email": "landcodevelopment2@gmail.com",
 
-      "image": "https://landcodevelopmentllc.netlify.app/images/creek-before.jpg",
+      "image": "https://www.landcodevelopmentllc.com/images/creek-before.jpg",
 
       "priceRange": "$$",
 
@@ -650,9 +650,9 @@ a[href^="tel:"] {
 
 </script>
 
-</head>
+<link rel="stylesheet" href="/landco-design.css"></head>
 
-<body>
+<body class="landco-polished">
 
 <header class="header" id="top">
 
@@ -772,7 +772,7 @@ a[href^="tel:"] {
 
     <p class="section-sub">Tell us about your project. We’ll review it and contact you quickly.</p>
 
-    <form name="project-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html" data-form-track="homepage_quote_form" enctype="multipart/form-data">
+    <form name="project-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html" data-form-track="homepage_quote_form" enctype="multipart/form-data"><input type="hidden" name="gbraid" value=""><input type="hidden" name="wbraid" value="">
 
       <input type="hidden" name="form-name" value="project-request"/>
 
@@ -1127,7 +1127,7 @@ a[href^="tel:"] {
 
           if (typeof gtag === 'function') {
 
-            gtag('event', 'generate_lead', {
+            gtag('event', 'landco_form_attempt', {
 
               event_category: 'form',
 

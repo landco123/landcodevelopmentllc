@@ -39,7 +39,7 @@ class WebsiteText(HTMLParser):
 entries = []
 pages = []
 for path in sorted(Path('.').glob('*.html')):
-    if path.stem in {'404', 'thank-you', 'civil-contractor-request'}:
+    if path.stem in {'404', 'thank-you', 'civil-contractor-request', 'design-review'}:
         continue
     parser = WebsiteText()
     parser.feed(path.read_text())
