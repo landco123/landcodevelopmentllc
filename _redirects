@@ -1,3 +1,9 @@
+# Retire legacy French-drain URLs in favor of the established service page.
+/landing-images/french-drain.html /french-drains 301!
+/landing-images/french-drain /french-drains 301!
+/french-drain.html /french-drains 301!
+/french-drain /french-drains 301!
+
 # Old .html service pages — send directly to final clean HTTPS www URLs
 
 http://landcodevelopmentllc.com/land-clearing.html https://www.landcodevelopmentllc.com/land-clearing 301!
