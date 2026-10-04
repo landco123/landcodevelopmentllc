@@ -18,7 +18,451 @@
 
 <link href="https://www.landcodevelopmentllc.com/" rel="canonical"/>
 
-<link href="style.css" rel="stylesheet"/>
+<style data-landco-style="style.css">
+:root{
+  --black:#111;
+  --gray:#f4f4f4;
+  --gold:#d4af37;
+  --text:#222;
+  --muted:#555;
+  --radius:10px;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  color:var(--text);
+  background:#fff;
+  line-height:1.5;
+  text-align:center;
+}
+
+.container{
+  width:90%;
+  max-width:1100px;
+  margin:0 auto;
+  padding:0 20px;
+}
+
+/* HEADER (CENTERED) */
+.header{
+  background:var(--black);
+  color:#fff;
+  padding:42px 0 28px;
+}
+
+.header h1{
+  margin:0;
+  font-size:34px;
+}
+
+.tagline{
+  margin:10px 0 0;
+  color:#ddd;
+}
+
+/* NAV BUTTONS */
+.nav{
+  margin-top:16px;
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.nav a{
+  display:inline-block;
+  text-decoration:none;
+  color:#fff;
+  font-weight:bold;
+  font-size:14px;
+  padding:10px 14px;
+  border:1px solid rgba(255,255,255,0.22);
+  border-radius:999px;
+  background:rgba(255,255,255,0.06);
+}
+
+.nav a:hover{
+  background:rgba(255,255,255,0.14);
+}
+
+/* HEADER CALL BUTTON */
+.header-call{
+  display:inline-block;
+  margin-top:16px;
+  padding:12px 22px;
+  background:var(--gold);
+  color:#000;
+  text-decoration:none;
+  font-weight:bold;
+  border-radius:8px;
+}
+
+/* HERO */
+.hero{
+  background:var(--gray);
+  padding:70px 0;
+}
+
+.hero h2{
+  margin:0 0 12px;
+  font-size:30px;
+}
+
+.hero-sub{
+  max-width:760px;
+  margin:0 auto;
+  color:var(--muted);
+}
+
+/* BUTTONS */
+.cta-btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:14px 28px;
+  background:#000;
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+  border-radius:8px;
+  transition: transform .15s ease, opacity .15s ease;
+}
+
+.cta-btn:hover{
+  opacity:0.92;
+  transform:translateY(-1px);
+}
+
+.secondary{
+  background:transparent;
+  color:#000;
+  border:2px solid #000;
+}
+
+/* SERVICES */
+.services{
+  padding:70px 0;
+  background:#fff;
+}
+
+.section-sub{
+  margin-top:10px;
+  color:var(--muted);
+}
+
+.service-grid{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:24px;
+  margin-top:36px;
+}
+
+.service{
+  width:320px;
+  max-width:100%;
+  padding:22px 18px;
+  border:1px solid #e9e9e9;
+  border-radius:var(--radius);
+  background:#fff;
+  text-align:left;
+}
+
+.service h3{
+  margin:0 0 8px;
+  font-size:18px;
+}
+
+.service p{
+  margin:0;
+  color:var(--muted);
+}
+
+/* PROJECTS */
+.projects{
+  padding:70px 0;
+  background:var(--gray);
+}
+
+/* BEFORE/AFTER GRID */
+.ba-grid{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:20px;
+  max-width:950px;
+  margin:40px auto 10px;
+}
+
+.ba-card{
+  position:relative;
+  margin:0;
+  border-radius:var(--radius);
+  overflow:hidden;
+  background:#ddd;
+  border:1px solid rgba(0,0,0,0.08);
+}
+
+.ba-card img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  display:block;
+}
+
+.ba-label{
+  position:absolute;
+  top:10px;
+  left:10px;
+  background:rgba(0,0,0,0.78);
+  color:#fff;
+  font-weight:bold;
+  padding:6px 10px;
+  border-radius:8px;
+  font-size:13px;
+}
+
+.ba-wide{
+  grid-column: 1 / -1;
+}
+
+.ba-wide img{
+  height:340px;
+}
+
+.gallery-note{
+  margin-top:18px;
+  color:var(--muted);
+}
+
+/* CONTACT */
+.contact{
+  padding:70px 0;
+  background:#fff;
+}
+
+.contact a{
+  color:#000;
+  font-weight:bold;
+  text-decoration:none;
+}
+
+footer{
+  background:var(--black);
+  color:#fff;
+  padding:20px 0;
+}
+
+/* MOBILE */
+@media (max-width: 800px){
+  .header h1{ font-size:28px; }
+  .hero h2{ font-size:26px; }
+  .ba-grid{ grid-template-columns: 1fr; }
+  .ba-wide img{ height:260px; }
+  .service{ text-align:left; }
+}
+
+
+/* TRUST / REVIEWS */
+.trust{ background: var(--gray); padding: 60px 0; }
+.trust-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap:18px;
+  margin-top:20px;
+}
+.trust-card{
+  display:block;
+  padding:18px;
+  border:1px solid #ddd;
+  border-radius: var(--radius);
+  background:#fff;
+  color:inherit;
+  text-decoration:none;
+  text-align:left;
+}
+.trust-card h3{ margin:0 0 6px 0; color: var(--black); }
+.trust-card p{ margin:0; color: var(--muted); }
+.callout{
+  margin-top:22px;
+  padding:18px;
+  border-radius: var(--radius);
+  border:1px solid #ddd;
+  background:#fff;
+  text-align:left;
+}
+
+/* MINI CTAs */
+.mini-ctas{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  justify-content:center;
+  margin: 18px 0 10px;
+}
+.mini-cta{
+  display:inline-block;
+  padding:10px 14px;
+  border:1px solid #ddd;
+  border-radius:999px;
+  text-decoration:none;
+  color:var(--text);
+  background:#fff;
+  font-weight:700;
+  font-size:0.95rem;
+}
+.mini-cta:hover{ border-color: var(--gold); }
+
+/* BULLET LIST */
+.bullet-list{
+  max-width: 800px;
+  margin: 0 auto;
+  text-align:left;
+  padding-left: 20px;
+}
+.service-area{ margin-top: 14px; color: var(--muted); }
+
+/* FOOTER */
+footer{ background:#111; color:#fff; padding: 30px 0; }
+.footer-inner{ text-align:center; }
+.footer-links a, footer a{ color:#fff; text-decoration: underline; }
+.footer-nap{ margin: 8px 0; }
+
+
+/* --- Polished before/after gallery --- */
+.ba-grid{
+  gap: 18px;
+}
+.ba-card{
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.04);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.35);
+  transform: translateZ(0);
+}
+.ba-card picture, .ba-card img{
+  display:block;
+  width:100%;
+}
+.ba-card img{
+  height: 260px;
+  object-fit: cover;
+  filter: contrast(1.06) saturate(1.05);
+}
+.ba-card figcaption{
+  position:absolute;
+  left:0; right:0; bottom:0;
+  padding: 12px 14px;
+  font-weight: 700;
+  letter-spacing: .2px;
+  color:#fff;
+  background: linear-gradient(to top, rgba(0,0,0,0.78), rgba(0,0,0,0));
+}
+@media (max-width: 520px){
+  .ba-card img{ height: 220px; }
+}
+/* FORM STYLING */
+form{
+  max-width:700px;
+  margin:30px auto 0;
+  text-align:left;
+}
+
+form label{
+  display:block;
+  margin-bottom:8px;
+  font-weight:bold;
+  color:var(--black);
+}
+
+form input,
+form select,
+form textarea{
+  width:100%;
+  padding:14px 16px;
+  margin-bottom:18px;
+  border:1px solid #d9d9d9;
+  border-radius:8px;
+  font-size:16px;
+  font-family:Arial, sans-serif;
+  color:var(--text);
+  background:#fff;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus{
+  outline:none;
+  border-color:var(--gold);
+  box-shadow:0 0 0 3px rgba(212,175,55,0.18);
+}
+
+form textarea{
+  min-height:140px;
+  resize:vertical;
+}
+
+form button{
+  display:inline-block;
+  padding:14px 28px;
+  background:#000;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  font-weight:bold;
+  font-size:16px;
+  cursor:pointer;
+}
+
+form button:hover{
+  opacity:0.92;
+}
+/* === LANDCO PHONE BUTTON STYLE (added 2026-05-13) ============= */
+
+a[href^="tel:"],
+
+button.landco-call,          /* for any future buttons that use this class */
+
+[role="button"].landco-call {
+
+  background: #b39214;       /* Landco gold */
+
+  color: #ffffff;
+
+  padding: 0.75rem 1.25rem;
+
+  border: none;
+
+  border-radius: 6px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  display: inline-block;
+
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+}
+
+a[href^="tel:"]:hover,
+
+button.landco-call:hover,
+
+[role="button"].landco-call:hover {
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+
+}
+
+</style>
 
 <meta content="#111111" name="theme-color"/>
 
@@ -518,7 +962,252 @@ a[href^="tel:"] {
 }
 </style>
 
-<link href="front-april.css" rel="stylesheet"/>
+<style data-landco-style="front-april.css">
+/*
+ * Homepage visual layer: restores the established April Landco presentation.
+ * Content, schema, tracking, forms and service-area SEO remain in index.html.
+ */
+
+/* Undo the later global telephone-link treatment on ordinary text links. */
+body a[href^="tel:"] {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  transform: none;
+  transition: none;
+}
+
+body a[href^="tel:"]:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* April header call button. */
+body .header-call,
+body a.header-call[href^="tel:"] {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 12px 22px;
+  background: var(--gold);
+  color: #000;
+  border: 0;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* April primary and secondary CTA treatment. */
+body .cta-btn,
+body a.cta-btn[href^="tel:"] {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 28px;
+  background: #000;
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: none;
+  transition: transform .15s ease, opacity .15s ease;
+}
+
+body .cta-btn:hover,
+body a.cta-btn[href^="tel:"]:hover {
+  color: #fff;
+  opacity: .92;
+  transform: translateY(-1px);
+}
+
+body .cta-btn.secondary {
+  background: transparent;
+  color: #000;
+  border: 2px solid #000;
+}
+
+body .cta-btn.secondary:hover {
+  color: #000;
+}
+
+/* Keep the familiar April chips and proof cards. */
+body .mini-cta {
+  display: inline-block;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--text);
+  box-shadow: none;
+  font-weight: 700;
+}
+
+body .mini-cta:hover {
+  background: #fff;
+  color: var(--text);
+  border-color: var(--gold);
+}
+
+body .phone-display,
+body a.phone-display[href^="tel:"] {
+  display: inline;
+  padding: 0;
+  background: transparent;
+  color: #000;
+  border: 0;
+  box-shadow: none;
+}
+
+/* April service-area block, extended to today's complete coverage hub. */
+section.service-area {
+  margin: 0;
+  padding: 60px 20px;
+  background: var(--gray);
+  color: var(--text);
+}
+
+section.service-area .container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section.service-area ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 900px;
+  margin: 24px auto 0;
+  padding: 0;
+  list-style: none;
+}
+
+section.service-area li {
+  margin: 0;
+}
+
+section.service-area a {
+  display: inline-block;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+section.service-area a:hover {
+  border-color: var(--gold);
+}
+
+/* Retain the approved mobile Call / Quote utility without changing desktop. */
+.sticky-mobile-cta {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  body {
+    padding-bottom: 76px;
+  }
+
+  .sticky-mobile-cta {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+    background: rgba(5, 5, 5, .97);
+    border-top: 2px solid #c9a227;
+    box-shadow: 0 -8px 22px rgba(0, 0, 0, .25);
+  }
+
+  body .sticky-mobile-cta a,
+  body .sticky-mobile-cta a[href^="tel:"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    margin: 0;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: 900;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  body .sticky-mobile-cta .sticky-call,
+  body .sticky-mobile-cta a.sticky-call[href^="tel:"] {
+    background: #c9a227;
+    color: #050505;
+    border: 1px solid #c9a227;
+  }
+
+  body .sticky-mobile-cta .sticky-quote {
+    background: #fff;
+    color: #050505;
+    border: 1px solid #fff;
+  }
+}
+
+/* Protected lead intake layered onto the approved April presentation. */
+#quote-form form fieldset.form-upload {
+  margin: 4px 0 18px;
+  padding: 16px;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  text-align: left;
+}
+
+#quote-form form fieldset.form-upload legend {
+  padding: 0 8px;
+  font-weight: 800;
+}
+
+#quote-form form .form-notice {
+  margin: 0 0 18px;
+  padding: 12px 14px;
+  background: #fff8df;
+  border-left: 4px solid #c9a227;
+  color: #222;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+#quote-form form .consent {
+  display: block;
+  margin-bottom: 14px;
+  font-weight: 400;
+  text-align: left;
+}
+
+#quote-form form .consent input {
+  width: auto;
+  margin-right: 8px;
+}
+
+#quote-form form .consent a {
+  color: #111;
+  text-decoration: underline;
+}
+
+.hidden {
+  position: absolute !important;
+  left: -10000px !important;
+}
+
+</style>
 
 <script type="application/ld+json">
 
@@ -650,7 +1339,35 @@ a[href^="tel:"] {
 
 </script>
 
-<link rel="stylesheet" href="/landco-design.css"></head>
+<style data-landco-style="landco-design.css">
+/* Landco polish only: existing layouts, navigation, photos and assistant remain unchanged. */
+body.landco-polished{--gold:#c9a227;--black:#111;--radius:10px}
+body.landco-polished .header,body.landco-polished footer{background:#111;color:#fff}
+body.landco-polished .nav a{background:#171717;color:#fff;border-color:#76632d}
+body.landco-polished .nav a:hover{background:#26231a;color:#f1d783;border-color:#c9a227}
+body.landco-polished a.header-call[href^="tel:"]{background:#c9a227;color:#111;border-color:#c9a227;text-decoration:none}
+body.landco-polished .cta-btn,body.landco-polished a.cta-btn[href^="tel:"],body.landco-polished .cta{background:#c9a227;color:#111;border-color:#c9a227;font-weight:800;text-decoration:none;box-shadow:none}
+body.landco-polished .cta-btn.secondary{background:#111;color:#fff;border-color:#c9a227}
+body.landco-polished .cta-btn:hover,body.landco-polished a.cta-btn[href^="tel:"]:hover{background:#dfc064;color:#111}
+body.landco-polished .cta-btn.secondary:hover{background:#28241b;color:#fff}
+body.landco-polished .mini-cta{background:#111;color:#fff;border-color:#c9a227;box-shadow:none}
+body.landco-polished .mini-cta:hover{background:#28241b;color:#f1d783;border-color:#c9a227}
+body.landco-polished section.service-area a{background:#111;color:#fff;border-color:#c9a227}
+body.landco-polished .service,body.landco-polished .service-card,body.landco-polished .trust-card,body.landco-polished .quote-card,body.landco-polished .local-proof,body.landco-polished .hero-card{border-color:#d8ceb0;box-shadow:none}
+body.landco-polished .local-proof{border-left-color:#c9a227}
+body.landco-polished .eyebrow{color:#786014!important}
+body.landco-polished form:not(.lc-input):not(.lc-review) button[type="submit"]{background:#c9a227;color:#111;font-weight:800;cursor:pointer}
+body.landco-polished form:not(.lc-input):not(.lc-review) input,body.landco-polished form:not(.lc-input):not(.lc-review) select,body.landco-polished form:not(.lc-input):not(.lc-review) textarea{border-color:#bdb9ac}
+body.landco-polished form:not(.lc-input):not(.lc-review) .consent{display:block;font-size:12px;font-weight:400;line-height:1.5;color:#222;margin:12px 0;text-align:left}
+body.landco-polished form:not(.lc-input):not(.lc-review) .consent input{width:auto;margin:0 6px 0 0;vertical-align:middle}
+body.landco-polished form:not(.lc-input):not(.lc-review) .consent a{color:#111;text-decoration:underline}
+body.landco-polished footer a{color:#e4cb7b}
+body.landco-polished .sticky-cta,body.landco-polished .sticky-mobile-cta{background:#fff;border-top-color:#c9a227}
+body.landco-polished .sticky-cta .sticky-call,body.landco-polished .sticky-cta a.sticky-call[href^="tel:"],body.landco-polished .sticky-mobile-cta .sticky-call,body.landco-polished .sticky-mobile-cta a.sticky-call[href^="tel:"]{background:#c9a227;color:#111;border-color:#c9a227}
+body.landco-polished .sticky-cta .sticky-quote,body.landco-polished .sticky-mobile-cta .sticky-quote{background:#111;color:#fff;border-color:#111}
+body.landco-polished :where(a,button,input,select,textarea):focus-visible{outline:3px solid #a18324;outline-offset:3px}
+
+</style></head>
 
 <body class="landco-polished">
 
@@ -692,6 +1409,7 @@ a[href^="tel:"] {
 
 </header>
 
+<main id="main-content">
 <section class="hero">
 
   <div class="container">
@@ -867,7 +1585,7 @@ a[href^="tel:"] {
 
           <source srcset="images/creek-before.webp" type="image/webp"/>
 
-          <img alt="Before: standing water routed through yard before creek bed drainage install." loading="lazy" src="images/creek-before.jpg"/>
+          <img alt="Before: standing water routed through yard before creek bed drainage install." loading="lazy" src="/images/optimized/creek-before-540.webp" srcset="/images/optimized/creek-before-480.webp 480w, /images/optimized/creek-before-540.webp 540w" sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 400px" width="540" height="1351" decoding="async" />
 
         </picture>
 
@@ -881,7 +1599,7 @@ a[href^="tel:"] {
 
           <source srcset="images/creek-after.webp" type="image/webp"/>
 
-          <img alt="After: clean creek bed drainage installed to move water away from the home." loading="lazy" src="images/creek-after.jpg"/>
+          <img alt="After: clean creek bed drainage installed to move water away from the home." loading="lazy" src="/images/optimized/creek-after-540.webp" srcset="/images/optimized/creek-after-480.webp 480w, /images/optimized/creek-after-540.webp 540w" sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 400px" width="540" height="1351" decoding="async" />
 
         </picture>
 
@@ -893,7 +1611,7 @@ a[href^="tel:"] {
 
         <picture>
 
-          <img alt="Finished creek bed drainage system with clean stone and proper grading for long-term water control." loading="lazy" src="images/creek-finished.JPEG"/>
+          <img alt="Finished creek bed drainage system with clean stone and proper grading for long-term water control." loading="lazy" src="/images/optimized/creek-finished-1102.webp" srcset="/images/optimized/creek-finished-480.webp 480w, /images/optimized/creek-finished-960.webp 960w, /images/optimized/creek-finished-1102.webp 1102w" sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 400px" width="1102" height="1468" decoding="async" />
 
         </picture>
 
@@ -907,7 +1625,7 @@ a[href^="tel:"] {
 
           <source srcset="images/mulch-before.webp" type="image/webp"/>
 
-          <img alt="Before: dense brush and overgrowth in work area." loading="lazy" src="images/mulch-before.jpg"/>
+          <img alt="Before: dense brush and overgrowth in work area." loading="lazy" src="/images/optimized/mulch-before-1152.webp" srcset="/images/optimized/mulch-before-480.webp 480w, /images/optimized/mulch-before-960.webp 960w, /images/optimized/mulch-before-1152.webp 1152w" sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 400px" width="1152" height="1536" decoding="async" />
 
         </picture>
 
@@ -921,7 +1639,7 @@ a[href^="tel:"] {
 
           <source srcset="images/mulch-after.webp" type="image/webp"/>
 
-          <img alt="After: mulched and cleaned work area ready for use." loading="lazy" src="images/mulch-after.jpg"/>
+          <img alt="After: mulched and cleaned work area ready for use." loading="lazy" src="/images/optimized/mulch-after-1152.webp" srcset="/images/optimized/mulch-after-480.webp 480w, /images/optimized/mulch-after-960.webp 960w, /images/optimized/mulch-after-1152.webp 1152w" sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 400px" width="1152" height="1536" decoding="async" />
 
         </picture>
 
@@ -1041,6 +1759,7 @@ a[href^="tel:"] {
 
 </section>
 
+</main>
 <footer>
 
   <div class="container footer-inner">
