@@ -2,9 +2,6 @@
 /drainage.html https://www.landcodevelopmentllc.com/drainage-correction.html 301!
 /drainage https://www.landcodevelopmentllc.com/drainage-correction.html 301!
 /drainage/ https://www.landcodevelopmentllc.com/drainage-correction.html 301!
-/drainage-correction https://www.landcodevelopmentllc.com/drainage-correction.html 301!
-/drainage-correction/ https://www.landcodevelopmentllc.com/drainage-correction.html 301!
-/drainage-correction.html/ https://www.landcodevelopmentllc.com/drainage-correction.html 301!
 
 # Retire legacy French-drain URLs in favor of the established service page.
 /landing-images/french-drain.html /french-drains 301!
@@ -69,6 +66,8 @@ http://www.landcodevelopmentllc.com/* https://www.landcodevelopmentllc.com/:spla
 /french-drains /french-drains.html 200
 
 /civil-government /civil-government.html 200
+
+/drainage-correction /drainage-correction.html 200
 
 
 
