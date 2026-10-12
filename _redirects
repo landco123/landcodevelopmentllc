@@ -1,3 +1,11 @@
+# Consolidate drainage aliases into the established drainage-correction service page.
+/drainage.html https://www.landcodevelopmentllc.com/drainage-correction.html 301!
+/drainage https://www.landcodevelopmentllc.com/drainage-correction.html 301!
+/drainage/ https://www.landcodevelopmentllc.com/drainage-correction.html 301!
+/drainage-correction https://www.landcodevelopmentllc.com/drainage-correction.html 301!
+/drainage-correction/ https://www.landcodevelopmentllc.com/drainage-correction.html 301!
+/drainage-correction.html/ https://www.landcodevelopmentllc.com/drainage-correction.html 301!
+
 # Retire legacy French-drain URLs in favor of the established service page.
 /landing-images/french-drain.html /french-drains 301!
 /landing-images/french-drain /french-drains 301!
@@ -62,9 +70,7 @@ http://www.landcodevelopmentllc.com/* https://www.landcodevelopmentllc.com/:spla
 
 /civil-government /civil-government.html 200
 
-/drainage-correction /drainage-correction.html 200
 
-/drainage /drainage.html 200
 
 /standing-water-yard-drainage /standing-water-yard-drainage.html 200
 
