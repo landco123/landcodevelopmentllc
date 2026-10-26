@@ -57,7 +57,9 @@ http://www.landcodevelopmentllc.com/* https://www.landcodevelopmentllc.com/:spla
 
 /robots.txt /robots.txt 200
 
-# Preserve every public extensionless route before the true 404 fallback
+# Send legacy extensionless aliases to the established canonical .html URLs.
+# Primary service routes stay extensionless; /thank-you remains an internal
+# rewrite so Netlify can preserve the form-success flow.
 
 /land-clearing /land-clearing.html 200
 
@@ -67,65 +69,65 @@ http://www.landcodevelopmentllc.com/* https://www.landcodevelopmentllc.com/:spla
 
 /civil-government /civil-government.html 200
 
-/drainage-correction /drainage-correction.html 200
+/drainage-correction /drainage-correction.html 301!
 
 
 
-/standing-water-yard-drainage /standing-water-yard-drainage.html 200
+/standing-water-yard-drainage /standing-water-yard-drainage.html 301!
 
-/gallery /gallery.html 200
+/gallery /gallery.html 301!
 
-/civil-contractor-request /civil-contractor-request.html 200
+/civil-contractor-request /civil-contractor-request.html 301!
 
-/service-areas /service-areas.html 200
+/service-areas /service-areas.html 301!
 
-/privacy-policy /privacy-policy.html 200
+/privacy-policy /privacy-policy.html 301!
 
-/terms /terms.html 200
+/terms /terms.html 301!
 
 /thank-you /thank-you.html 200
 
-/athens-ga /athens-ga.html 200
+/athens-ga /athens-ga.html 301!
 
-/auburn-ga /auburn-ga.html 200
+/auburn-ga /auburn-ga.html 301!
 
-/bethlehem-ga /bethlehem-ga.html 200
+/bethlehem-ga /bethlehem-ga.html 301!
 
-/bogart-ga /bogart-ga.html 200
+/bogart-ga /bogart-ga.html 301!
 
-/braselton-ga /braselton-ga.html 200
+/braselton-ga /braselton-ga.html 301!
 
-/buford-ga /buford-ga.html 200
+/buford-ga /buford-ga.html 301!
 
-/conyers-ga /conyers-ga.html 200
+/conyers-ga /conyers-ga.html 301!
 
-/dacula-ga /dacula-ga.html 200
+/dacula-ga /dacula-ga.html 301!
 
-/duluth-ga /duluth-ga.html 200
+/duluth-ga /duluth-ga.html 301!
 
-/grayson-ga /grayson-ga.html 200
+/grayson-ga /grayson-ga.html 301!
 
-/hoschton-ga /hoschton-ga.html 200
+/hoschton-ga /hoschton-ga.html 301!
 
-/jefferson-ga /jefferson-ga.html 200
+/jefferson-ga /jefferson-ga.html 301!
 
-/lawrenceville-ga /lawrenceville-ga.html 200
+/lawrenceville-ga /lawrenceville-ga.html 301!
 
-/lilburn-ga /lilburn-ga.html 200
+/lilburn-ga /lilburn-ga.html 301!
 
-/loganville-ga /loganville-ga.html 200
+/loganville-ga /loganville-ga.html 301!
 
-/monroe-ga /monroe-ga.html 200
+/monroe-ga /monroe-ga.html 301!
 
-/snellville-ga /snellville-ga.html 200
+/snellville-ga /snellville-ga.html 301!
 
-/sugar-hill-ga /sugar-hill-ga.html 200
+/sugar-hill-ga /sugar-hill-ga.html 301!
 
-/suwanee-ga /suwanee-ga.html 200
+/suwanee-ga /suwanee-ga.html 301!
 
-/watkinsville-ga /watkinsville-ga.html 200
+/watkinsville-ga /watkinsville-ga.html 301!
 
-/winder-ga /winder-ga.html 200
+/winder-ga /winder-ga.html 301!
 
 # Old WordPress / junk cleanup
 
