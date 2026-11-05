@@ -1,4 +1,4 @@
-import { answerQuestion } from './answers.mjs';
+import { answerQuestion, siteVisitNotice } from './answers.mjs';
 import { intakeSteps, validateIntake } from './intake.mjs';
 
 function track(event) { if (typeof window.gtag === 'function') window.gtag('event', event, { event_category: 'assistant' }); }
@@ -23,6 +23,7 @@ function init() {
       <button type="button" class="lc-edit-request">Edit my details</button>
       <button type="button" class="lc-add-photos">Add photos / use full form</button>
       <p>No price or appointment is confirmed. Zach reviews your request.</p>
+      <p>${siteVisitNotice}</p>
     </form>
     <div class="lc-actions"><button type="button" class="lc-quote">Start my request</button><a href="tel:+19122541918">Call Zach</a></div>
     <p class="lc-note">Direct to Landco. Zach confirms price and timing. <a href="/privacy-policy.html">Privacy</a> • <a href="/terms.html">Terms</a></p>

@@ -1,11 +1,14 @@
 // Public service information. Project scope remains subject to Zach's review.
 import { websiteAnswer } from './search.mjs';
 import { websiteKnowledge } from './knowledge.mjs';
+export const siteVisitNotice = 'If your project needs an on-site visit, we’ll confirm any visit fee with you before scheduling.';
+
 export function answerQuestion(message) {
   const q = String(message || '').slice(0, 1000).toLowerCase();
   const result = (reply, service = '', url = ({'Driveway':'/grading','Grading / House Pad':'/grading','Land Clearing':'/land-clearing','French Drain':'/french-drains','Drainage Correction':'/drainage-correction','Erosion Control':'/civil-government','Other':'/civil-government'}[service] || '')) => ({ reply, service, links: url ? [{label:'Read more on our website',url}] : [] });
   if (/what.*(services|offer)|all.*services|\beverything\b|what (can|do) (you|y.all) do/.test(q) && !/price|cost|schedule|permit/.test(q)) return {reply:'Landco’s website lists land and brush clearing, forestry mulching, fence line and lot clearing, rough and finish grading, yard leveling, house and shed pad preparation, gravel driveway and access preparation, French drains, surface drainage, downspout tie-ins, drainage correction, erosion-control support, and civil or contractor site preparation. Ask about any of these, or send your scope for Zach’s review.',service:'',links:[{label:'Grading and site preparation',url:'/grading'},{label:'Clearing and mulching',url:'/land-clearing'},{label:'Drainage',url:'/french-drains'},{label:'Civil and contractor support',url:'/civil-government'}]};
   if (/concrete|asphalt|paving/.test(q)) return result('Landco prepares sites and installs or refreshes gravel drives. We do not pour concrete or asphalt. Tell us whether you need grading, a pad, or gravel work.', 'Driveway');
+  if (/\b(?:free|fees?|charge|charges)\b/.test(q) && /\b(?:quotes?|estimates?|consultations?|visits?)\b/.test(q)) return result(siteVisitNotice);
   if (/\b(price|cost|budget|rates?|discount)\b|how much/.test(q)) return result('Zach reviews each project before providing a price. Size, access, materials, water flow and site conditions affect the scope. Use Request a Quote to send your location, project details and photos directly to Landco.');
   if (/schedule|available|availability|tomorrow|today|appointment|book|start|urgent|emergency/.test(q)) return result('Call Landco directly at 912-254-1918 for timing or urgent requests. This assistant cannot reserve a date or confirm availability. For immediate danger, contact emergency services.');
   if (/guarantee|warranty|permit|engineer|licensed|insurance|insured|utility|legal/.test(q)) return result('Zach must review project requirements, site conditions, utility locations and any needed professional or jurisdictional approvals. This assistant cannot confirm permits, coverage or guarantees. Call 912-254-1918 or request a project review.');
