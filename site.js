@@ -33,7 +33,13 @@
       uploads.forEach(input => {
         for (const file of input.files || []) {
           total += file.size;
-          if (!/\.(jpe?g|png|webp)$/i.test(file.name)) input.setCustomValidity('Please use JPG, PNG or WebP project photos. You can send your request without photos and text them to 912-254-1918.');
+          const pdfAllowed = /application\/pdf/i.test(input.getAttribute('accept') || '');
+          const allowedFile = pdfAllowed ? /\.(jpe?g|png|webp|pdf)$/i : /\.(jpe?g|png|webp)$/i;
+          if (!allowedFile.test(file.name)) {
+            input.setCustomValidity(pdfAllowed
+              ? 'Please use JPG, PNG, WebP or PDF project files.'
+              : 'Please use JPG, PNG or WebP project photos. You can send your request without photos and text them to 912-254-1918.');
+          }
         }
       });
       // Leave room for form fields and multipart overhead below the provider's 8 MB request limit.
