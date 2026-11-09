@@ -1401,6 +1401,8 @@ body.landco-polished :where(a,button,input,select,textarea):focus-visible{outlin
 
       <a href="#contact">Contact</a>
 
+      <a href="#quote-form">Quote / Photos</a>
+
     </nav>
 
     <a class="header-call" href="tel:+19122541918" data-call-track="header_call">Call Now 912-254-1918</a>
@@ -1422,7 +1424,7 @@ body.landco-polished :where(a,button,input,select,textarea):focus-visible{outlin
 
     <br><br>
 
-    <a class="cta-btn secondary" href="#quote-form">Get a Fast Quote</a>
+    <a class="cta-btn secondary" href="#quote-form">Get a Quote / Add Photos</a>
 
   </div>
 
@@ -1476,7 +1478,7 @@ body.landco-polished :where(a,button,input,select,textarea):focus-visible{outlin
 
     </div>
 
-    <a class="cta-btn secondary" href="#quote-form">Get a Fast Quote</a>
+    <a class="cta-btn secondary" href="#quote-form">Get a Quote / Add Photos</a>
 
   </div>
 
@@ -1488,7 +1490,7 @@ body.landco-polished :where(a,button,input,select,textarea):focus-visible{outlin
 
     <h2>Request a Quote</h2>
 
-    <p class="section-sub">Tell us about your project. We’ll review it and contact you quickly.</p>
+    <p class="section-sub"><strong>Add up to 3 regular iPhone photos.</strong> Large pictures are prepared automatically before they are sent.</p>
 
     <form name="project-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html" data-form-track="homepage_quote_form" enctype="multipart/form-data"><input type="hidden" name="gbraid" value=""><input type="hidden" name="wbraid" value="">
       <p>If your project needs an on-site visit, we’ll confirm any visit fee with you before scheduling.</p>
@@ -1549,14 +1551,14 @@ body.landco-polished :where(a,button,input,select,textarea):focus-visible{outlin
 
       <textarea id="description" name="description" required></textarea>
 
-      <fieldset class="form-upload">
-        <legend>Project photos (optional)</legend>
-        <label>Photo 1<input name="project_photo_1" type="file" accept="image/jpeg,image/png,image/webp"/></label>
-        <label>Photo 2<input name="project_photo_2" type="file" accept="image/jpeg,image/png,image/webp"/></label>
-        <label>Photo 3<input name="project_photo_3" type="file" accept="image/jpeg,image/png,image/webp"/></label>
+      <fieldset class="form-upload" id="project-photos">
+        <legend>Add project photos (optional)</legend>
+        <label>Add photo 1<input name="project_photo_1" type="file" accept="image/jpeg,image/png,image/webp"/></label>
+        <label>Add photo 2<input name="project_photo_2" type="file" accept="image/jpeg,image/png,image/webp"/></label>
+        <label>Add photo 3<input name="project_photo_3" type="file" accept="image/jpeg,image/png,image/webp"/></label>
       </fieldset>
 
-      <p class="form-notice"><strong>Upload safety:</strong> Keep all files under 8 MB total. Upload only project-relevant JPG, PNG or WebP images that you have authority to share. Do not submit payment, banking, identification, access-code or other sensitive information.</p>
+      <p class="form-notice"><strong>iPhone photos accepted:</strong> Large JPG, PNG or WebP project photos are prepared automatically. Add up to 3 photos you have authority to share. Do not submit payment, banking, identification, access-code or other sensitive information.</p>
 
       <label class="consent"><input type="checkbox" name="contact_consent" value="authorized" required/> I authorize Landco Development LLC to contact me by phone, text or email about this project request. Message and data rates may apply.</label>
 
@@ -1801,7 +1803,7 @@ body.landco-polished :where(a,button,input,select,textarea):focus-visible{outlin
 
   <a class="sticky-call" href="tel:+19122541918" data-call-track="mobile_sticky_call">Call Now</a>
 
-  <a class="sticky-quote" href="#quote-form">Quote Now</a>
+  <a class="sticky-quote" href="#quote-form">Quote + Photos</a>
 
 </div>
 
