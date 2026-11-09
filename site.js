@@ -23,29 +23,143 @@
   document.querySelectorAll('a[href*="#quote-form"]:not([onclick*="gtag"])').forEach(link => {
     link.addEventListener('click',() => emit('click_quote',{event_category:'engagement',event_label:location.pathname}));
   });
+
+  const photoTargetBytes = 2 * 1024 * 1024;
+  const uploadTotalBytes = 7.5 * 1024 * 1024;
+  const photoMaxSide = 2000;
+  const photoPattern = /\.(jpe?g|png|webp)$/i;
+
+  function formatMegabytes(bytes) {
+    return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
+  }
+
+  function uploadStatus(input) {
+    const parent = input.parentElement || input;
+    let status = parent.querySelector('[data-landco-upload-status]');
+    if (!status) {
+      status = document.createElement('span');
+      status.setAttribute('data-landco-upload-status','');
+      status.setAttribute('role','status');
+      status.setAttribute('aria-live','polite');
+      status.style.display = 'block';
+      status.style.marginTop = '.35rem';
+      status.style.fontSize = '.9rem';
+      status.style.fontWeight = '600';
+      status.style.color = '#6b5410';
+      parent.append(status);
+    }
+    return status;
+  }
+
+  function loadPhoto(file) {
+    return new Promise(function (resolve,reject) {
+      const url = URL.createObjectURL(file);
+      const image = new Image();
+      image.onload = function () { URL.revokeObjectURL(url); resolve(image); };
+      image.onerror = function () { URL.revokeObjectURL(url); reject(new Error('Photo could not be opened.')); };
+      image.src = url;
+    });
+  }
+
+  function canvasJpeg(canvas,quality) {
+    return new Promise(function (resolve,reject) {
+      canvas.toBlob(function (blob) {
+        if (blob) resolve(blob);
+        else reject(new Error('Photo could not be prepared.'));
+      },'image/jpeg',quality);
+    });
+  }
+
+  async function optimizePhoto(file) {
+    if (file.size <= photoTargetBytes) return file;
+    const image = await loadPhoto(file);
+    const longest = Math.max(image.naturalWidth,image.naturalHeight);
+    let scale = Math.min(1,photoMaxSide / longest);
+    let width = Math.max(1,Math.round(image.naturalWidth * scale));
+    let height = Math.max(1,Math.round(image.naturalHeight * scale));
+    let quality = .84;
+    let blob;
+    for (let attempt = 0; attempt < 5; attempt += 1) {
+      const canvas = document.createElement('canvas');
+      canvas.width = width;
+      canvas.height = height;
+      const context = canvas.getContext('2d');
+      if (!context) throw new Error('Photo could not be prepared.');
+      context.fillStyle = '#fff';
+      context.fillRect(0,0,width,height);
+      context.drawImage(image,0,0,width,height);
+      blob = await canvasJpeg(canvas,quality);
+      canvas.width = canvas.height = 1;
+      if (blob.size <= photoTargetBytes) break;
+      const reduction = Math.min(.9,Math.sqrt(photoTargetBytes / blob.size) * .94);
+      width = Math.max(1,Math.round(width * reduction));
+      height = Math.max(1,Math.round(height * reduction));
+      quality = Math.max(.58,quality - .07);
+    }
+    if (!blob || blob.size > photoTargetBytes) throw new Error('Photo remains too large.');
+    const baseName = file.name.replace(/\.[^.]+$/,'') || 'project-photo';
+    return new File([blob],baseName + '.jpg',{type:'image/jpeg',lastModified:file.lastModified});
+  }
+
   document.querySelectorAll('form').forEach(function (form) {
     // Netlify removes data-netlify during deployment; the registered form-name field remains.
     if (!form.querySelector('input[name="form-name"]')) return;
     const uploads = [...form.querySelectorAll('input[type="file"]')];
     function validateUploads() {
-      uploads.forEach(input => input.setCustomValidity(''));
+      const errors = new Map();
       let total = 0;
       uploads.forEach(input => {
+        if (input.dataset.uploadError) errors.set(input,input.dataset.uploadError);
         for (const file of input.files || []) {
           total += file.size;
           const pdfAllowed = /application\/pdf/i.test(input.getAttribute('accept') || '');
-          const allowedFile = pdfAllowed ? /\.(jpe?g|png|webp|pdf)$/i : /\.(jpe?g|png|webp)$/i;
+          const allowedFile = pdfAllowed ? /\.(jpe?g|png|webp|pdf)$/i : photoPattern;
           if (!allowedFile.test(file.name)) {
-            input.setCustomValidity(pdfAllowed
+            errors.set(input,pdfAllowed
               ? 'Please use JPG, PNG, WebP or PDF project files.'
               : 'Please use JPG, PNG or WebP project photos. You can send your request without photos and text them to 912-254-1918.');
           }
         }
       });
       // Leave room for form fields and multipart overhead below the provider's 8 MB request limit.
-      if (total > 7.5 * 1024 * 1024 && uploads.length) uploads[0].setCustomValidity('These photos are too large to send together. Choose smaller photos, or send the request without photos and text them to 912-254-1918.');
+      if (total > uploadTotalBytes && uploads.length && !errors.has(uploads[0])) {
+        errors.set(uploads[0],'These photos could not be reduced enough to send together. Remove one photo, or send the request without photos and text them to 912-254-1918.');
+      }
+      uploads.forEach(input => input.setCustomValidity(errors.get(input) || ''));
     }
-    uploads.forEach(input => input.addEventListener('change',validateUploads));
+    uploads.forEach(function (input) {
+      input.addEventListener('change',async function () {
+        const version = String((Number(input.dataset.uploadVersion) || 0) + 1);
+        input.dataset.uploadVersion = version;
+        delete input.dataset.uploadError;
+        const file = input.files && input.files[0];
+        const status = uploadStatus(input);
+        if (!file) { status.textContent = ''; validateUploads(); return; }
+        if (!photoPattern.test(file.name)) { status.textContent = ''; validateUploads(); return; }
+        if (file.size <= photoTargetBytes) {
+          status.textContent = 'Photo ready to send (' + formatMegabytes(file.size) + ').';
+          validateUploads();
+          return;
+        }
+        input.dataset.uploadError = 'Preparing this photo for upload. Please wait a moment.';
+        status.textContent = 'Preparing photo for upload…';
+        validateUploads();
+        try {
+          const optimized = await optimizePhoto(file);
+          if (input.dataset.uploadVersion !== version) return;
+          const transfer = new DataTransfer();
+          transfer.items.add(optimized);
+          input.files = transfer.files;
+          delete input.dataset.uploadError;
+          status.textContent = 'Photo ready — reduced from ' + formatMegabytes(file.size) + ' to ' + formatMegabytes(optimized.size) + '.';
+        } catch (error) {
+          if (input.dataset.uploadVersion !== version) return;
+          input.dataset.uploadError = 'This photo could not be prepared. Try another photo, or send the request without photos and text it to 912-254-1918.';
+          status.textContent = 'This photo needs a different file or must be sent by text.';
+        }
+        validateUploads();
+      });
+    });
     form.addEventListener('submit', function (event) {
       validateUploads();
       if (!form.checkValidity()) { event.preventDefault(); form.reportValidity(); return; }
