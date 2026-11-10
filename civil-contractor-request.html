@@ -119,13 +119,13 @@
       <label>Plans or bid-document link (optional)</label>
       <input type="url" name="plans_link" placeholder="https://"/>
 
-      <fieldset class="form-upload"><legend>Project files or photos (optional)</legend><label>File 1<input name="project_file_1" type="file" accept="image/jpeg,image/png,image/webp,application/pdf"/></label><label>File 2<input name="project_file_2" type="file" accept="image/jpeg,image/png,image/webp,application/pdf"/></label></fieldset>
+      <fieldset class="form-upload"><legend>Project files or photos (optional)</legend><label>File 1<input name="project_file_1" type="file" accept="image/jpeg,image/png,image/webp,image/heic,image/heif,.heic,.heif,application/pdf"/></label><label>File 2<input name="project_file_2" type="file" accept="image/jpeg,image/png,image/webp,image/heic,image/heif,.heic,.heif,application/pdf"/></label></fieldset>
       <p class="form-notice"><strong>Upload safety:</strong> Keep uploads under 8 MB total and do not submit payment, banking, identification, access-code or controlled information.</p>
       <label class="consent"><input type="checkbox" name="contact_consent" value="authorized" required/> I authorize Landco Development LLC to contact me about this project request.</label>
       <label class="consent"><input type="checkbox" name="terms_acknowledgment" value="accepted" required/> I acknowledge the <a href="/privacy-policy.html" target="_blank" rel="noopener">Privacy Policy</a> and <a href="/terms.html" target="_blank" rel="noopener">Website Terms</a>.</label>
 
       <button type="submit">Submit Project Request</button>
-    </form>
+    <input type="hidden" name="photo_count" value="0"><input type="hidden" name="photo_status" value="No photos selected"></form>
 
     <p>
       Prefer to speak directly? Call <a href="tel:+19122541918">912-254-1918</a>

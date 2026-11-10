@@ -717,7 +717,7 @@ export const websiteKnowledge = [
   },
   {
     "title": "Get a Fast Grading Quote",
-    "text": "Send your city, project type and what needs to be corrected. You can text photos after submitting.",
+    "text": "Send your city, project type and what needs to be corrected. Add project photos in the form below so Landco can review scope and access.",
     "url": "/grading"
   },
   {
@@ -1032,7 +1032,7 @@ export const websiteKnowledge = [
   },
   {
     "title": "Get a Fast Land Clearing Quote",
-    "text": "Send your city, project type and what needs to be cleared. You can text photos after submitting.",
+    "text": "Send your city, project type and what needs to be cleared. Add project photos in the form below so Landco can review scope and access.",
     "url": "/land-clearing"
   },
   {

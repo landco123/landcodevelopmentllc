@@ -1492,7 +1492,7 @@ body.landco-polished :where(a,button,input,select,textarea):focus-visible{outlin
 
     <p class="section-sub"><strong>Add up to 3 regular iPhone photos.</strong> Large pictures are prepared automatically before they are sent.</p>
 
-    <form name="project-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html" data-form-track="homepage_quote_form" enctype="multipart/form-data"><input type="hidden" name="gbraid" value=""><input type="hidden" name="wbraid" value="">
+    <form data-requires-project-photo="true" name="project-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html" data-form-track="homepage_quote_form" enctype="multipart/form-data"><input type="hidden" name="gbraid" value=""><input type="hidden" name="wbraid" value="">
       <p>If your project needs an on-site visit, we’ll confirm any visit fee with you before scheduling.</p>
 
       <input type="hidden" name="form-name" value="project-request"/>
@@ -1552,13 +1552,13 @@ body.landco-polished :where(a,button,input,select,textarea):focus-visible{outlin
       <textarea id="description" name="description" required></textarea>
 
       <fieldset class="form-upload" id="project-photos">
-        <legend>Add project photos (optional)</legend>
-        <label>Add photo 1<input name="project_photo_1" type="file" accept="image/jpeg,image/png,image/webp"/></label>
-        <label>Add photo 2<input name="project_photo_2" type="file" accept="image/jpeg,image/png,image/webp"/></label>
-        <label>Add photo 3<input name="project_photo_3" type="file" accept="image/jpeg,image/png,image/webp"/></label>
+        <legend>Add project photos — add at least 1</legend>
+        <label>Add photo 1<input name="project_photo_1" type="file" accept="image/jpeg,image/png,image/webp,image/heic,image/heif,.heic,.heif" required/></label>
+        <label>Add photo 2<input name="project_photo_2" type="file" accept="image/jpeg,image/png,image/webp,image/heic,image/heif,.heic,.heif"/></label>
+        <label>Add photo 3<input name="project_photo_3" type="file" accept="image/jpeg,image/png,image/webp,image/heic,image/heif,.heic,.heif"/></label>
       </fieldset>
 
-      <p class="form-notice"><strong>iPhone photos accepted:</strong> Large JPG, PNG or WebP project photos are prepared automatically. Add up to 3 photos you have authority to share. Do not submit payment, banking, identification, access-code or other sensitive information.</p>
+      <p class="form-notice"><strong>iPhone photos accepted:</strong> Large JPG, PNG, WebP or iPhone HEIC project photos are prepared automatically. Add up to 3 photos you have authority to share. Do not submit payment, banking, identification, access-code or other sensitive information.</p>
 
       <label class="consent"><input type="checkbox" name="contact_consent" value="authorized" required/> I authorize Landco Development LLC to contact me by phone, text or email about this project request. Message and data rates may apply.</label>
 
@@ -1566,7 +1566,7 @@ body.landco-polished :where(a,button,input,select,textarea):focus-visible{outlin
 
       <button type="submit">Submit Request</button>
 
-    </form>
+    <input type="hidden" name="photo_count" value="0"><input type="hidden" name="photo_status" value="No photos selected"></form>
 
   </div>
 

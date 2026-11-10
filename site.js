@@ -27,10 +27,11 @@
   const photoTargetBytes = 2 * 1024 * 1024;
   const uploadTotalBytes = 7.5 * 1024 * 1024;
   const photoMaxSide = 2000;
-  const photoPattern = /\.(jpe?g|png|webp)$/i;
+  const photoPattern = /\.(jpe?g|png|webp|heic|heif)$/i;
+  const iphonePhotoPattern = /\.(heic|heif)$/i;
 
   function formatMegabytes(bytes) {
-    return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
+    return bytes < 100 * 1024 ? Math.max(1,Math.round(bytes / 1024)) + ' KB' : (bytes / (1024 * 1024)).toFixed(1) + ' MB';
   }
 
   function uploadStatus(input) {
@@ -71,7 +72,7 @@
   }
 
   async function optimizePhoto(file) {
-    if (file.size <= photoTargetBytes) return file;
+    if (file.size <= photoTargetBytes && !iphonePhotoPattern.test(file.name)) return file;
     const image = await loadPhoto(file);
     const longest = Math.max(image.naturalWidth,image.naturalHeight);
     let scale = Math.min(1,photoMaxSide / longest);
@@ -105,27 +106,62 @@
     // Netlify removes data-netlify during deployment; the registered form-name field remains.
     if (!form.querySelector('input[name="form-name"]')) return;
     const uploads = [...form.querySelectorAll('input[type="file"]')];
+    const photosRequired = form.hasAttribute('data-requires-project-photo');
+    const previewUrls = new Map();
+    function showPreview(input,file) {
+      const parent = input.parentElement || input;
+      let preview = parent.querySelector('[data-landco-photo-preview]');
+      if (previewUrls.has(input)) URL.revokeObjectURL(previewUrls.get(input));
+      previewUrls.delete(input);
+      if (!file || !photoPattern.test(file.name)) {
+        if (preview) preview.remove();
+        return;
+      }
+      if (!preview) {
+        preview = document.createElement('img');
+        preview.setAttribute('data-landco-photo-preview','');
+        preview.alt = 'Selected project photo';
+        preview.style.cssText = 'display:block;max-width:160px;max-height:120px;object-fit:contain;margin-top:.5rem;border-radius:6px';
+        parent.append(preview);
+      }
+      const url = URL.createObjectURL(file);
+      previewUrls.set(input,url);
+      preview.src = url;
+    }
     function validateUploads() {
       const errors = new Map();
       let total = 0;
+      let count = 0;
       uploads.forEach(input => {
         if (input.dataset.uploadError) errors.set(input,input.dataset.uploadError);
         for (const file of input.files || []) {
           total += file.size;
+          if (file.size > 0) count += 1;
+          else errors.set(input,'This file is empty. Please choose the photo again.');
           const pdfAllowed = /application\/pdf/i.test(input.getAttribute('accept') || '');
-          const allowedFile = pdfAllowed ? /\.(jpe?g|png|webp|pdf)$/i : photoPattern;
+          const allowedFile = pdfAllowed ? /\.(jpe?g|png|webp|heic|heif|pdf)$/i : photoPattern;
           if (!allowedFile.test(file.name)) {
             errors.set(input,pdfAllowed
-              ? 'Please use JPG, PNG, WebP or PDF project files.'
-              : 'Please use JPG, PNG or WebP project photos. You can send your request without photos and text them to 912-254-1918.');
+              ? 'Please use JPG, PNG, WebP, iPhone HEIC or PDF project files.'
+              : 'Please use JPG, PNG, WebP or iPhone HEIC project photos. For help, call or text 912-254-1918.');
           }
         }
       });
       // Leave room for form fields and multipart overhead below the provider's 8 MB request limit.
       if (total > uploadTotalBytes && uploads.length && !errors.has(uploads[0])) {
-        errors.set(uploads[0],'These photos could not be reduced enough to send together. Remove one photo, or send the request without photos and text them to 912-254-1918.');
+        errors.set(uploads[0],'These files are too large to send together. Keep at least one photo and remove an extra file, or call or text 912-254-1918 for help.');
+      }
+      if (photosRequired && uploads.length) {
+        // Any photo slot can satisfy the requirement; HTML also protects the no-script path.
+        uploads[0].required = count === 0;
+        if (!count) errors.set(uploads[0],'Please add at least one project photo so Landco can review the work and access.');
       }
       uploads.forEach(input => input.setCustomValidity(errors.get(input) || ''));
+      const photoCount = form.querySelector('input[name="photo_count"]');
+      const photoStatus = form.querySelector('input[name="photo_status"]');
+      if (photoCount) photoCount.value = String(count);
+      if (photoStatus) photoStatus.value = errors.size ? 'Photos need attention — not ready to send' : count ? count + ' project file(s) included with this request' : 'No photos included';
+      return errors.size === 0;
     }
     uploads.forEach(function (input) {
       input.addEventListener('change',async function () {
@@ -134,10 +170,12 @@
         delete input.dataset.uploadError;
         const file = input.files && input.files[0];
         const status = uploadStatus(input);
+        showPreview(input,null);
         if (!file) { status.textContent = ''; validateUploads(); return; }
         if (!photoPattern.test(file.name)) { status.textContent = ''; validateUploads(); return; }
-        if (file.size <= photoTargetBytes) {
+        if (file.size <= photoTargetBytes && !iphonePhotoPattern.test(file.name)) {
           status.textContent = 'Photo ready to send (' + formatMegabytes(file.size) + ').';
+          showPreview(input,file);
           validateUploads();
           return;
         }
@@ -150,16 +188,19 @@
           const transfer = new DataTransfer();
           transfer.items.add(optimized);
           input.files = transfer.files;
+          if (input.files.length !== 1 || input.files[0].size !== optimized.size) throw new Error('Prepared photo was not attached.');
           delete input.dataset.uploadError;
           status.textContent = 'Photo ready — reduced from ' + formatMegabytes(file.size) + ' to ' + formatMegabytes(optimized.size) + '.';
+          showPreview(input,optimized);
         } catch (error) {
           if (input.dataset.uploadVersion !== version) return;
-          input.dataset.uploadError = 'This photo could not be prepared. Try another photo, or send the request without photos and text it to 912-254-1918.';
-          status.textContent = 'This photo needs a different file or must be sent by text.';
+          input.dataset.uploadError = 'This photo could not be attached. Choose a JPG, PNG or WebP version, or call or text 912-254-1918 for help.';
+          status.textContent = 'Photo not attached. Choose another photo before sending.';
         }
         validateUploads();
       });
     });
+    validateUploads();
     form.addEventListener('submit', function (event) {
       validateUploads();
       if (!form.checkValidity()) { event.preventDefault(); form.reportValidity(); return; }
