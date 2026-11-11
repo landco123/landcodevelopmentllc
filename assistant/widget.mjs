@@ -19,9 +19,9 @@ function init() {
       <strong>Your request for Zach</strong><dl class="lc-summary"></dl>
       <label class="lc-consent"><input type="checkbox" name="contact_consent" required><span>Landco may contact me by phone, text or email about this request. Message and data rates may apply.</span></label>
       <label class="lc-consent"><input type="checkbox" name="terms_acknowledgment" required><span>I accept the <a href="/privacy-policy.html" target="_blank" rel="noopener">Privacy Policy</a> and <a href="/terms.html" target="_blank" rel="noopener">Website Terms</a>.</span></label>
-      <button type="submit" class="lc-submit-request">Continue to project photos</button>
+      <button type="submit" class="lc-submit-request">Send project request</button>
       <button type="button" class="lc-edit-request">Edit my details</button>
-      <button type="button" class="lc-add-photos">Add photos / use full form</button>
+      <button type="button" class="lc-add-photos">Add optional photos</button>
       <p>No price or appointment is confirmed. Zach reviews your request.</p>
       <p>${siteVisitNotice}</p>
     </form>
@@ -63,7 +63,7 @@ function init() {
     quote.hidden = false; quote.textContent = 'Cancel request'; send.textContent = 'Next'; promptStep();
   }
   function showReview() {
-    stepIndex = -2; questionForm.hidden = true; useNotes.hidden = true; log.hidden = true; review.hidden = false; progress.hidden = false; progress.textContent = 'Review and add photos · Direct to Landco'; quote.hidden = true;
+    stepIndex = -2; questionForm.hidden = true; useNotes.hidden = true; log.hidden = true; review.hidden = false; progress.hidden = false; progress.textContent = 'Review your request · Direct to Landco'; quote.hidden = true;
     const summary = root.querySelector('.lc-summary'); summary.replaceChildren();
     for (const [key,label] of [['name','Name'],['phone','Phone'],['email','Email'],['location','Project location'],['details','Work requested']]) {
       const term = document.createElement('dt'), value = document.createElement('dd'); term.textContent = label; value.textContent = request[key] || ''; summary.append(term,value);

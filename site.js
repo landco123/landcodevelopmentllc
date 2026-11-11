@@ -106,7 +106,6 @@
     // Netlify removes data-netlify during deployment; the registered form-name field remains.
     if (!form.querySelector('input[name="form-name"]')) return;
     const uploads = [...form.querySelectorAll('input[type="file"]')];
-    const photosRequired = form.hasAttribute('data-requires-project-photo');
     const previewUrls = new Map();
     function showPreview(input,file) {
       const parent = input.parentElement || input;
@@ -149,12 +148,7 @@
       });
       // Leave room for form fields and multipart overhead below the provider's 8 MB request limit.
       if (total > uploadTotalBytes && uploads.length && !errors.has(uploads[0])) {
-        errors.set(uploads[0],'These files are too large to send together. Keep at least one photo and remove an extra file, or call or text 912-254-1918 for help.');
-      }
-      if (photosRequired && uploads.length) {
-        // Any photo slot can satisfy the requirement; HTML also protects the no-script path.
-        uploads[0].required = count === 0;
-        if (!count) errors.set(uploads[0],'Please add at least one project photo so Landco can review the work and access.');
+        errors.set(uploads[0],'These files are too large to send together. Remove files to continue, or call or text 912-254-1918 for help.');
       }
       uploads.forEach(input => input.setCustomValidity(errors.get(input) || ''));
       const photoCount = form.querySelector('input[name="photo_count"]');
@@ -164,12 +158,24 @@
       return errors.size === 0;
     }
     uploads.forEach(function (input) {
+      const remove = document.createElement('button');
+      remove.type = 'button';
+      remove.textContent = 'Remove file';
+      remove.setAttribute('aria-label','Remove ' + input.name.replace(/^project_/, '').replaceAll('_',' '));
+      remove.hidden = true;
+      const status = uploadStatus(input);
+      (status.closest('label') || status).after(remove);
+      remove.addEventListener('click',function () {
+        input.value = '';
+        input.dispatchEvent(new Event('change'));
+        input.focus();
+      });
       input.addEventListener('change',async function () {
         const version = String((Number(input.dataset.uploadVersion) || 0) + 1);
         input.dataset.uploadVersion = version;
         delete input.dataset.uploadError;
         const file = input.files && input.files[0];
-        const status = uploadStatus(input);
+        remove.hidden = !file;
         showPreview(input,null);
         if (!file) { status.textContent = ''; validateUploads(); return; }
         if (!photoPattern.test(file.name)) { status.textContent = ''; validateUploads(); return; }
@@ -195,7 +201,7 @@
         } catch (error) {
           if (input.dataset.uploadVersion !== version) return;
           input.dataset.uploadError = 'This photo could not be attached. Choose a JPG, PNG or WebP version, or call or text 912-254-1918 for help.';
-          status.textContent = 'Photo not attached. Choose another photo before sending.';
+          status.textContent = 'Photo not attached. Choose another photo or remove this file to send your request.';
         }
         validateUploads();
       });
